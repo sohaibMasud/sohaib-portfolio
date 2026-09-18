@@ -58,7 +58,7 @@
     .cv-paper b { color: #0f172a; font-weight: 600; }
     .cv-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 4px 12px; }
 
-    /* Print Setup for Pixel-Perfect PDF Export */
+    /* Print Setup for Clean PDF Export */
     @media print {
       body * { visibility: hidden !important; }
       #cv-modal, #cv-modal * { visibility: visible !important; }
@@ -77,26 +77,26 @@
 </head>
 <body class="bg-slate-950 text-slate-100 font-sans antialiased selection:bg-accent selection:text-slate-950">
 
-  <!-- Sticky Header Navigation -->
+  <!-- Even, Balanced Header Navigation -->
   <header class="sticky top-0 z-50 backdrop-blur-md bg-slate-950/90 border-b border-slate-800/80">
-    <div class="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
-      <a href="#" class="text-base font-bold tracking-tight text-white hover:text-accent transition">
+    <div class="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between gap-4">
+      <a href="#" class="text-base font-bold tracking-tight text-white hover:text-accent transition shrink-0">
         Sohaib Masud<span class="text-accent">.</span>
       </a>
       
-      <nav class="hidden md:flex items-center gap-6 text-sm font-medium text-slate-400">
-        <a href="#about" class="hover:text-white transition">Overview</a>
-        <a href="#marketing-labs" class="hover:text-white transition">Campaign Labs</a>
-        <a href="#case-studies" class="hover:text-white transition">Proven Traction</a>
-        <a href="#cv-downloads" class="hover:text-white transition">Tailored Resumes</a>
+      <nav class="hidden lg:flex items-center gap-5 text-sm font-medium text-slate-400">
+        <a href="#about" class="hover:text-white transition">About</a>
+        <a href="#marketing-labs" class="hover:text-white transition">Marketing Labs</a>
+        <a href="#case-studies" class="hover:text-white transition">Growth</a>
+        <a href="#cv-downloads" class="hover:text-white transition">Resumes</a>
         <a href="#talent-vision" class="hover:text-white transition">Endorsements</a>
-        <a href="#projects" class="hover:text-white transition">Strategy &amp; Sim</a>
-        <a href="#photography" class="hover:text-white transition">Visual Direction</a>
-        <a href="#research" class="hover:text-white transition">Governance</a>
+        <a href="#projects" class="hover:text-white transition">Projects</a>
+        <a href="#photography" class="hover:text-white transition">Visual Eye</a>
+        <a href="#research" class="hover:text-white transition">Research</a>
         <a href="#education" class="hover:text-white transition">Education</a>
       </nav>
 
-      <a href="#contact" class="px-4 py-2 text-xs font-semibold rounded-md bg-accent text-slate-950 hover:bg-sky-400 transition shadow-sm">
+      <a href="#contact" class="px-4 py-2 text-xs font-semibold rounded-md bg-accent text-slate-950 hover:bg-sky-400 transition shadow-sm shrink-0">
         Let's Connect
       </a>
     </div>
@@ -104,7 +104,7 @@
 
   <main class="max-w-6xl mx-auto px-6 py-12 space-y-28">
 
-    <!-- Repositioned Technical Growth Marketer Hero Section -->
+    <!-- Technical Growth Marketer Hero Section -->
     <section id="about" class="py-12 md:py-16 flex flex-col items-start gap-6">
       <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-slate-900 border border-slate-800 text-xs font-mono text-accent">
         <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
@@ -139,7 +139,7 @@
           View Proven Traction (53K+ Reach)
         </a>
         <a href="#cv-downloads" class="px-6 py-3 rounded-lg bg-slate-900 hover:bg-slate-800 text-slate-200 border border-slate-800 font-medium transition">
-          Access ATS Resumes
+          Browse Tailored CVs
         </a>
       </div>
     </section>
@@ -169,19 +169,16 @@
               <h3 class="text-lg font-bold text-white leading-snug">Duolingo: Viral Short-Form to Paid Conversion Funnel</h3>
               
               <div class="space-y-3 text-xs leading-relaxed">
-                <!-- Part 1: Objective -->
                 <div>
                   <span class="font-mono text-sky-400 font-semibold uppercase tracking-wider block">1. The Objective</span>
-                  <p class="text-slate-300 mt-1">Lower Customer Acquisition Cost (CAC) for Duolingo Super subscriptions by turning chaotic organic TikTok humor into a structured, mid-funnel acquisition engine for university students preparing to study abroad.</p>
+                  <p class="text-slate-300 mt-1">Lower Customer Acquisition Cost (CAC) for Duolingo Super subscriptions by turning viral TikTok humor into a structured, mid-funnel acquisition engine for university students preparing to study abroad.</p>
                 </div>
 
-                <!-- Part 2: Strategy & Channels -->
                 <div>
                   <span class="font-mono text-sky-400 font-semibold uppercase tracking-wider block">2. Strategy &amp; Channels</span>
                   <p class="text-slate-300 mt-1">Meta Ads (Reels 9:16 + Story placements) and TikTok Spark Ads. Audience clustering: 18–24 demographic with dual interest targeting in IELTS/TOEFL test prep, Erasmus programs, and European travel.</p>
                 </div>
 
-                <!-- Part 3: Creative / Assets -->
                 <div class="p-3 rounded-lg bg-slate-900 border border-slate-800/80 space-y-2">
                   <span class="font-mono text-emerald-400 font-semibold uppercase tracking-wider block">3. Creative Variations &amp; Ad Hooks</span>
                   <p class="text-slate-300"><strong class="text-white">Hook A (Loss Aversion):</strong> <em>"POV: Duo notices you haven't opened Spanish in 48 hours before landing in Madrid."</em> (Fast-cut jump scare with text overlay).</p>
@@ -189,7 +186,6 @@
                   <div class="text-[11px] text-slate-500 font-mono">CTA: "Claim Your 14-Day Free Trial &rarr;"</div>
                 </div>
 
-                <!-- Part 4: Impact / Simulated KPIs -->
                 <div class="p-3 rounded-lg bg-slate-900/60 border border-slate-800/60 space-y-1">
                   <span class="font-mono text-indigo-400 font-semibold uppercase tracking-wider block">4. Tracking &amp; Simulated KPIs</span>
                   <div class="text-slate-300 grid grid-cols-2 gap-2 pt-1 font-mono text-[11px]">
@@ -218,26 +214,22 @@
               <h3 class="text-lg font-bold text-white leading-snug">Gymshark: E-Commerce SEO &amp; Keyword Gap Funnel</h3>
               
               <div class="space-y-3 text-xs leading-relaxed">
-                <!-- Part 1: Objective -->
                 <div>
                   <span class="font-mono text-sky-400 font-semibold uppercase tracking-wider block">1. The Objective</span>
                   <p class="text-slate-300 mt-1">Capture unbranded, high-intent transactional search traffic competing directly with Nike and Lululemon by addressing search architecture gaps on seamless compression wear category pages.</p>
                 </div>
 
-                <!-- Part 2: Strategy & Channels -->
                 <div>
                   <span class="font-mono text-sky-400 font-semibold uppercase tracking-wider block">2. Strategy &amp; Channels</span>
                   <p class="text-slate-300 mt-1">Organic Google Search (Technical On-Page SEO) coupled with high-conversion landing page restructuring. Built semantic pillar-and-cluster blog hubs linking directly to product PDPs with canonical tag discipline.</p>
                 </div>
 
-                <!-- Part 3: Creative / Assets -->
                 <div class="p-3 rounded-lg bg-slate-900 border border-slate-800/80 space-y-2">
                   <span class="font-mono text-emerald-400 font-semibold uppercase tracking-wider block">3. Content Architecture &amp; CRO Wireframe</span>
-                  <p class="text-slate-300"><strong class="text-white">Pillar Page:</strong> <em>"The Definitive Guide to Squat-Proof Seamless Compression (2026 Fit &amp; Fabric Breakdown)."</em></p>
+                  <p class="text-slate-300"><strong class="text-white">Pillar Page:</strong> <em>"The Definitive Guide to Squat-Proof Seamless Compression (Fit &amp; Fabric Breakdown)."</em></p>
                   <p class="text-slate-300"><strong class="text-white">CRO Re-architecture:</strong> Relocated fabric breathability badges above the mobile fold; embedded sticky "Quick Add to Bag" trigger upon 60% scroll depth.</p>
                 </div>
 
-                <!-- Part 4: Impact / Simulated KPIs -->
                 <div class="p-3 rounded-lg bg-slate-900/60 border border-slate-800/60 space-y-1">
                   <span class="font-mono text-indigo-400 font-semibold uppercase tracking-wider block">4. Tracking &amp; Simulated KPIs</span>
                   <div class="text-slate-300 grid grid-cols-2 gap-2 pt-1 font-mono text-[11px]">
@@ -266,26 +258,22 @@
               <h3 class="text-lg font-bold text-white leading-snug">Spotify: Personalized Churn Re-engagement Pipeline</h3>
               
               <div class="space-y-3 text-xs leading-relaxed">
-                <!-- Part 1: Objective -->
                 <div>
                   <span class="font-mono text-sky-400 font-semibold uppercase tracking-wider block">1. The Objective</span>
                   <p class="text-slate-300 mt-1">Re-engage subscribers who canceled Spotify Premium within the past 45 days, decreasing permanent churn rate and maximizing Customer Lifetime Value (LTV) without resorting to margin-diluting discount blitzes.</p>
                 </div>
 
-                <!-- Part 2: Strategy & Channels -->
                 <div>
                   <span class="font-mono text-sky-400 font-semibold uppercase tracking-wider block">2. Strategy &amp; Channels</span>
                   <p class="text-slate-300 mt-1">Automated behavioral trigger email sequences via CRM (e.g., Klaviyo/HubSpot logic), segmented dynamically based on the subscriber's top streamed genre and favorite podcast drops during their active tenure.</p>
                 </div>
 
-                <!-- Part 3: Creative / Assets -->
                 <div class="p-3 rounded-lg bg-slate-900 border border-slate-800/80 space-y-2">
                   <span class="font-mono text-emerald-400 font-semibold uppercase tracking-wider block">3. Copy &amp; Sequence Wireframe</span>
                   <p class="text-slate-300"><strong class="text-white">Email 1 (Day 7 - Nostalgia):</strong> <em>"Your Friday Release Radar isn't the same without you, Sohaib."</em> (Curated list of 5 new tracks from top 3 followed artists).</p>
                   <p class="text-slate-300"><strong class="text-white">Email 2 (Day 21 - Value Reinforcement):</strong> Feature spotlight on offline downloads and lossless audio enhancements.</p>
                 </div>
 
-                <!-- Part 4: Impact / Simulated KPIs -->
                 <div class="p-3 rounded-lg bg-slate-900/60 border border-slate-800/60 space-y-1">
                   <span class="font-mono text-indigo-400 font-semibold uppercase tracking-wider block">4. Tracking &amp; Simulated KPIs</span>
                   <div class="text-slate-300 grid grid-cols-2 gap-2 pt-1 font-mono text-[11px]">
@@ -404,14 +392,14 @@
       <div>
         <span class="text-xs font-mono text-accent uppercase tracking-widest">Industry Profiles</span>
         <h2 class="text-2xl font-bold tracking-tight text-white mt-1">Curated Resumes by Career Track</h2>
-        <p class="text-slate-400 text-sm mt-1">Click to review or generate an ATS-ready PDF instantly formatted to industry standards.</p>
+        <p class="text-slate-400 text-sm mt-1">Select the CV version that matches your organization's domain requirements.</p>
       </div>
 
       <div class="grid md:grid-cols-3 gap-6">
         <!-- CV 1 Card -->
         <div class="p-6 rounded-xl bg-slate-900 border border-slate-800 flex flex-col justify-between hover:border-slate-700 transition">
           <div class="space-y-3">
-            <span class="px-2 py-0.5 text-[11px] rounded bg-slate-800 text-sky-400 font-mono">Organic Reach &amp; Creative Video</span>
+            <span class="px-2 py-0.5 text-[11px] rounded bg-slate-800 text-sky-400 font-mono">Organic Reach &amp; Audio/Video</span>
             <h3 class="text-lg font-semibold text-white">Content Creation &amp; Social Strategy CV</h3>
             <p class="text-sm text-slate-400 leading-relaxed">
               Tailored for creative direction, algorithmic video editing, caption copywriting, and fanbase curation.
@@ -420,7 +408,7 @@
           <div class="mt-6 pt-4 border-t border-slate-800 flex items-center justify-between text-xs">
             <span class="text-slate-500">Social Lead / Producer</span>
             <button onclick="openCvModal('cv1')" class="text-accent font-semibold hover:underline flex items-center gap-1">
-              View &amp; Print CV &rarr;
+              Access CV Profile &rarr;
             </button>
           </div>
         </div>
@@ -428,16 +416,16 @@
         <!-- CV 2 Card -->
         <div class="p-6 rounded-xl bg-slate-900 border border-slate-800 flex flex-col justify-between hover:border-slate-700 transition">
           <div class="space-y-3">
-            <span class="px-2 py-0.5 text-[11px] rounded bg-slate-800 text-sky-400 font-mono">Growth &amp; Technical Funnels</span>
-            <h3 class="text-lg font-semibold text-white">Technical Growth &amp; MarTech CV</h3>
+            <span class="px-2 py-0.5 text-[11px] rounded bg-slate-800 text-sky-400 font-mono">Growth &amp; CRO</span>
+            <h3 class="text-lg font-semibold text-white">Digital Growth &amp; Marketing Strategy CV</h3>
             <p class="text-sm text-slate-400 leading-relaxed">
-              Focuses on customer journey mapping, Google Tag Manager architectures, conversion rate optimization, and paid acquisition.
+              Focuses on customer journey mapping, brand equity, conversion rate optimization, and D2C commerce retention.
             </p>
           </div>
           <div class="mt-6 pt-4 border-t border-slate-800 flex items-center justify-between text-xs">
-            <span class="text-slate-500">Growth / Technical Marketer</span>
+            <span class="text-slate-500">Growth / Digital Strategist</span>
             <button onclick="openCvModal('cv2')" class="text-accent font-semibold hover:underline flex items-center gap-1">
-              View &amp; Print CV &rarr;
+              Access CV Profile &rarr;
             </button>
           </div>
         </div>
@@ -445,7 +433,7 @@
         <!-- CV 3 Card -->
         <div class="p-6 rounded-xl bg-slate-900 border border-slate-800 flex flex-col justify-between hover:border-slate-700 transition">
           <div class="space-y-3">
-            <span class="px-2 py-0.5 text-[11px] rounded bg-slate-800 text-sky-400 font-mono">People Ops &amp; Governance</span>
+            <span class="px-2 py-0.5 text-[11px] rounded bg-slate-800 text-sky-400 font-mono">Talent &amp; Operations</span>
             <h3 class="text-lg font-semibold text-white">People Operations &amp; HR Management CV</h3>
             <p class="text-sm text-slate-400 leading-relaxed">
               Covers candidate onboarding lifecycles, structured HR data modeling in Excel, and regulatory policy alignment.
@@ -454,7 +442,7 @@
           <div class="mt-6 pt-4 border-t border-slate-800 flex items-center justify-between text-xs">
             <span class="text-slate-500">People Ops / HR Associate</span>
             <button onclick="openCvModal('cv3')" class="text-accent font-semibold hover:underline flex items-center gap-1">
-              View &amp; Print CV &rarr;
+              Access CV Profile &rarr;
             </button>
           </div>
         </div>
@@ -683,7 +671,7 @@
       </div>
     </section>
 
-    <!-- Strategic Applied Research Section -->
+    <!-- Strategic Applied Research Section (Updated ID & Anchors) -->
     <section id="research" class="space-y-8">
       <div>
         <span class="text-xs font-mono text-accent uppercase tracking-widest">Academic &amp; Organizational Rigor</span>
@@ -884,7 +872,7 @@
       <div id="cv-modal-controls" class="w-full max-w-[820px] mb-4 flex flex-wrap items-center justify-between gap-3 bg-slate-900/90 border border-slate-800 p-3 rounded-xl shadow-lg">
         <div class="flex items-center gap-2">
           <button onclick="switchCvTab('cv1')" id="tab-btn-cv1" class="px-3 py-1.5 text-xs font-semibold rounded-lg bg-sky-500 text-slate-950 transition">Content &amp; Social</button>
-          <button onclick="switchCvTab('cv2')" id="tab-btn-cv2" class="px-3 py-1.5 text-xs font-semibold rounded-lg bg-slate-800 text-slate-300 hover:bg-slate-700 transition">Technical Growth</button>
+          <button onclick="switchCvTab('cv2')" id="tab-btn-cv2" class="px-3 py-1.5 text-xs font-semibold rounded-lg bg-slate-800 text-slate-300 hover:bg-slate-700 transition">Digital Growth</button>
           <button onclick="switchCvTab('cv3')" id="tab-btn-cv3" class="px-3 py-1.5 text-xs font-semibold rounded-lg bg-slate-800 text-slate-300 hover:bg-slate-700 transition">People Ops</button>
         </div>
         <div class="flex items-center gap-2">
@@ -999,7 +987,7 @@
       <div id="cv2-content" class="cv-tab-content cv-paper hidden">
         <div class="cv-header">
           <div class="cv-h1">SOHAIB MASUD</div>
-          <div class="cv-subtitle">Technical Growth Marketer &bull; Funnel Architect &bull; MarTech &amp; Web Analytics</div>
+          <div class="cv-subtitle">Digital Growth Strategist &bull; Performance &amp; Social Marketing &bull; Web Analytics</div>
           <div class="cv-contact">
             +966 57 247 5955 &bull; <a href="mailto:sohaibmasud@outlook.com">sohaibmasud@outlook.com</a> &bull; 
             <a href="https://linkedin.com/in/sohaibm2001">linkedin.com/in/sohaibm2001</a> &bull; Immediate Availability &bull; Remote
@@ -1008,14 +996,14 @@
 
         <div class="cv-section-title">Professional Profile</div>
         <p style="color: #334155;">
-          Hybrid growth marketer bridging commercial strategy, frontend web development (HTML/Tailwind), and web analytics. Google Analytics certified (2026) with direct experience engineering organic viral breakouts (53K+ post likes) and architecting full-funnel acquisition, GTM event tagging, and conversion tracking models.
+          Analytically driven digital strategist with dual expertise in organic growth architecture, customer acquisition modeling, and web analytics. Certified in Google Analytics (2026) and Digital Marketing Fundamentals. Experienced in turning organic audiences into active communities, modeling commercial unit margins, and applying rigorous quantitative strategy to scalable growth models.
         </p>
 
         <div class="cv-section-title">Growth Marketing &amp; Brand Experience</div>
 
         <div class="cv-item">
           <div class="cv-item-header">
-            <span class="cv-item-title">Founder &amp; Growth Lead</span>
+            <span class="cv-item-title">Founder &amp; Content Lead</span>
             <span class="cv-item-date">Nov 2023 &ndash; Present</span>
           </div>
           <div class="cv-item-sub">@mehehehmwe (Digital Cultural Brand)</div>
@@ -1088,10 +1076,10 @@
           <div class="cv-item-sub">Prince Mohammad Bin Fahd University (PMU)</div>
         </div>
 
-        <div class="cv-section-title">Technical MarTech Toolkit</div>
+        <div class="cv-section-title">Core Competencies &amp; Technical Toolkit</div>
         <p style="color: #334155;">
-          <b>Growth &amp; Analytics:</b> Google Analytics 4 (GA4), GTM event mapping, Search Engine Optimization (SEO), Paid Social acquisition modeling, Conversion Rate Optimization (CRO), Lifecycle email nurture architecture.<br>
-          <b>Web &amp; Modeling:</b> HTML5, Tailwind CSS, Git/GitHub, Microsoft Excel (Pivot Tables, VLOOKUP, Data Sanitization), Google Sheets, Demand Forecasting.<br>
+          <b>Growth Marketing:</b> Google Analytics (GA4), Search Engine Optimization (SEO), Paid Social acquisition modeling, Conversion Rate Optimization (CRO), Lifecycle email nurture architecture.<br>
+          <b>Analytics &amp; Modeling:</b> Microsoft Excel (Pivot Tables, VLOOKUP, Data Cleaning), Google Sheets, Demand Forecasting, KPI Dashboards.<br>
           <b>Creative Tools:</b> Canva, Figma, Adobe Lightroom, Liit.
         </p>
       </div>
