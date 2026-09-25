@@ -77,29 +77,78 @@
 </head>
 <body class="bg-slate-950 text-slate-100 font-sans antialiased selection:bg-accent selection:text-slate-950">
 
-  <!-- Sticky Navigation -->
-  <header class="sticky top-0 z-50 backdrop-blur-md bg-slate-950/90 border-b border-slate-800/80">
-    <div class="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
-      <a href="#" class="text-base font-bold tracking-tight text-white hover:text-accent transition">
+  <!-- Modern Floating Header Navigation -->
+  <header class="sticky top-4 z-50 max-w-6xl mx-auto px-4 sm:px-6">
+    <div class="backdrop-blur-xl bg-slate-950/80 border border-slate-800/80 rounded-2xl shadow-2xl px-5 h-16 flex items-center justify-between gap-4">
+      
+      <!-- Brand Logo -->
+      <a href="#" class="text-base font-bold tracking-tight text-white hover:text-accent transition flex items-center gap-1.5 shrink-0">
+        <span class="w-2.5 h-2.5 rounded-full bg-accent animate-pulse"></span>
         Sohaib Masud<span class="text-accent">.</span>
       </a>
-      
-      <nav class="hidden md:flex items-center gap-6 text-sm font-medium text-slate-400">
-        <a href="#about" class="hover:text-white transition">About</a>
-        <a href="#what-i-bring" class="hover:text-white transition">What I Bring</a>
-        <a href="#talent-vision" class="hover:text-white transition">Talent &amp; Vision</a>
-        <a href="#cv-downloads" class="hover:text-white transition">Resumes</a>
-        <a href="#case-studies" class="hover:text-white transition">Growth</a>
-        <a href="#projects" class="hover:text-white transition">Projects</a>
-        <a href="#marketing-labs" class="hover:text-white transition">Marketing Labs</a>
-        <a href="#photography" class="hover:text-white transition">Artistic Eye</a>
-        <a href="#research" class="hover:text-white transition">Research</a>
-        <a href="#education" class="hover:text-white transition">Education &amp; Certs</a>
+
+      <!-- Desktop Nav: Clean & Prioritized -->
+      <nav class="hidden md:flex items-center gap-1 text-xs lg:text-sm font-medium text-slate-300">
+        <a href="#about" class="px-3 py-1.5 rounded-lg hover:text-white hover:bg-slate-800/60 transition">About</a>
+        <a href="#talent-vision" class="px-3 py-1.5 rounded-lg hover:text-white hover:bg-slate-800/60 transition">Talent &amp; Vision</a>
+        <a href="#cv-downloads" class="px-3 py-1.5 rounded-lg hover:text-white hover:bg-slate-800/60 transition">Resumes</a>
+        <a href="#case-studies" class="px-3 py-1.5 rounded-lg hover:text-white hover:bg-slate-800/60 transition">Growth</a>
+        <a href="#marketing-labs" class="px-3 py-1.5 rounded-lg hover:text-white hover:bg-slate-800/60 transition">Marketing Labs</a>
+        
+        <!-- Clean Dropdown for Additional Sections -->
+        <div class="relative group">
+          <button class="px-3 py-1.5 rounded-lg hover:text-white hover:bg-slate-800/60 transition flex items-center gap-1 text-slate-400 group-hover:text-white">
+            <span>More</span>
+            <svg class="w-3.5 h-3.5 transition-transform duration-200 group-hover:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+            </svg>
+          </button>
+          <div class="absolute left-0 top-full pt-2 hidden group-hover:block w-48 transition-all duration-200">
+            <div class="p-1.5 rounded-xl bg-slate-900/95 border border-slate-800 shadow-xl backdrop-blur-lg flex flex-col gap-1 text-xs">
+              <a href="#projects" class="px-3 py-2 rounded-lg text-slate-300 hover:text-white hover:bg-slate-800 transition">Projects</a>
+              <a href="#photography" class="px-3 py-2 rounded-lg text-slate-300 hover:text-white hover:bg-slate-800 transition">Artistic Eye</a>
+              <a href="#research" class="px-3 py-2 rounded-lg text-slate-300 hover:text-white hover:bg-slate-800 transition">Research</a>
+              <a href="#education" class="px-3 py-2 rounded-lg text-slate-300 hover:text-white hover:bg-slate-800 transition">Education &amp; Certs</a>
+            </div>
+          </div>
+        </div>
       </nav>
 
-      <a href="#contact" class="px-4 py-2 text-xs font-semibold rounded-md bg-accent text-slate-950 hover:bg-sky-400 transition shadow-sm">
-        Let's Connect
-      </a>
+      <!-- Right CTAs & Mobile Toggle -->
+      <div class="flex items-center gap-3">
+        <a href="#contact" class="hidden sm:inline-flex px-4 py-2 text-xs font-semibold rounded-xl bg-accent text-slate-950 hover:bg-sky-400 hover:shadow-lg hover:shadow-sky-500/20 transition shrink-0">
+          Let's Connect
+        </a>
+
+        <!-- Mobile Hamburger Button -->
+        <button onclick="toggleMobileNav()" class="md:hidden p-2 rounded-lg text-slate-400 hover:text-white hover:bg-slate-800/80 transition" aria-label="Toggle Menu">
+          <svg id="hamburger-icon" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+          </svg>
+          <svg id="close-icon" class="w-6 h-6 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+          </svg>
+        </button>
+      </div>
+
+    </div>
+
+    <!-- Mobile Slide-Down Menu -->
+    <div id="mobile-menu" class="hidden md:hidden mt-2 p-4 rounded-2xl bg-slate-950/95 border border-slate-800/90 shadow-2xl backdrop-blur-xl flex flex-col gap-1 text-sm font-medium">
+      <a href="#about" onclick="toggleMobileNav()" class="px-3 py-2 rounded-lg text-slate-300 hover:text-white hover:bg-slate-800/60 transition">About</a>
+      <a href="#talent-vision" onclick="toggleMobileNav()" class="px-3 py-2 rounded-lg text-slate-300 hover:text-white hover:bg-slate-800/60 transition">Talent &amp; Vision</a>
+      <a href="#cv-downloads" onclick="toggleMobileNav()" class="px-3 py-2 rounded-lg text-slate-300 hover:text-white hover:bg-slate-800/60 transition">Resumes</a>
+      <a href="#case-studies" onclick="toggleMobileNav()" class="px-3 py-2 rounded-lg text-slate-300 hover:text-white hover:bg-slate-800/60 transition">Growth</a>
+      <a href="#projects" onclick="toggleMobileNav()" class="px-3 py-2 rounded-lg text-slate-300 hover:text-white hover:bg-slate-800/60 transition">Projects</a>
+      <a href="#marketing-labs" onclick="toggleMobileNav()" class="px-3 py-2 rounded-lg text-slate-300 hover:text-white hover:bg-slate-800/60 transition">Marketing Labs</a>
+      <a href="#photography" onclick="toggleMobileNav()" class="px-3 py-2 rounded-lg text-slate-300 hover:text-white hover:bg-slate-800/60 transition">Artistic Eye</a>
+      <a href="#research" onclick="toggleMobileNav()" class="px-3 py-2 rounded-lg text-slate-300 hover:text-white hover:bg-slate-800/60 transition">Research</a>
+      <a href="#education" onclick="toggleMobileNav()" class="px-3 py-2 rounded-lg text-slate-300 hover:text-white hover:bg-slate-800/60 transition">Education &amp; Certs</a>
+      <div class="pt-2 border-t border-slate-800 mt-1">
+        <a href="#contact" onclick="toggleMobileNav()" class="block text-center w-full px-4 py-2.5 text-xs font-semibold rounded-xl bg-accent text-slate-950 hover:bg-sky-400 transition">
+          Let's Connect &rarr;
+        </a>
+      </div>
     </div>
   </header>
 
@@ -130,83 +179,6 @@
         <a href="#cv-downloads" class="px-6 py-3 rounded-lg bg-slate-900 hover:bg-slate-800 text-slate-200 border border-slate-800 font-medium transition">
           Browse Tailored CVs
         </a>
-      </div>
-    </section>
-
-    <!-- What I Bring Section -->
-    <section id="what-i-bring" class="space-y-6">
-      <div>
-        <span class="text-xs font-mono text-accent uppercase tracking-widest">Multi-Disciplinary Impact</span>
-        <h2 class="text-2xl font-bold tracking-tight text-white mt-1">What I Bring</h2>
-        <p class="text-slate-400 text-sm mt-1 max-w-2xl">
-          Core capabilities synthesized from verified commercial execution, algorithmic distribution, academic research, and cross-functional leadership.
-        </p>
-      </div>
-
-      <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
-        <!-- Brand & Consumer -->
-        <div class="p-6 rounded-xl bg-slate-900 border border-slate-800 hover:border-slate-700 transition flex flex-col justify-between space-y-4">
-          <div class="space-y-2">
-            <span class="text-xs font-mono text-accent uppercase tracking-wider">01 &bull; Strategy</span>
-            <h3 class="text-lg font-bold text-white">Brand &amp; Consumer</h3>
-            <p class="text-xs text-slate-300 leading-relaxed">
-              Cultivating brand equity and high-trust fan communities from scratch. Connecting consumer psychology with conversational communication channels to drive repeat retention and lifetime value (LTV).
-            </p>
-          </div>
-          <div class="space-y-1.5 text-xs text-slate-400 border-t border-slate-800/80 pt-3 font-mono">
-            <div>&bull; Audience loyalty &amp; retention</div>
-            <div>&bull; Conversational customer funnels</div>
-            <div>&bull; Repeat purchase &amp; LTV optimization</div>
-          </div>
-        </div>
-
-        <!-- Digital & Growth -->
-        <div class="p-6 rounded-xl bg-slate-900 border border-slate-800 hover:border-slate-700 transition flex flex-col justify-between space-y-4">
-          <div class="space-y-2">
-            <span class="text-xs font-mono text-sky-400 uppercase tracking-wider">02 &bull; Performance</span>
-            <h3 class="text-lg font-bold text-white">Digital &amp; Growth</h3>
-            <p class="text-xs text-slate-300 leading-relaxed">
-              Full-funnel campaign architecture across paid social parameter modeling, on-page SEO keyword gap clusters, and Google Analytics 4 (GA4) custom event tracking paired with 99%+ operational fulfillment.
-            </p>
-          </div>
-          <div class="space-y-1.5 text-xs text-slate-400 border-t border-slate-800/80 pt-3 font-mono">
-            <div>&bull; Certified GA4 web tracking</div>
-            <div>&bull; Paid social &amp; CRO wireframing</div>
-            <div>&bull; 99%+ e-commerce fulfillment precision</div>
-          </div>
-        </div>
-
-        <!-- Social & Content -->
-        <div class="p-6 rounded-xl bg-slate-900 border border-slate-800 hover:border-slate-700 transition flex flex-col justify-between space-y-4">
-          <div class="space-y-2">
-            <span class="text-xs font-mono text-indigo-400 uppercase tracking-wider">03 &bull; Creative</span>
-            <h3 class="text-lg font-bold text-white">Social &amp; Content</h3>
-            <p class="text-xs text-slate-300 leading-relaxed">
-              Native short-form video pacing, minimalist aesthetic typography, and viral hook architecture that commands attention and yields verified artist and industry management recognition.
-            </p>
-          </div>
-          <div class="space-y-1.5 text-xs text-slate-400 border-t border-slate-800/80 pt-3 font-mono">
-            <div>&bull; 53K+ likes &bull; 71.8% non-follower reach</div>
-            <div>&bull; 25K–30K monthly organic interactions</div>
-            <div>&bull; Industry &amp; artist acknowledged</div>
-          </div>
-        </div>
-
-        <!-- People & Research -->
-        <div class="p-6 rounded-xl bg-slate-900 border border-slate-800 hover:border-slate-700 transition flex flex-col justify-between space-y-4">
-          <div class="space-y-2">
-            <span class="text-xs font-mono text-emerald-400 uppercase tracking-wider">04 &bull; Governance</span>
-            <h3 class="text-lg font-bold text-white">People &amp; Research</h3>
-            <p class="text-xs text-slate-300 leading-relaxed">
-              Analytical human capital inquiry covering servant leadership, psychological safety, and GCC board diversity, reinforced by multi-round Capsim enterprise leadership and on-set technical direction.
-            </p>
-          </div>
-          <div class="space-y-1.5 text-xs text-slate-400 border-t border-slate-800/80 pt-3 font-mono">
-            <div>&bull; Empirical governance &amp; HRM research</div>
-            <div>&bull; Capsim 8-round solo leadership</div>
-            <div>&bull; Institutional project videography</div>
-          </div>
-        </div>
       </div>
     </section>
 
@@ -1181,9 +1153,18 @@
     </div>
   </div>
 
-  <!-- Script for Modal Tabs & Dynamic Year -->
+  <!-- Script for Modal Tabs, Mobile Navigation & Dynamic Year -->
   <script>
     document.getElementById('year').textContent = new Date().getFullYear();
+
+    function toggleMobileNav() {
+      const menu = document.getElementById('mobile-menu');
+      const ham = document.getElementById('hamburger-icon');
+      const close = document.getElementById('close-icon');
+      menu.classList.toggle('hidden');
+      ham.classList.toggle('hidden');
+      close.classList.toggle('hidden');
+    }
 
     function openCvModal(tabKey) {
       document.getElementById('cv-modal').classList.remove('hidden');
