@@ -19,7 +19,7 @@
     }
   </script>
   <style>
-    /* ATS-Optimized Clean Printable Resume Paper */
+    /* CV Document Styling */
     .cv-paper {
       width: 100%;
       max-width: 820px;
@@ -58,7 +58,7 @@
     .cv-paper b { color: #0f172a; font-weight: 600; }
     .cv-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 4px 12px; }
 
-    /* Print Setup for Clean ATS PDF Export */
+    /* Print Setup to Export the Selected CV Cleanly to PDF */
     @media print {
       body * { visibility: hidden !important; }
       #cv-modal, #cv-modal * { visibility: visible !important; }
@@ -77,27 +77,26 @@
 </head>
 <body class="bg-slate-950 text-slate-100 font-sans antialiased selection:bg-accent selection:text-slate-950">
 
-  <!-- Sticky Header Navigation -->
+  <!-- Sticky Navigation -->
   <header class="sticky top-0 z-50 backdrop-blur-md bg-slate-950/90 border-b border-slate-800/80">
-    <div class="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between gap-4">
-      <a href="#" class="text-base font-bold tracking-tight text-white hover:text-accent transition shrink-0">
+    <div class="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
+      <a href="#" class="text-base font-bold tracking-tight text-white hover:text-accent transition">
         Sohaib Masud<span class="text-accent">.</span>
       </a>
       
-      <nav class="hidden lg:flex items-center gap-5 text-sm font-medium text-slate-400">
+      <nav class="hidden md:flex items-center gap-6 text-sm font-medium text-slate-400">
         <a href="#about" class="hover:text-white transition">About</a>
-        <a href="#what-i-bring" class="hover:text-white transition">What I Bring</a>
-        <a href="#marketing-labs" class="hover:text-white transition">Marketing Labs</a>
-        <a href="#case-studies" class="hover:text-white transition">Growth</a>
+        <a href="#talent-vision" class="hover:text-white transition">Talent &amp; Vision</a>
         <a href="#cv-downloads" class="hover:text-white transition">Resumes</a>
-        <a href="#talent-vision" class="hover:text-white transition">Endorsements</a>
+        <a href="#case-studies" class="hover:text-white transition">Growth</a>
         <a href="#projects" class="hover:text-white transition">Projects</a>
-        <a href="#photography" class="hover:text-white transition">Visual Eye</a>
+        <a href="#marketing-labs" class="hover:text-white transition">Marketing Labs</a>
+        <a href="#photography" class="hover:text-white transition">Artistic Eye</a>
         <a href="#research" class="hover:text-white transition">Research</a>
-        <a href="#education" class="hover:text-white transition">Education</a>
+        <a href="#education" class="hover:text-white transition">Education &amp; Certs</a>
       </nav>
 
-      <a href="#contact" class="px-4 py-2 text-xs font-semibold rounded-md bg-accent text-slate-950 hover:bg-sky-400 transition shadow-sm shrink-0">
+      <a href="#contact" class="px-4 py-2 text-xs font-semibold rounded-md bg-accent text-slate-950 hover:bg-sky-400 transition shadow-sm">
         Let's Connect
       </a>
     </div>
@@ -105,11 +104,11 @@
 
   <main class="max-w-6xl mx-auto px-6 py-12 space-y-28">
 
-    <!-- Hero Section (100% Original Title & Exact Bio Restored) -->
+    <!-- Hero Section -->
     <section id="about" class="py-12 md:py-16 flex flex-col items-start gap-6">
       <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-slate-900 border border-slate-800 text-xs font-mono text-accent">
         <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
-        Immediate Availability &bull; Open to Worldwide Relocation &bull; Remote
+        Immediate Availability &bull; Remote Available
       </div>
       <h1 class="text-4xl sm:text-6xl font-extrabold tracking-tight text-white leading-tight">
         Digital Content Strategist, <br class="hidden sm:inline" />
@@ -120,15 +119,6 @@
       <p class="text-lg text-slate-300 max-w-3xl leading-relaxed">
         I operate at the convergence of data-conscious digital growth, media production, and organizational research. With a track record of driving tens of thousands of organic interactions, managing e-commerce fulfillment with 99%+ precision, and analyzing complex governance frameworks, I build platforms that turn casual engagement into sustained community and business equity.
       </p>
-
-      <!-- Competency Quick-Access Bar (Demonstrating Multi-Track Mastery) -->
-      <div class="flex flex-wrap gap-2 text-xs font-mono">
-        <span class="px-3 py-1 rounded bg-slate-900 border border-slate-800 text-sky-400">Google Analytics 4 (GA4)</span>
-        <span class="px-3 py-1 rounded bg-slate-900 border border-slate-800 text-indigo-400">Short-Form Content Pacing &amp; Hook Architecture</span>
-        <span class="px-3 py-1 rounded bg-slate-900 border border-slate-800 text-emerald-400">Strategic T&amp;D / Nitaqat Mutawar (Vision 2030)</span>
-        <span class="px-3 py-1 rounded bg-slate-900 border border-slate-800 text-amber-400">Paid Social Funnels &amp; E-Commerce CRO</span>
-      </div>
-
       <div class="flex flex-wrap gap-4 pt-2">
         <a href="#projects" class="px-6 py-3 rounded-lg bg-sky-500 hover:bg-sky-400 text-slate-950 font-semibold transition shadow-lg shadow-sky-500/20">
           View Featured Projects
@@ -142,378 +132,111 @@
       </div>
     </section>
 
-    <!-- What I Bring Section -->
-    <section id="what-i-bring" class="space-y-6">
+    <!-- Talent & Vision -->
+    <section id="talent-vision" class="space-y-8">
       <div>
-        <span class="text-xs font-mono text-accent uppercase tracking-widest">Core Capabilities</span>
-        <h2 class="text-2xl font-bold tracking-tight text-white mt-1">What I Bring</h2>
-        <p class="text-slate-400 text-sm mt-1">Key strengths across strategy, growth, storytelling, and organizational intelligence.</p>
+        <span class="text-xs font-mono text-accent uppercase tracking-widest">Recruitment &amp; Creative Endorsements</span>
+        <h2 class="text-2xl font-bold tracking-tight text-white mt-1">Endorsements &amp; Performance Reviews</h2>
+        <p class="text-slate-400 text-sm mt-1 max-w-2xl">
+          Direct evaluations from academic department chairs, HRM professors, and project leads detailing analytical capability, self-discipline, and creative execution.
+        </p>
       </div>
 
-      <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
-        <!-- Brand & Consumer -->
-        <div class="p-6 rounded-xl bg-slate-900 border border-slate-800 hover:border-slate-700 transition flex flex-col justify-between space-y-4">
-          <div class="space-y-2">
-            <span class="text-xs font-mono text-accent uppercase tracking-wider">Discipline 01</span>
-            <h3 class="text-lg font-bold text-white">Brand &amp; Consumer</h3>
-            <p class="text-xs text-slate-300 leading-relaxed">
-              Employer branding architecture, community equity building, and narrative positioning that converts casual impressions into loyal brand advocates.
-            </p>
-          </div>
-          <div class="space-y-1.5 text-xs text-slate-400 border-t border-slate-800/80 pt-3 font-mono">
-            <div>&bull; Inbound talent branding</div>
-            <div>&bull; Retention &amp; churn win-back</div>
-            <div>&bull; Audience trust &amp; community equity</div>
-          </div>
-        </div>
-
-        <!-- Digital & Growth -->
-        <div class="p-6 rounded-xl bg-slate-900 border border-slate-800 hover:border-slate-700 transition flex flex-col justify-between space-y-4">
-          <div class="space-y-2">
-            <span class="text-xs font-mono text-sky-400 uppercase tracking-wider">Discipline 02</span>
-            <h3 class="text-lg font-bold text-white">Digital &amp; Growth</h3>
-            <p class="text-xs text-slate-300 leading-relaxed">
-              Full-funnel campaign architecture, conversion rate optimization (CRO), on-page SEO content clusters, and high-precision e-commerce operations.
-            </p>
-          </div>
-          <div class="space-y-1.5 text-xs text-slate-400 border-t border-slate-800/80 pt-3 font-mono">
-            <div>&bull; GA4 &amp; GTM event taxonomy</div>
-            <div>&bull; Paid social funnels &amp; CAC optimization</div>
-            <div>&bull; 99%+ e-commerce fulfillment precision</div>
-          </div>
-        </div>
-
-        <!-- Social & Content -->
-        <div class="p-6 rounded-xl bg-slate-900 border border-slate-800 hover:border-slate-700 transition flex flex-col justify-between space-y-4">
-          <div class="space-y-2">
-            <span class="text-xs font-mono text-indigo-400 uppercase tracking-wider">Discipline 03</span>
-            <h3 class="text-lg font-bold text-white">Social &amp; Content</h3>
-            <p class="text-xs text-slate-300 leading-relaxed">
-              Algorithmic literacy, short-form hook pacing (0:00–0:02 scroll-stoppers), and editorial curation driving verified industry and artist recognition.
-            </p>
-          </div>
-          <div class="space-y-1.5 text-xs text-slate-400 border-t border-slate-800/80 pt-3 font-mono">
-            <div>&bull; 53K+ likes &amp; 71.8% non-follower reach</div>
-            <div>&bull; 25K–30K monthly organic interactions</div>
-            <div>&bull; Micro-content &amp; carousel architecture</div>
-          </div>
-        </div>
-
-        <!-- People & Research -->
-        <div class="p-6 rounded-xl bg-slate-900 border border-slate-800 hover:border-slate-700 transition flex flex-col justify-between space-y-4">
-          <div class="space-y-2">
-            <span class="text-xs font-mono text-emerald-400 uppercase tracking-wider">Discipline 04</span>
-            <h3 class="text-lg font-bold text-white">People &amp; Research</h3>
-            <p class="text-xs text-slate-300 leading-relaxed">
-              Applied organizational research, talent development strategies, and compliance frameworks aligned with Vision 2030 and Nitaqat Mutawar nationalization.
-            </p>
-          </div>
-          <div class="space-y-1.5 text-xs text-slate-400 border-t border-slate-800/80 pt-3 font-mono">
-            <div>&bull; Strategic T&amp;D frameworks</div>
-            <div>&bull; Nationalization &amp; labor compliance</div>
-            <div>&bull; Qualitative &amp; quantitative inquiry</div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Marketing Labs: 4-Part Full-Funnel Campaign Teardowns (4 Disciplines) -->
-    <section id="marketing-labs" class="space-y-8">
-      <div class="p-8 sm:p-10 rounded-2xl bg-gradient-to-br from-slate-900 via-slate-900 to-indigo-950/40 border border-slate-800 space-y-8">
-        <div>
-          <div class="inline-flex items-center gap-2 text-xs font-mono text-accent uppercase tracking-widest">
-            <span>🔬 Strategic MarTech &amp; Campaign Labs</span>
-          </div>
-          <h2 class="text-2xl font-bold tracking-tight text-white mt-1">Full-Funnel Campaign Architecture</h2>
-          <p class="text-slate-400 text-sm mt-1 max-w-3xl leading-relaxed">
-            Framed using a rigorous 4-part framework: <strong>Objective &rarr; Strategy &amp; Channels &rarr; Creative Copy &amp; Wireframes &rarr; Simulated KPIs &amp; Tracking Architecture</strong>. Demonstrates commercial execution across paid acquisition, SEO, lifecycle automation, and regional talent recruitment funnels.
-          </p>
-        </div>
-
-        <div class="grid lg:grid-cols-2 gap-6">
-
-          <!-- Campaign 1: Duolingo Paid Social Acquisition Funnel -->
-          <div class="p-6 rounded-xl bg-slate-950/80 border border-slate-800 space-y-5 flex flex-col justify-between hover:border-sky-500/50 transition">
-            <div class="space-y-4">
-              <div class="flex items-center justify-between border-b border-slate-800/80 pb-3">
-                <span class="text-accent font-mono text-xs font-semibold uppercase tracking-wider">Paid Social &amp; Acquisition</span>
-                <span class="text-[11px] font-mono text-slate-400">Meta Ads &bull; TikTok</span>
-              </div>
-              <h3 class="text-lg font-bold text-white leading-snug">Duolingo: Viral Short-Form to Paid Conversion Funnel</h3>
-              
-              <div class="space-y-3 text-xs leading-relaxed">
-                <div>
-                  <span class="font-mono text-sky-400 font-semibold uppercase tracking-wider block">1. The Objective</span>
-                  <p class="text-slate-300 mt-1">Lower Customer Acquisition Cost (CAC) for Duolingo Super subscriptions by turning viral TikTok humor into a structured, mid-funnel acquisition engine for university students preparing to study abroad.</p>
-                </div>
-
-                <div>
-                  <span class="font-mono text-sky-400 font-semibold uppercase tracking-wider block">2. Strategy &amp; Channels</span>
-                  <p class="text-slate-300 mt-1">Meta Ads (Reels 9:16 + Story placements) and TikTok Spark Ads. Audience clustering: 18–24 demographic with dual interest targeting in IELTS/TOEFL test prep, Erasmus programs, and European travel.</p>
-                </div>
-
-                <div class="p-3 rounded-lg bg-slate-900 border border-slate-800/80 space-y-2">
-                  <span class="font-mono text-emerald-400 font-semibold uppercase tracking-wider block">3. Creative Variations &amp; Ad Hooks</span>
-                  <p class="text-slate-300"><strong class="text-white">Hook A (Loss Aversion):</strong> <em>"POV: Duo notices you haven't opened Spanish in 48 hours before landing in Madrid."</em> (Fast-cut jump scare with text overlay).</p>
-                  <p class="text-slate-300"><strong class="text-white">Hook B (Social Proof):</strong> 3-slide carousel showing conversational fluency progression from Day 1 to Day 90.</p>
-                  <div class="text-[11px] text-slate-500 font-mono">CTA: "Claim Your 14-Day Free Trial &rarr;"</div>
-                </div>
-
-                <div class="p-3 rounded-lg bg-slate-900/60 border border-slate-800/60 space-y-1">
-                  <span class="font-mono text-indigo-400 font-semibold uppercase tracking-wider block">4. Tracking &amp; Simulated KPIs</span>
-                  <div class="text-slate-300 grid grid-cols-2 gap-2 pt-1 font-mono text-[11px]">
-                    <div>&bull; Benchmark CTR: <strong class="text-white">2.65%</strong></div>
-                    <div>&bull; Target CPC: <strong class="text-white">&le; $0.38</strong></div>
-                    <div>&bull; Trial Opt-In: <strong class="text-white">8.4%</strong></div>
-                    <div>&bull; Tracking: <strong class="text-white">GA4 Custom Event</strong></div>
-                  </div>
-                  <p class="text-[11px] text-slate-400 pt-1 font-mono">GTM trigger: `trial_intent_duo` firing on click with custom UTM parameter taxonomy.</p>
-                </div>
-              </div>
-            </div>
-            
-            <div class="text-[11px] text-slate-500 font-mono border-t border-slate-800/80 pt-3">
-              Core Discipline: Paid Social Architecture &bull; A/B Creative Testing &bull; CAC Compression
-            </div>
-          </div>
-
-          <!-- Campaign 2: Vision 2030 Tech Talent Employer Branding & Acquisition Funnel (HRM + Marketing Bridge) -->
-          <div class="p-6 rounded-xl bg-slate-950/80 border border-slate-800 space-y-5 flex flex-col justify-between hover:border-emerald-500/50 transition">
-            <div class="space-y-4">
-              <div class="flex items-center justify-between border-b border-slate-800/80 pb-3">
-                <span class="text-emerald-400 font-mono text-xs font-semibold uppercase tracking-wider">Employer Branding &bull; Talent Acquisition</span>
-                <span class="text-[11px] font-mono text-slate-400">LinkedIn &bull; Career Landing Hub</span>
-              </div>
-              <h3 class="text-lg font-bold text-white leading-snug">Vision 2030: Tech Talent Localization &amp; Inbound Funnel</h3>
-              
-              <div class="space-y-3 text-xs leading-relaxed">
-                <div>
-                  <span class="font-mono text-sky-400 font-semibold uppercase tracking-wider block">1. The Objective</span>
-                  <p class="text-slate-300 mt-1">Overcome high recruitment friction for specialized technical roles by replacing standard job board listings with an inbound employer branding funnel targeting bilingual Saudi national engineers under Nitaqat Mutawar guidelines.</p>
-                </div>
-
-                <div>
-                  <span class="font-mono text-sky-400 font-semibold uppercase tracking-wider block">2. Strategy &amp; Channels</span>
-                  <p class="text-slate-300 mt-1">LinkedIn Sponsored Content paired with native engineering "day-in-the-life" video micro-content. Driving traffic to an interactive, mobile-first "Graduate Engineering Rotational Program" landing portal.</p>
-                </div>
-
-                <div class="p-3 rounded-lg bg-slate-900 border border-slate-800/80 space-y-2">
-                  <span class="font-mono text-emerald-400 font-semibold uppercase tracking-wider block">3. Creative Variations &amp; Talent Hooks</span>
-                  <p class="text-slate-300"><strong class="text-white">Hook A (Mission Alignment):</strong> <em>"Build the sovereign infrastructure powering Vision 2030, not just another legacy system."</em> (Lead engineer interview with architecture previews).</p>
-                  <p class="text-slate-300"><strong class="text-white">Hook B (Career Progression):</strong> 3-step carousel showcasing fast-track laddering from Junior Associate to Technical Lead in 36 months.</p>
-                  <div class="text-[11px] text-slate-500 font-mono">CTA: "Explore Open Engineering Cohorts &rarr;"</div>
-                </div>
-
-                <div class="p-3 rounded-lg bg-slate-900/60 border border-slate-800/60 space-y-1">
-                  <span class="font-mono text-indigo-400 font-semibold uppercase tracking-wider block">4. Tracking &amp; Simulated KPIs</span>
-                  <div class="text-slate-300 grid grid-cols-2 gap-2 pt-1 font-mono text-[11px]">
-                    <div>&bull; Click-to-Apply: <strong class="text-white">18.4%</strong></div>
-                    <div>&bull; Cost Per Applicant: <strong class="text-white">-34% vs Agency</strong></div>
-                    <div>&bull; Application Completion: <strong class="text-white">82%</strong></div>
-                    <div>&bull; Tracking: <strong class="text-white">GTM Multi-Step Form</strong></div>
-                  </div>
-                  <p class="text-[11px] text-slate-400 pt-1 font-mono">Tracked drop-off stages in GA4 using multi-step form progress triggers.</p>
-                </div>
-              </div>
-            </div>
-
-            <div class="text-[11px] text-slate-500 font-mono border-t border-slate-800/80 pt-3">
-              Core Discipline: Employer Branding &bull; Strategic Recruitment Marketing &bull; Nationalization Alignment
-            </div>
-          </div>
-
-          <!-- Campaign 3: Gymshark SEO & CRO Landing Page Architecture -->
-          <div class="p-6 rounded-xl bg-slate-950/80 border border-slate-800 space-y-5 flex flex-col justify-between hover:border-sky-500/50 transition">
-            <div class="space-y-4">
-              <div class="flex items-center justify-between border-b border-slate-800/80 pb-3">
-                <span class="text-accent font-mono text-xs font-semibold uppercase tracking-wider">Search &amp; CRO Architecture</span>
-                <span class="text-[11px] font-mono text-slate-400">Organic SEO &bull; GA4</span>
-              </div>
-              <h3 class="text-lg font-bold text-white leading-snug">Gymshark: E-Commerce SEO &amp; Keyword Gap Funnel</h3>
-              
-              <div class="space-y-3 text-xs leading-relaxed">
-                <div>
-                  <span class="font-mono text-sky-400 font-semibold uppercase tracking-wider block">1. The Objective</span>
-                  <p class="text-slate-300 mt-1">Capture unbranded, high-intent transactional search traffic competing directly with Nike and Lululemon by addressing search architecture gaps on seamless compression wear category pages.</p>
-                </div>
-
-                <div>
-                  <span class="font-mono text-sky-400 font-semibold uppercase tracking-wider block">2. Strategy &amp; Channels</span>
-                  <p class="text-slate-300 mt-1">Organic Google Search (Technical On-Page SEO) coupled with high-conversion landing page restructuring. Built semantic pillar-and-cluster blog hubs linking directly to product PDPs with canonical tag discipline.</p>
-                </div>
-
-                <div class="p-3 rounded-lg bg-slate-900 border border-slate-800/80 space-y-2">
-                  <span class="font-mono text-emerald-400 font-semibold uppercase tracking-wider block">3. Content Architecture &amp; CRO Wireframe</span>
-                  <p class="text-slate-300"><strong class="text-white">Pillar Page:</strong> <em>"The Definitive Guide to Squat-Proof Seamless Compression (Fit &amp; Fabric Breakdown)."</em></p>
-                  <p class="text-slate-300"><strong class="text-white">CRO Re-architecture:</strong> Relocated fabric breathability badges above the mobile fold; embedded sticky "Quick Add to Bag" trigger upon 60% scroll depth.</p>
-                </div>
-
-                <div class="p-3 rounded-lg bg-slate-900/60 border border-slate-800/60 space-y-1">
-                  <span class="font-mono text-indigo-400 font-semibold uppercase tracking-wider block">4. Tracking &amp; Simulated KPIs</span>
-                  <div class="text-slate-300 grid grid-cols-2 gap-2 pt-1 font-mono text-[11px]">
-                    <div>&bull; Organic Lift: <strong class="text-white">+32% MoM</strong></div>
-                    <div>&bull; Bounce Rate: <strong class="text-white">&lt; 41%</strong></div>
-                    <div>&bull; PDP Add-to-Cart: <strong class="text-white">+14.2%</strong></div>
-                    <div>&bull; Funnel: <strong class="text-white">GA4 Checkout Step 1</strong></div>
-                  </div>
-                  <p class="text-[11px] text-slate-400 pt-1 font-mono">Tracked micro-conversions via GTM scroll-depth thresholds and outbound ecommerce checkout events.</p>
-                </div>
-              </div>
-            </div>
-
-            <div class="text-[11px] text-slate-500 font-mono border-t border-slate-800/80 pt-3">
-              Core Discipline: On-Page SEO &bull; Information Architecture &bull; Mobile CRO Wireframing
-            </div>
-          </div>
-
-          <!-- Campaign 4: Spotify Lifecycle Retention & Win-Back Automation -->
-          <div class="p-6 rounded-xl bg-slate-950/80 border border-slate-800 space-y-5 flex flex-col justify-between hover:border-sky-500/50 transition">
-            <div class="space-y-4">
-              <div class="flex items-center justify-between border-b border-slate-800/80 pb-3">
-                <span class="text-accent font-mono text-xs font-semibold uppercase tracking-wider">Retention &amp; Lifecycle</span>
-                <span class="text-[11px] font-mono text-slate-400">Email CRM &bull; Automation</span>
-              </div>
-              <h3 class="text-lg font-bold text-white leading-snug">Spotify: Personalized Churn Re-engagement Pipeline</h3>
-              
-              <div class="space-y-3 text-xs leading-relaxed">
-                <div>
-                  <span class="font-mono text-sky-400 font-semibold uppercase tracking-wider block">1. The Objective</span>
-                  <p class="text-slate-300 mt-1">Re-engage subscribers who canceled Spotify Premium within the past 45 days, decreasing permanent churn rate and maximizing Customer Lifetime Value (LTV) without resorting to margin-diluting discount blitzes.</p>
-                </div>
-
-                <div>
-                  <span class="font-mono text-sky-400 font-semibold uppercase tracking-wider block">2. Strategy &amp; Channels</span>
-                  <p class="text-slate-300 mt-1">Automated behavioral trigger email sequences via CRM (e.g., Klaviyo/HubSpot logic), segmented dynamically based on the subscriber's top streamed genre and favorite podcast drops during their active tenure.</p>
-                </div>
-
-                <div class="p-3 rounded-lg bg-slate-900 border border-slate-800/80 space-y-2">
-                  <span class="font-mono text-emerald-400 font-semibold uppercase tracking-wider block">3. Copy &amp; Sequence Wireframe</span>
-                  <p class="text-slate-300"><strong class="text-white">Email 1 (Day 7 - Nostalgia):</strong> <em>"Your Friday Release Radar isn't the same without you, Sohaib."</em> (Curated list of 5 new tracks from top 3 followed artists).</p>
-                  <p class="text-slate-300"><strong class="text-white">Email 2 (Day 21 - Value Reinforcement):</strong> Feature spotlight on offline downloads and lossless audio enhancements.</p>
-                </div>
-
-                <div class="p-3 rounded-lg bg-slate-900/60 border border-slate-800/60 space-y-1">
-                  <span class="font-mono text-indigo-400 font-semibold uppercase tracking-wider block">4. Tracking &amp; Simulated KPIs</span>
-                  <div class="text-slate-300 grid grid-cols-2 gap-2 pt-1 font-mono text-[11px]">
-                    <div>&bull; Open Rate: <strong class="text-white">48.2%</strong></div>
-                    <div>&bull; Win-Back CTR: <strong class="text-white">9.6%</strong></div>
-                    <div>&bull; Reactivation: <strong class="text-white">6.1%</strong></div>
-                    <div>&bull; Attribution: <strong class="text-white">UTM-Tagged Cohort</strong></div>
-                  </div>
-                  <p class="text-[11px] text-slate-400 pt-1 font-mono">UTM parameter tagging linked directly to GA4 User-ID cohort exploration reports.</p>
-                </div>
-              </div>
-            </div>
-
-            <div class="text-[11px] text-slate-500 font-mono border-t border-slate-800/80 pt-3">
-              Core Discipline: Lifecycle Automation &bull; Dynamic Segmentation &bull; LTV Protection
-            </div>
-          </div>
-
-        </div>
-
-        <!-- MarTech Stack Sub-Block -->
-        <div class="p-6 rounded-xl bg-slate-950/90 border border-slate-800 space-y-4">
-          <div class="flex items-center gap-2">
-            <span class="text-base">🛠️</span>
-            <h3 class="text-sm font-semibold uppercase tracking-wider text-slate-200">The MarTech &amp; Engineering Stack I Deploy</h3>
-          </div>
-          <div class="grid sm:grid-cols-3 gap-4 text-xs">
-            <div class="p-3.5 rounded-lg bg-slate-900 border border-slate-800/80 space-y-1">
-              <div class="text-accent font-mono font-semibold">Web &amp; Tagging Engine</div>
-              <div class="text-slate-300">HTML5 | Tailwind CSS | Google Tag Manager DataLayers | Git/GitHub Version Control</div>
-            </div>
-            <div class="p-3.5 rounded-lg bg-slate-900 border border-slate-800/80 space-y-1">
-              <div class="text-accent font-mono font-semibold">Analytics &amp; Intelligence</div>
-              <div class="text-slate-300">Google Analytics 4 (GA4) Custom Events | Google Search Console | Excel Pivot Modeling</div>
-            </div>
-            <div class="p-3.5 rounded-lg bg-slate-900 border border-slate-800/80 space-y-1">
-              <div class="text-accent font-mono font-semibold">Growth &amp; Creative Assets</div>
-              <div class="text-slate-300">Meta Ads Manager Parameter Simulation | Figma Wireframing | Canva Pro | Adobe Lightroom</div>
-            </div>
-          </div>
-        </div>
-
-      </div>
-    </section>
-
-    <!-- Social & Growth Case Studies (Verified Traction + Exact Hook Formula) -->
-    <section id="case-studies" class="space-y-6">
-      <div>
-        <span class="text-xs font-mono text-accent uppercase tracking-widest">Demonstrated Impact &amp; Creative Science</span>
-        <h2 class="text-2xl font-bold tracking-tight text-white mt-1">Audience Architecture &amp; Organic Growth</h2>
-        <p class="text-slate-400 text-sm mt-1">Proof of organic traction built through algorithm literacy, content pacing, and community loyalty.</p>
-      </div>
-
-      <div class="grid md:grid-cols-3 gap-6">
-        <!-- Case Study 1: @mehehehmwe with Hook Anatomy -->
-        <div class="p-6 rounded-xl bg-slate-900 border border-slate-800 hover:border-slate-700 transition flex flex-col justify-between">
-          <div class="space-y-4">
+      <div class="grid md:grid-cols-2 gap-6">
+        <div class="p-6 rounded-xl bg-slate-900 border border-slate-800 flex flex-col justify-between space-y-4 hover:border-slate-700 transition">
+          <div class="space-y-3">
             <div class="flex items-center justify-between">
-              <span class="text-xs font-mono text-accent">Culture &amp; Typography &bull; 2023–Present</span>
-              <span class="text-xs px-2 py-0.5 rounded bg-slate-800 text-emerald-400 font-mono">53K+ Post Likes</span>
+              <span class="px-2 py-0.5 text-[11px] rounded bg-indigo-950 text-indigo-300 border border-indigo-800 font-mono">
+                Academic &amp; Internship Leadership
+              </span>
+              <span class="text-xs font-mono text-slate-400">Aug 2025</span>
             </div>
-            <h3 class="text-lg font-semibold text-white">@mehehehmwe (Text &amp; Cultural Micro-Content)</h3>
-            <p class="text-sm text-slate-400 leading-relaxed">
-              Engineered text-first cultural content utilizing a high-contrast minimalist aesthetic. Achieved viral breakout distribution with zero paid ad budget.
+            <h3 class="text-lg font-semibold text-white">Institutional Research &amp; Human Capital Analytics</h3>
+            <p class="text-xs text-slate-300 leading-relaxed italic">
+              &quot;During his internship, his responsibilities involved academic research, course specification overview, and evaluating GCC banking board diversity, servant leadership, and HR trends... I'm affirmative he will be a great multifaceted asset to any organisation.&quot;
             </p>
-            
-            <!-- Viral Social Engineering Hook Formula -->
-            <div class="p-3 rounded-lg bg-slate-950/80 border border-slate-800/80 space-y-1.5 text-[11px] text-slate-300 font-mono">
-              <div class="text-sky-400 font-semibold uppercase">Viral Engineering Hook Formula:</div>
-              <div>&bull; <strong class="text-white">0:00–0:02:</strong> High-contrast typography scroll-stopper.</div>
-              <div>&bull; <strong class="text-white">The Loop:</strong> Relatable cultural friction designed specifically to trigger saved bookmarks &amp; comment-section discourse.</div>
-            </div>
-
-            <div class="space-y-1.5 text-xs text-slate-400 border-t border-slate-800/60 pt-3 font-mono">
-              <div>&bull; <strong class="text-slate-200">71.8%</strong> non-follower reach rate</div>
-              <div>&bull; <strong class="text-slate-200">10%&ndash;17%</strong> daily story retention rate</div>
-              <div>&bull; <strong class="text-slate-200">90%</strong> audience concentrated in 18&ndash;34 demo</div>
+          </div>
+          <div class="border-t border-slate-800/80 pt-4 space-y-2">
+            <div class="text-sm font-semibold text-white">Dr. Bassem E. Maamari</div>
+            <div class="text-xs text-slate-400">Chair, Marketing &amp; Digital Media &bull; Prince Mohammad Bin Fahd University</div>
+            <div class="flex flex-wrap gap-x-4 gap-y-1 text-xs text-accent pt-1 font-mono">
+              <a href="mailto:bmaamari@pmu.edu.sa" class="hover:underline">bmaamari@pmu.edu.sa</a>
+              <a href="tel:+966138964569" class="hover:underline">+966 13 896 4569</a>
             </div>
           </div>
         </div>
 
-        <!-- Case Study 2: @jaureguisvocals -->
-        <div class="p-6 rounded-xl bg-slate-900 border border-slate-800 hover:border-slate-700 transition flex flex-col justify-between">
-          <div class="space-y-4">
+        <div class="p-6 rounded-xl bg-slate-900 border border-slate-800 flex flex-col justify-between space-y-4 hover:border-slate-700 transition">
+          <div class="space-y-3">
             <div class="flex items-center justify-between">
-              <span class="text-xs font-mono text-accent">Catalog Strategy &bull; 2021–2025</span>
-              <span class="text-xs px-2 py-0.5 rounded bg-emerald-950 text-emerald-300 font-mono">Artist Acknowledged</span>
+              <span class="px-2 py-0.5 text-[11px] rounded bg-emerald-950 text-emerald-300 border border-emerald-800 font-mono">
+                Training &amp; Strategic Discipline
+              </span>
+              <span class="text-xs font-mono text-slate-400">Dec 2025</span>
             </div>
-            <h3 class="text-lg font-semibold text-white">@jaureguisvocals (Music Curation &amp; Archive)</h3>
-            <p class="text-sm text-slate-400 leading-relaxed">
-              Curated discography and vocal archive dedicated to Lauren Jauregui. Scaled through asset pacing, studio outtakes, and high-retention performance breakdowns.
+            <h3 class="text-lg font-semibold text-white">Analytical Performance &amp; Self-Aware Leadership</h3>
+            <p class="text-xs text-slate-300 leading-relaxed italic">
+              &quot;Exhibited exceptional self-awareness and disciplined focus... Translated heightened focus into strong analytical engagement with complex Harvard Business Review case studies. His capacity for reflection and rapid execution makes him an immediate asset.&quot;
             </p>
-            <div class="space-y-1.5 text-xs text-slate-400 border-t border-slate-800/60 pt-3 font-mono">
-              <div>&bull; Acknowledged &amp; engaged by <strong class="text-slate-200">Lauren Jauregui</strong> (Jan 2024)</div>
-              <div>&bull; <strong class="text-slate-200">25K&ndash;30K</strong> monthly organic account interactions</div>
-              <div>&bull; Highly active global discussion in comment threads</div>
+          </div>
+          <div class="border-t border-slate-800/80 pt-4 space-y-2">
+            <div class="text-sm font-semibold text-white">Dr. Sten Langmann</div>
+            <div class="text-xs text-slate-400">Assistant Professor in HRM &bull; Prince Mohammad Bin Fahd University</div>
+            <div class="flex flex-wrap gap-x-4 gap-y-1 text-xs text-accent pt-1 font-mono">
+              <a href="mailto:slangmann@pmu.edu.sa" class="hover:underline">slangmann@pmu.edu.sa</a>
+              <a href="tel:+966138964554" class="hover:underline">+966-13-896-4554</a>
             </div>
           </div>
         </div>
 
-        <!-- Case Study 3: @camilahavequestions -->
-        <div class="p-6 rounded-xl bg-slate-900 border border-slate-800 hover:border-slate-700 transition flex flex-col justify-between">
-          <div class="space-y-4">
+        <div class="p-6 rounded-xl bg-slate-900 border border-slate-800 flex flex-col justify-between space-y-4 hover:border-slate-700 transition">
+          <div class="space-y-3">
             <div class="flex items-center justify-between">
-              <span class="text-xs font-mono text-accent">Digital Journalism &bull; 2017–2020</span>
-              <span class="text-xs px-2 py-0.5 rounded bg-emerald-950 text-emerald-300 font-mono">Industry Recognized</span>
+              <span class="px-2 py-0.5 text-[11px] rounded bg-sky-950 text-sky-300 border border-sky-800 font-mono">
+                Marketing &amp; Creative Strategy
+              </span>
+              <span class="text-xs font-mono text-slate-400">Dec 2025</span>
             </div>
-            <h3 class="text-lg font-semibold text-white">@camilahavequestions (Editorial Updates)</h3>
-            <p class="text-sm text-slate-400 leading-relaxed">
-              High-frequency digital publication tracking international album cycles, press appearances, and live rollouts across global time zones.
+            <h3 class="text-lg font-semibold text-white">Marketing Innovation &amp; Problem Solving</h3>
+            <p class="text-xs text-slate-300 leading-relaxed italic">
+              &quot;Possesses remarkable creativity, initiative, and refined interpersonal communication skills. Highly adept at bridging academic theory with practical industry challenges, translating core concepts into actionable solutions.&quot;
             </p>
-            <div class="space-y-1.5 text-xs text-slate-400 border-t border-slate-800/60 pt-3 font-mono">
-              <div>&bull; Verified recognition from <strong class="text-slate-200">Camila Cabello</strong> &amp; team</div>
-              <div>&bull; Acknowledged by veteran manager <strong class="text-slate-200">Roger Gold</strong></div>
-              <div>&bull; Sustained <strong class="text-slate-200">12K&ndash;25K</strong> monthly multi-year interactions</div>
+          </div>
+          <div class="border-t border-slate-800/80 pt-4 space-y-2">
+            <div class="text-sm font-semibold text-white">Dr. Emad Tariq, PhD, FHEA, FCIM</div>
+            <div class="text-xs text-slate-400">Assistant Professor &amp; Chair of Teaching Innovation Committee &bull; PMU</div>
+            <div class="flex flex-wrap gap-x-4 gap-y-1 text-xs text-accent pt-1 font-mono">
+              <a href="mailto:etariq@pmu.edu.sa" class="hover:underline">etariq@pmu.edu.sa</a>
+              <a href="tel:+966138494302" class="hover:underline">+966-13-849-4302</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="p-6 rounded-xl bg-slate-900 border border-slate-800 flex flex-col justify-between space-y-4 hover:border-slate-700 transition">
+          <div class="space-y-3">
+            <div class="flex items-center justify-between">
+              <span class="px-2 py-0.5 text-[11px] rounded bg-amber-950 text-amber-300 border border-amber-800 font-mono">
+                Media Production &amp; Videography
+              </span>
+              <span class="text-xs font-mono text-slate-400">May 2026</span>
+            </div>
+            <h3 class="text-lg font-semibold text-white">Technical Direction &amp; On-Set Execution</h3>
+            <p class="text-xs text-slate-300 leading-relaxed italic">
+              &quot;Possesses the rare combination of technical know-how and artistic instinct. Filming in a busy facility required unique spatial awareness and adaptability, all handled flawlessly to deliver crisp, high-energy footage.&quot;
+            </p>
+          </div>
+          <div class="border-t border-slate-800/80 pt-4 space-y-2">
+            <div class="text-sm font-semibold text-white">Abdoul-Haye Oumar Moussa Sanankoua</div>
+            <div class="text-xs text-slate-400">MS Graduate, Department of Electrical Engineering &bull; KFUPM</div>
+            <div class="flex flex-wrap gap-x-4 gap-y-1 text-xs text-accent pt-1 font-mono">
+              <a href="tel:+966562478937" class="hover:underline">+966 56 247 8937</a>
             </div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- Interactive Tailored Resumes Section -->
+    <!-- Tailored Resumes Section -->
     <section id="cv-downloads" class="space-y-6">
       <div>
         <span class="text-xs font-mono text-accent uppercase tracking-widest">Industry Profiles</span>
@@ -543,13 +266,13 @@
         <div class="p-6 rounded-xl bg-slate-900 border border-slate-800 flex flex-col justify-between hover:border-slate-700 transition">
           <div class="space-y-3">
             <span class="px-2 py-0.5 text-[11px] rounded bg-slate-800 text-sky-400 font-mono">Growth &amp; CRO</span>
-            <h3 class="text-lg font-semibold text-white">Digital Strategy &amp; Marketing CV</h3>
+            <h3 class="text-lg font-semibold text-white">Digital Growth &amp; Marketing Strategy CV</h3>
             <p class="text-sm text-slate-400 leading-relaxed">
-              Tailored for full-funnel acquisition, paid social testing, GA4 analytics tracking, and retention workflows.
+              Focuses on customer journey mapping, brand equity, conversion rate optimization, and D2C commerce retention.
             </p>
           </div>
           <div class="mt-6 pt-4 border-t border-slate-800 flex items-center justify-between text-xs">
-            <span class="text-slate-500">Growth / Performance</span>
+            <span class="text-slate-500">Growth / Digital Strategist</span>
             <button onclick="openCvModal('cv2')" class="text-accent font-semibold hover:underline flex items-center gap-1">
               Access CV Profile &rarr;
             </button>
@@ -559,14 +282,14 @@
         <!-- CV 3 Card -->
         <div class="p-6 rounded-xl bg-slate-900 border border-slate-800 flex flex-col justify-between hover:border-slate-700 transition">
           <div class="space-y-3">
-            <span class="px-2 py-0.5 text-[11px] rounded bg-slate-800 text-emerald-400 font-mono">Governance &amp; Operations</span>
-            <h3 class="text-lg font-semibold text-white">Research &amp; Human Capital Strategy CV</h3>
+            <span class="px-2 py-0.5 text-[11px] rounded bg-slate-800 text-sky-400 font-mono">Talent &amp; Operations</span>
+            <h3 class="text-lg font-semibold text-white">People Operations &amp; HR Management CV</h3>
             <p class="text-sm text-slate-400 leading-relaxed">
-              Tailored for talent development, nationalization frameworks (Nitaqat Mutawar), and policy analysis.
+              Covers candidate onboarding lifecycles, structured HR data modeling in Excel, and regulatory policy alignment.
             </p>
           </div>
           <div class="mt-6 pt-4 border-t border-slate-800 flex items-center justify-between text-xs">
-            <span class="text-slate-500">Researcher / Analyst</span>
+            <span class="text-slate-500">People Ops / HR Associate</span>
             <button onclick="openCvModal('cv3')" class="text-accent font-semibold hover:underline flex items-center gap-1">
               Access CV Profile &rarr;
             </button>
@@ -575,324 +298,840 @@
       </div>
     </section>
 
-    <!-- Talent & Vision Endorsements Section -->
-    <section id="talent-vision" class="space-y-6">
+    <!-- Social & Growth Case Studies -->
+    <section id="case-studies" class="space-y-6">
       <div>
-        <span class="text-xs font-mono text-accent uppercase tracking-widest">Industry Endorsements</span>
-        <h2 class="text-2xl font-bold tracking-tight text-white mt-1">Verified Recognition &amp; Testimonials</h2>
-        <p class="text-slate-400 text-sm mt-1">Direct feedback from music managers, recording artists, and organizational mentors.</p>
+        <span class="text-xs font-mono text-accent uppercase tracking-widest">Demonstrated Impact</span>
+        <h2 class="text-2xl font-bold tracking-tight text-white mt-1">Audience Architecture &amp; Growth Case Studies</h2>
+        <p class="text-slate-400 text-sm mt-1">Proof of organic traction built through algorithm literacy, content curation, and community loyalty.</p>
+      </div>
+
+      <div class="grid md:grid-cols-3 gap-6">
+        <div class="p-6 rounded-xl bg-slate-900 border border-slate-800 hover:border-slate-700 transition flex flex-col justify-between">
+          <div class="space-y-4">
+            <div class="flex items-center justify-between">
+              <span class="text-xs font-mono text-accent">Culture &amp; Typography &bull; 2023–Present</span>
+              <span class="text-xs px-2 py-0.5 rounded bg-slate-800 text-emerald-400 font-mono">53K+ Post Likes</span>
+            </div>
+            <h3 class="text-lg font-semibold text-white">@mehehehmwe (Text &amp; Cultural Micro-Content)</h3>
+            <p class="text-sm text-slate-400 leading-relaxed">
+              Engineered text-first cultural content utilizing a high-contrast minimalist aesthetic. Achieved viral breakout distribution with zero paid ad budget.
+            </p>
+            <div class="space-y-1.5 text-xs text-slate-400 border-t border-slate-800/60 pt-3">
+              <div>&bull; <strong class="text-slate-200">71.8%</strong> non-follower reach rate</div>
+              <div>&bull; <strong class="text-slate-200">10%&ndash;17%</strong> daily story retention rate</div>
+              <div>&bull; <strong class="text-slate-200">90%</strong> audience concentrated in 18&ndash;34 demo</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="p-6 rounded-xl bg-slate-900 border border-slate-800 hover:border-slate-700 transition flex flex-col justify-between">
+          <div class="space-y-4">
+            <div class="flex items-center justify-between">
+              <span class="text-xs font-mono text-accent">Catalog Strategy &bull; 2021–2025</span>
+              <span class="text-xs px-2 py-0.5 rounded bg-emerald-950 text-emerald-300 font-mono">Artist Acknowledged</span>
+            </div>
+            <h3 class="text-lg font-semibold text-white">@jaureguisvocals (Music Curation &amp; Archive)</h3>
+            <p class="text-sm text-slate-400 leading-relaxed">
+              Curated discography and vocal archive dedicated to Lauren Jauregui. Scaled through asset pacing, studio outtakes, and high-retention performance breakdowns.
+            </p>
+            <div class="space-y-1.5 text-xs text-slate-400 border-t border-slate-800/60 pt-3">
+              <div>&bull; Directly acknowledged &amp; engaged by <strong class="text-slate-200">Lauren Jauregui</strong> (Jan 2024)</div>
+              <div>&bull; <strong class="text-slate-200">25K&ndash;30K</strong> monthly organic account interactions</div>
+              <div>&bull; Highly active global discussion in comment threads</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="p-6 rounded-xl bg-slate-900 border border-slate-800 hover:border-slate-700 transition flex flex-col justify-between">
+          <div class="space-y-4">
+            <div class="flex items-center justify-between">
+              <span class="text-xs font-mono text-accent">Digital Journalism &bull; 2017–2020</span>
+              <span class="text-xs px-2 py-0.5 rounded bg-emerald-950 text-emerald-300 font-mono">Industry Recognized</span>
+            </div>
+            <h3 class="text-lg font-semibold text-white">@camilahavequestions (Editorial Updates)</h3>
+            <p class="text-sm text-slate-400 leading-relaxed">
+              High-frequency digital publication tracking international album cycles, press appearances, and live rollouts across global time zones.
+            </p>
+            <div class="space-y-1.5 text-xs text-slate-400 border-t border-slate-800/60 pt-3">
+              <div>&bull; Verified recognition from <strong class="text-slate-200">Camila Cabello</strong> &amp; management</div>
+              <div>&bull; Acknowledged by veteran manager <strong class="text-slate-200">Roger Gold</strong></div>
+              <div>&bull; Sustained <strong class="text-slate-200">12K&ndash;25K</strong> monthly multi-year interactions</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Strategic Projects & Simulations Section -->
+    <section id="projects" class="space-y-8">
+      <div>
+        <span class="text-xs font-mono text-accent uppercase tracking-widest">Enterprise &amp; Strategy</span>
+        <h2 class="text-2xl font-bold tracking-tight text-white mt-1">Featured Strategic Projects</h2>
+        <p class="text-slate-400 text-sm mt-1 max-w-2xl">
+          End-to-end business strategy execution, financial modeling, and higher-education curricular architecture.
+        </p>
       </div>
 
       <div class="grid md:grid-cols-2 gap-6">
-        <div class="p-6 rounded-xl bg-slate-900 border border-slate-800 space-y-4">
-          <div class="flex items-center gap-3">
-            <div class="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center font-bold text-accent">RG</div>
-            <div>
-              <div class="font-bold text-white text-sm">Roger Gold</div>
-              <div class="text-xs text-slate-400">Founder &amp; Veteran Artist Manager</div>
+        <div class="p-6 rounded-xl bg-slate-900 border border-slate-800 space-y-4 flex flex-col justify-between hover:border-slate-700 transition">
+          <div class="space-y-3">
+            <div class="flex items-center justify-between">
+              <span class="px-2 py-0.5 text-[11px] rounded bg-indigo-950 text-indigo-300 border border-indigo-800 font-mono">
+                Team Ferris &bull; 8 Full Rounds
+              </span>
+              <span class="text-xs px-2 py-0.5 rounded bg-emerald-950 text-emerald-300 font-mono">Solo Operator</span>
             </div>
+            <h3 class="text-lg font-semibold text-white">Capsim Business Strategy Simulation</h3>
+            <p class="text-xs text-slate-300 leading-relaxed">
+              Operated as the sole decision-maker for Team Ferris, managing the complete enterprise across all 8 fiscal simulation rounds. While peers had full-time employment commitments limiting participation, I stepped in to steer the entire organization independently—deepening practical mastery across cross-functional leadership, financial forecasting, and operational agility.
+            </p>
           </div>
-          <p class="text-sm text-slate-300 italic leading-relaxed">
-            "Recognized the high editorial standard, speed, and precision in tracking global music rollouts and live appearances across multiple territories."
-          </p>
+
+          <div class="space-y-2 text-xs text-slate-400 border-t border-slate-800/80 pt-3">
+            <div>&bull; <strong class="text-slate-200">R&amp;D &amp; Marketing:</strong> Engineered sensor positioning across size, performance, and MTBF reliability metrics; aligned pricing curves and promo budgets to capture high market share.</div>
+            <div>&bull; <strong class="text-slate-200">Production &amp; TQM:</strong> Governed second shifts, ramped plant automation to compress unit labor costs, and balanced production capacity precisely against demand forecasts.</div>
+            <div>&bull; <strong class="text-slate-200">Corporate Finance:</strong> Structured capital allocation via long-term debt and equity issuances, protected positive cash flow, and completely avoided emergency loans across all 8 rounds.</div>
+            <div>&bull; <strong class="text-slate-200">Reporting &amp; Analysis:</strong> Evaluated annual Capsim Courier market debriefs, prepared strategic peer presentations, and delivered executive board reviews.</div>
+          </div>
         </div>
 
-        <div class="p-6 rounded-xl bg-slate-900 border border-slate-800 space-y-4">
-          <div class="flex items-center gap-3">
-            <div class="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center font-bold text-accent">LJ</div>
-            <div>
-              <div class="font-bold text-white text-sm">Lauren Jauregui</div>
-              <div class="text-xs text-slate-400">Singer &amp; Songwriter</div>
+        <div class="p-6 rounded-xl bg-slate-900 border border-slate-800 space-y-4 flex flex-col justify-between hover:border-slate-700 transition">
+          <div class="space-y-3">
+            <div class="flex items-center justify-between">
+              <span class="px-2 py-0.5 text-[11px] rounded bg-sky-950 text-sky-300 border border-sky-800 font-mono">
+                Academic Curriculum Architecture
+              </span>
+              <span class="text-xs font-mono text-slate-400">38 Credit Hours</span>
             </div>
+            <h3 class="text-lg font-semibold text-white">PMU MS in Finance &amp; Compliance Program Design</h3>
+            <p class="text-xs text-slate-300 leading-relaxed">
+              Spearheaded the development of a comprehensive, 4-semester graduate degree framework for Prince Mohammad Bin Fahd University (PMU), synthesizing elite academic benchmarks from UCLA (MFE), Emory University (MSF), University of the Pacific (MSF), and George Washington University (MSFC).
+            </p>
           </div>
-          <p class="text-sm text-slate-300 italic leading-relaxed">
-            "Direct artist engagement and acknowledgment of vocal catalog preservation, studio outtakes analysis, and community engagement."
-          </p>
+
+          <div class="space-y-2 text-xs text-slate-400 border-t border-slate-800/80 pt-3">
+            <div>&bull; <strong class="text-slate-200">Quantitative Core:</strong> Embedded high-rigor foundations including Financial Econometrics, Stochastic Calculus, and computational modeling with Python.</div>
+            <div>&bull; <strong class="text-slate-200">Compliance &amp; Governance:</strong> Engineered dedicated courses in AML/CFT, cybersecurity risk governance, international commercial arbitration, and corporate fraud mitigation.</div>
+            <div>&bull; <strong class="text-slate-200">FinTech &amp; Machine Learning:</strong> Integrated forward-looking coursework covering distributed ledgers/blockchain, digital assets, and predictive AI applications in finance.</div>
+            <div>&bull; <strong class="text-slate-200">Applied Synthesis:</strong> Mapped coursework to CFA Institute Candidate Body of Knowledge standards and established a 4-credit applied thesis/industry capstone.</div>
+          </div>
         </div>
       </div>
     </section>
 
-    <!-- Featured Projects Section -->
-    <section id="projects" class="space-y-6">
+    <!-- Marketing Labs Section -->
+    <section id="marketing-labs" class="space-y-8">
+      <div class="p-8 sm:p-10 rounded-2xl bg-gradient-to-br from-slate-900 via-slate-900 to-indigo-950/40 border border-slate-800 space-y-8">
+        <div>
+          <span class="text-xs font-mono text-accent uppercase tracking-widest">🔬 Digital Marketing Lab &amp; Creative Ventures</span>
+          <h2 class="text-2xl font-bold tracking-tight text-white mt-1">Marketing Labs</h2>
+          <p class="text-slate-400 text-sm mt-1 max-w-3xl leading-relaxed">
+            This section serves as my strategic sandbox—where I apply data-driven marketing frameworks to analyze, critique, and optimize the digital presence of real-world brands.
+          </p>
+        </div>
+
+        <div class="grid sm:grid-cols-3 gap-6">
+          <div class="p-5 rounded-xl bg-slate-950/70 border border-slate-800/80 space-y-3 flex flex-col justify-between hover:border-slate-700 transition">
+            <div class="space-y-2">
+              <div class="text-accent font-mono text-xs font-semibold">Brand Teardown &bull; Paid Social</div>
+              <h3 class="text-base font-semibold text-white">Duolingo: Gen-Z Content Strategy &amp; Meta Ad Model</h3>
+              <p class="text-xs text-slate-400 leading-relaxed">
+                <strong class="text-slate-300">Objective:</strong> Analyzed Duolingo&rsquo;s organic TikTok presence to reverse-engineer their viral short-form video hooks for a speculative Meta Ads acquisition campaign.
+              </p>
+              <p class="text-xs text-slate-400 leading-relaxed">
+                <strong class="text-slate-300">Execution:</strong> Designed a mock paid media funnel, scripted 3 high-retention video ad concepts, and mapped out a targeting matrix using Meta Ads Manager parameters.
+              </p>
+            </div>
+            <div class="text-[11px] text-slate-500 font-mono border-t border-slate-800/80 pt-3">
+              <strong class="text-slate-300 font-normal">Core Focus:</strong> Paid social architecture, creative ad copywriting, and conversion-focused performance metrics (CTR, CPA).
+            </div>
+          </div>
+
+          <div class="p-5 rounded-xl bg-slate-950/70 border border-slate-800/80 space-y-3 flex flex-col justify-between hover:border-slate-700 transition">
+            <div class="space-y-2">
+              <div class="text-accent font-mono text-xs font-semibold">Search Architecture &bull; CRO</div>
+              <h3 class="text-base font-semibold text-white">Gymshark: E-Commerce SEO &amp; Keyword Gap Analysis</h3>
+              <p class="text-xs text-slate-400 leading-relaxed">
+                <strong class="text-slate-300">Objective:</strong> Conducted an independent organic search audit on Gymshark&rsquo;s high-intent product landing pages to identify untapped search volume.
+              </p>
+              <p class="text-xs text-slate-400 leading-relaxed">
+                <strong class="text-slate-300">Execution:</strong> Performed a speculative keyword gap analysis against top competitors, mapping out an optimized blog content cluster and updated meta tags.
+              </p>
+            </div>
+            <div class="text-[11px] text-slate-500 font-mono border-t border-slate-800/80 pt-3">
+              <strong class="text-slate-300 font-normal">Core Focus:</strong> On-page SEO optimization, search intent categorization, and Google Analytics (GA4) conversion funnel tracking.
+            </div>
+          </div>
+
+          <div class="p-5 rounded-xl bg-slate-950/70 border border-slate-800/80 space-y-3 flex flex-col justify-between hover:border-slate-700 transition">
+            <div class="space-y-2">
+              <div class="text-accent font-mono text-xs font-semibold">Lifecycle Retention &bull; Automation</div>
+              <h3 class="text-base font-semibold text-white">Spotify: Personalized Email Retention Campaign</h3>
+              <p class="text-xs text-slate-400 leading-relaxed">
+                <strong class="text-slate-300">Objective:</strong> Developed a speculative, lifecycle email marketing sequence designed to re-engage lapsed Spotify Premium subscribers.
+              </p>
+              <p class="text-xs text-slate-400 leading-relaxed">
+                <strong class="text-slate-300">Execution:</strong> Wireframed a 3-part automated email nurture stream using user behavior triggers and crafted personalized, benefit-driven email copy.
+              </p>
+            </div>
+            <div class="text-[11px] text-slate-500 font-mono border-t border-slate-800/80 pt-3">
+              <strong class="text-slate-300 font-normal">Core Focus:</strong> Lifecycle marketing automation, audience segmentation, and subscriber retention analytics (Open Rates, CTR).
+            </div>
+          </div>
+        </div>
+
+        <div class="p-6 rounded-xl bg-slate-950/90 border border-slate-800 space-y-4">
+          <div class="flex items-center gap-2">
+            <span class="text-base">🛠️</span>
+            <h3 class="text-sm font-semibold uppercase tracking-wider text-slate-200">The Tech &amp; Marketing Stack I'm Testing</h3>
+          </div>
+          <div class="grid sm:grid-cols-3 gap-4 text-xs">
+            <div class="p-3.5 rounded-lg bg-slate-900 border border-slate-800/80 space-y-1">
+              <div class="text-accent font-mono font-semibold">Design &amp; Copy</div>
+              <div class="text-slate-300">Canva | Figma | AI-Prompt Engineering</div>
+            </div>
+            <div class="p-3.5 rounded-lg bg-slate-900 border border-slate-800/80 space-y-1">
+              <div class="text-accent font-mono font-semibold">Analytics &amp; Search</div>
+              <div class="text-slate-300">GA4 Blueprinting | SEO Keyword Mapping | Google Search Console Logic</div>
+            </div>
+            <div class="p-3.5 rounded-lg bg-slate-900 border border-slate-800/80 space-y-1">
+              <div class="text-accent font-mono font-semibold">Paid Media</div>
+              <div class="text-slate-300">Meta Ads Manager Simulation | Budget Allocation Modeling</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Visual Direction: Artistic Eye Section -->
+    <section id="photography" class="space-y-8">
       <div>
-        <span class="text-xs font-mono text-accent uppercase tracking-widest">Selected Works</span>
-        <h2 class="text-2xl font-bold tracking-tight text-white mt-1">Featured Projects &amp; Digital Ventures</h2>
-        <p class="text-slate-400 text-sm mt-1">Commercial e-commerce operations, digital curation, and content systems.</p>
+        <span class="text-xs font-mono text-accent uppercase tracking-widest">Visual Direction &amp; Aesthetic Lens</span>
+        <h2 class="text-2xl font-bold tracking-tight text-white mt-1">Artistic Eye &amp; Photographic Studies</h2>
+        <p class="text-slate-400 text-sm mt-1 max-w-2xl">
+          Visual storytelling across intentional camera bodies and curated color processing—balancing Y2K nostalgia against cinematic euphoric realism.
+        </p>
       </div>
 
       <div class="grid md:grid-cols-2 gap-6">
-        <div class="p-6 rounded-xl bg-slate-900 border border-slate-800 space-y-4">
-          <div class="flex items-center justify-between">
-            <span class="text-xs font-mono text-accent">E-Commerce &bull; Operations</span>
-            <span class="text-xs px-2 py-0.5 rounded bg-slate-800 text-sky-400 font-mono">99%+ Accuracy</span>
+        <div class="p-6 rounded-xl bg-slate-900 border border-slate-800 space-y-4 flex flex-col justify-between">
+          <div class="space-y-3">
+            <div class="flex items-center justify-between">
+              <span class="px-2 py-0.5 text-[11px] rounded bg-amber-950 text-amber-300 border border-amber-800 font-mono">
+                Kodak Pixpro C1 &bull; Y2K Digital Grain
+              </span>
+              <span class="text-xs font-mono text-slate-400">Coffeehouse Culture</span>
+            </div>
+            <div class="group relative aspect-video overflow-hidden rounded-lg bg-slate-950 border border-slate-800/80">
+              <img 
+                src="https://images.unsplash.com/photo-1501339847302-ac426a4a7cbb?auto=format&fit=crop&w=1200&q=80" 
+                alt="Moody aesthetic coffee shop capturing 2000s digicam warmth" 
+                class="w-full h-full object-cover group-hover:scale-105 transition duration-500"
+              />
+            </div>
+            <h3 class="text-lg font-semibold text-white">Ditching Commercial Gloss for Y2K Nostalgia</h3>
+            <p class="text-xs text-slate-400 leading-relaxed">
+              Modern spaces often default to sterile, hyper-commercialized studio photography. Using the <strong>Kodak Pixpro C1</strong>, I deliberately step away from pristine perfection to capture raw atmosphere, halogen glow, and organic café chatter. The early-2000s sensor rendering brings an unvarnished digital grain and nostalgic intimacy that restores authentic human warmth to public social houses.
+            </p>
           </div>
-          <h3 class="text-xl font-bold text-white">Direct-to-Consumer Order Fulfillment &amp; Operations</h3>
+          <div class="text-[11px] text-slate-500 font-mono border-t border-slate-800/80 pt-3">
+            Gear: Kodak Pixpro C1 &bull; In-Camera CCD Color Tone &bull; Unstaged Ambient Light
+          </div>
+        </div>
+
+        <div class="p-6 rounded-xl bg-slate-900 border border-slate-800 space-y-4 flex flex-col justify-between">
+          <div class="space-y-3">
+            <div class="flex items-center justify-between">
+              <span class="px-2 py-0.5 text-[11px] rounded bg-emerald-950 text-emerald-300 border border-emerald-800 font-mono">
+                Canon M6 &bull; Lightroom &amp; Liit Color Grading
+              </span>
+              <span class="text-xs font-mono text-slate-400">Atmospheric Nature</span>
+            </div>
+            <div class="group relative aspect-video overflow-hidden rounded-lg bg-slate-950 border border-slate-800/80">
+              <img 
+                src="https://images.unsplash.com/photo-1470246973918-29a93221c455?auto=format&fit=crop&w=1200&q=80" 
+                alt="Euphoric misty nature landscape color graded for emotional depth" 
+                class="w-full h-full object-cover group-hover:scale-105 transition duration-500"
+              />
+            </div>
+            <h3 class="text-lg font-semibold text-white">Translating Nature into Emotional Euphoria</h3>
+            <p class="text-xs text-slate-400 leading-relaxed">
+              Shooting landscapes with the <strong>Canon M6</strong> serves as the raw foundation for extensive mood grading. By pushing and pulling tonal curves through <strong>Adobe Lightroom</strong> and <strong>Liit</strong>, I sculpt highlights, lift deep mist shadows, and tune greens and golds into an ethereal palette. The objective isn't clinical botanical documentation, but capturing the pure emotional resonance of euphoria.
+            </p>
+          </div>
+          <div class="text-[11px] text-slate-500 font-mono border-t border-slate-800/80 pt-3">
+            Gear: Canon EOS M6 &bull; RAW Workflow &bull; Adobe Lightroom &amp; Liit Curve Sculpting
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Strategic Applied Research Section -->
+    <section id="research" class="space-y-8">
+      <div>
+        <span class="text-xs font-mono text-accent uppercase tracking-widest">Academic &amp; Organizational Rigor</span>
+        <h2 class="text-2xl font-bold tracking-tight text-white mt-1">Strategic Research &amp; Governance Analyses</h2>
+        <p class="text-slate-400 text-sm mt-1">
+          Bridging empirical research frameworks with practical corporate decision-making and ethical technology integration.
+        </p>
+      </div>
+
+      <div class="grid md:grid-cols-2 gap-6">
+        <div class="p-6 rounded-xl bg-slate-900 border border-slate-800 space-y-4 flex flex-col justify-between">
+          <div class="space-y-2">
+            <span class="px-2 py-0.5 text-[11px] rounded bg-slate-800 text-sky-400 font-mono">Corporate Governance &amp; AI Ethics</span>
+            <h3 class="text-lg font-semibold text-white">Board Diversity &amp; Emerging Tech Governance in GCC Banking</h3>
+            <p class="text-sm text-slate-400 leading-relaxed">
+              Investigated the direct relationship between boardroom composition (demographic, cognitive, and geographic diversity) and firm value within the GCC financial sector, balancing strategic perspective gains against communication friction.
+            </p>
+          </div>
+          <div class="space-y-2 text-xs text-slate-400 border-t border-slate-800/80 pt-3">
+            <div>&bull; <strong class="text-slate-200">Theoretical Models:</strong> Applied Agency Theory, Resource Dependence Theory, and Faultline Theory to diagnose board cohesion.</div>
+            <div>&bull; <strong class="text-slate-200">Responsible AI Integration:</strong> Analyzed corporate governance hurdles in adopting machine learning, focusing on mitigating algorithmic bias and ensuring ethical data oversight.</div>
+          </div>
+        </div>
+
+        <div class="p-6 rounded-xl bg-slate-900 border border-slate-800 space-y-4 flex flex-col justify-between">
+          <div class="space-y-2">
+            <span class="px-2 py-0.5 text-[11px] rounded bg-slate-800 text-sky-400 font-mono">People Operations &amp; Culture</span>
+            <h3 class="text-lg font-semibold text-white">Servant Leadership, Psychological Safety &amp; Human Capital</h3>
+            <p class="text-sm text-slate-400 leading-relaxed">
+              Explored how human-centric leadership models dismantle rigid corporate power hierarchies, mitigate subtle workplace discrimination, and accelerate the transition of early-career professionals into collaborative organizations.
+            </p>
+          </div>
+          <div class="space-y-2 text-xs text-slate-400 border-t border-slate-800/80 pt-3">
+            <div>&bull; <strong class="text-slate-200">Behavioral Dynamics:</strong> Evaluated emotional intelligence and psychological safety frameworks to measure their direct effect on employee innovation and trust.</div>
+            <div>&bull; <strong class="text-slate-200">Actionable DEI Frameworks:</strong> Formulated structured mentorship programs and equitable task delegation models to support underrepresented talent.</div>
+          </div>
+        </div>
+
+        <div class="p-6 rounded-xl bg-slate-900 border border-slate-800 space-y-4 flex flex-col justify-between">
+          <div class="space-y-2">
+            <span class="px-2 py-0.5 text-[11px] rounded bg-slate-800 text-sky-400 font-mono">Market Dynamics &amp; Information Strategy</span>
+            <h3 class="text-lg font-semibold text-white">Information Architecture &amp; Supply Chain Analytics (Walmart Case Analysis)</h3>
+            <p class="text-sm text-slate-400 leading-relaxed">
+              Analyzed how large-scale enterprise retailers establish sustainable competitive advantages by actively assessing the nature and extent of their organizational data needs.
+            </p>
+          </div>
+          <div class="space-y-2 text-xs text-slate-400 border-t border-slate-800/80 pt-3">
+            <div>&bull; <strong class="text-slate-200">Supply Optimization:</strong> Evaluated economies of scale, automated inventory pipelines, and algorithm-driven dynamic pricing models.</div>
+            <div>&bull; <strong class="text-slate-200">Market Pressures:</strong> Assessed adaptation strategies required to respond to shifting consumer demands for supply-chain transparency and ethical sustainability.</div>
+          </div>
+        </div>
+
+        <div class="p-6 rounded-xl bg-slate-900 border border-slate-800 space-y-4 flex flex-col justify-between">
+          <div class="space-y-2">
+            <span class="px-2 py-0.5 text-[11px] rounded bg-slate-800 text-sky-400 font-mono">Media Theory &amp; Audience Psychology</span>
+            <h3 class="text-lg font-semibold text-white">Media Evolution, Algorithmic Consumption &amp; Cultural Identity</h3>
+            <p class="text-sm text-slate-400 leading-relaxed">
+              Synthesized critical media theories (including Adorno's culture industry critique) to analyze how mass media consumption, digital formatting, and film representation shape generational attitudes and cultural values.
+            </p>
+          </div>
+          <div class="space-y-2 text-xs text-slate-400 border-t border-slate-800/80 pt-3">
+            <div>&bull; <strong class="text-slate-200">Cognitive Impact:</strong> Examined the psychological correlation between continuous micro-content consumption, attention fragmentation, and cognitive fatigue.</div>
+            <div>&bull; <strong class="text-slate-200">Representation Analysis:</strong> Assessed how mainstream entertainment formats perpetuate cultural misrepresentation, highlighting the need for authentic grassroots digital media.</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Commercial & People Operations -->
+    <section id="operations" class="space-y-6">
+      <div>
+        <span class="text-xs font-mono text-accent uppercase tracking-widest">Execution &amp; Systems</span>
+        <h2 class="text-2xl font-bold tracking-tight text-white mt-1">Commercial Operations &amp; People Analytics</h2>
+      </div>
+
+      <div class="grid md:grid-cols-2 gap-6">
+        <div class="p-6 rounded-xl bg-slate-900 border border-slate-800 space-y-3">
+          <div class="flex justify-between items-start">
+            <div>
+              <h3 class="text-lg font-semibold text-white">Commercial &amp; Operations Lead</h3>
+              <p class="text-xs text-slate-400">Independent D2C Food Venture &bull; Oct 2020 &ndash; Present</p>
+            </div>
+            <span class="px-2 py-0.5 text-xs rounded bg-slate-800 text-emerald-400 font-mono">99%+ Fulfillment</span>
+          </div>
           <p class="text-sm text-slate-400 leading-relaxed">
-            Coordinated end-to-end e-commerce logistics, inventory tracking, customer communication pipelines, and checkout optimization with sustained 99%+ order fulfillment accuracy.
+            Directed end-to-end commercial operations, unit-margin pricing models, and ingredient supply chains while operating responsive digital communication funnels that drove high repeat customer retention.
           </p>
         </div>
 
-        <div class="p-6 rounded-xl bg-slate-900 border border-slate-800 space-y-4">
-          <div class="flex items-center justify-between">
-            <span class="text-xs font-mono text-accent">Content Systems &bull; Video Editing</span>
-            <span class="text-xs px-2 py-0.5 rounded bg-slate-800 text-sky-400 font-mono">Adobe Creative Suite</span>
+        <div class="p-6 rounded-xl bg-slate-900 border border-slate-800 space-y-3">
+          <div class="flex justify-between items-start">
+            <div>
+              <h3 class="text-lg font-semibold text-white">HR Operations &amp; Academic Data Intern</h3>
+              <p class="text-xs text-slate-400">College of Business Administration &bull; Jun 2025 &ndash; Aug 2025</p>
+            </div>
+            <span class="px-2 py-0.5 text-xs rounded bg-slate-800 text-sky-400 font-mono">Data &amp; Compliance</span>
           </div>
-          <h3 class="text-xl font-bold text-white">Short-Form Content Production Pipeline</h3>
           <p class="text-sm text-slate-400 leading-relaxed">
-            Developed scalable short-form video and typography production frameworks using Adobe Lightroom, Premiere, and Canva Pro—optimizing hooks for retention and high-velocity discovery.
+            Maintained student performance logs in Microsoft Excel using formulas and pivot tables; conducted international benchmarking to support graduate compliance programs.
           </p>
         </div>
       </div>
     </section>
 
-    <!-- Visual Eye / Photography Section -->
-    <section id="photography" class="space-y-6">
+    <!-- Education, Accreditations & Honours -->
+    <section id="education" class="space-y-8">
       <div>
-        <span class="text-xs font-mono text-accent uppercase tracking-widest">Visual Direction</span>
-        <h2 class="text-2xl font-bold tracking-tight text-white mt-1">Creative Eye &amp; Aesthetic Framing</h2>
-        <p class="text-slate-400 text-sm mt-1">Visual compositions focused on light, architectural balance, and minimalist color harmony.</p>
+        <span class="text-xs font-mono text-accent uppercase tracking-widest">Academic &amp; Strategy Foundations</span>
+        <h2 class="text-2xl font-bold tracking-tight text-white mt-1">Education &amp; Professional Accreditations</h2>
       </div>
 
-      <div class="grid sm:grid-cols-3 gap-4">
-        <div class="h-48 rounded-xl bg-slate-900 border border-slate-800 flex items-center justify-center text-slate-600 text-xs font-mono">
-          [Minimalist Architecture &bull; Lightroom Grade]
+      <div class="grid md:grid-cols-2 gap-6">
+        <div class="p-6 rounded-xl bg-slate-900 border border-slate-800 space-y-3 flex flex-col justify-between">
+          <div class="space-y-2">
+            <div class="flex items-center justify-between">
+              <span class="text-xs font-mono text-accent">Sep 2026 &ndash; Dec 2027</span>
+              <span class="px-2 py-0.5 text-[11px] rounded bg-emerald-950 text-emerald-300 border border-emerald-800 font-mono">Dual CIM &amp; DMI</span>
+            </div>
+            <h3 class="text-xl font-bold text-white">MSc Strategic Digital Marketing</h3>
+            <p class="text-sm font-medium text-slate-300">Arden University (UK)</p>
+            <p class="text-xs text-slate-400 leading-relaxed">
+              Applied, commercially driven master's focusing on MarTech infrastructures, data-backed customer acquisition, and omnichannel retention strategies.
+            </p>
+          </div>
+          <div class="text-xs text-slate-400 border-t border-slate-800/80 pt-3 space-y-1">
+            <div>&bull; <strong class="text-slate-200">Focus:</strong> Cross-Channel Strategy, Attribution &amp; Journey Mapping</div>
+            <div>&bull; <strong class="text-slate-200">Capstone:</strong> 60-Credit Digital Transformation Project</div>
+          </div>
         </div>
-        <div class="h-48 rounded-xl bg-slate-900 border border-slate-800 flex items-center justify-center text-slate-600 text-xs font-mono">
-          [Urban Geometry &bull; High-Contrast Natural Light]
+
+        <div class="p-6 rounded-xl bg-slate-900 border border-slate-800 space-y-3 flex flex-col justify-between">
+          <div class="space-y-2">
+            <div class="flex items-center justify-between">
+              <span class="text-xs font-mono text-accent">Conferred August 2026</span>
+              <span class="px-2 py-0.5 text-[11px] rounded bg-slate-800 text-sky-300 font-mono">Bachelor's Degree</span>
+            </div>
+            <h3 class="text-xl font-bold text-white">B.S. in Human Resource Management</h3>
+            <p class="text-sm font-medium text-slate-300">Prince Mohammad Bin Fahd University (PMU)</p>
+            <p class="text-xs text-slate-400 leading-relaxed">
+              Comprehensive business management foundation covering human capital analytics, organizational behavior, talent allocation, and data-driven workforce planning.
+            </p>
+          </div>
+          <div class="text-xs text-slate-400 border-t border-slate-800/80 pt-3 space-y-1">
+            <div>&bull; <strong class="text-slate-200">Capstone:</strong> Multi-Round Corporate Strategy Simulation (Market analytics, R&amp;D allocation &amp; financial modeling)</div>
+            <div>&bull; <strong class="text-slate-200">Core:</strong> Strategic Talent Management, Labor Allocation, People Operations</div>
+          </div>
         </div>
-        <div class="h-48 rounded-xl bg-slate-900 border border-slate-800 flex items-center justify-center text-slate-600 text-xs font-mono">
-          [Atmospheric Space &bull; Framing Discipline]
+      </div>
+
+      <div class="space-y-4 pt-2">
+        <h3 class="text-sm font-semibold uppercase tracking-wider text-slate-300">Verified Certifications &amp; Diplomas</h3>
+        <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
+          <div class="p-4 rounded-lg bg-slate-900 border border-slate-800 space-y-1 hover:border-sky-500/40 transition">
+            <div class="flex items-center justify-between">
+              <span class="text-[11px] font-mono text-accent">Sep 2026 &ndash; 2027</span>
+              <span class="text-[10px] font-mono text-emerald-400 bg-emerald-950/60 px-1.5 py-0.5 rounded border border-emerald-900">Verified</span>
+            </div>
+            <h4 class="text-sm font-semibold text-white">Google Analytics Certification</h4>
+            <p class="text-xs text-slate-400">Google &bull; Event tracking, attribution models, user funnels, and data exploration.</p>
+          </div>
+
+          <div class="p-4 rounded-lg bg-slate-900 border border-slate-800 space-y-1 hover:border-sky-500/40 transition">
+            <div class="flex items-center justify-between">
+              <span class="text-[11px] font-mono text-accent">Sep 2024</span>
+              <span class="text-[10px] font-mono text-emerald-400 bg-emerald-950/60 px-1.5 py-0.5 rounded border border-emerald-900">Verified</span>
+            </div>
+            <h4 class="text-sm font-semibold text-white">Fundamentals of Digital Marketing</h4>
+            <p class="text-xs text-slate-400">Google &bull; Search engine strategy, organic social media growth, display ad setup, and conversion planning.</p>
+          </div>
+
+          <div class="p-4 rounded-lg bg-slate-900 border border-slate-800 space-y-1 hover:border-sky-500/40 transition">
+            <div class="flex items-center justify-between">
+              <span class="text-[11px] font-mono text-accent">Nov 2024</span>
+              <span class="text-[10px] font-mono text-slate-400">Diploma</span>
+            </div>
+            <h4 class="text-sm font-semibold text-white">Diploma in Media Studies</h4>
+            <p class="text-xs text-slate-400">Alison &bull; Media evolution, copyright law, digital distribution channels, and audio broadcasting.</p>
+          </div>
+
+          <div class="p-4 rounded-lg bg-slate-900 border border-slate-800 space-y-1 hover:border-sky-500/40 transition">
+            <div class="flex items-center justify-between">
+              <span class="text-[11px] font-mono text-accent">Oct 2024</span>
+              <span class="text-[10px] font-mono text-sky-400">Advanced</span>
+            </div>
+            <h4 class="text-sm font-semibold text-white">EF SET English Certification</h4>
+            <p class="text-xs text-slate-400">EF Education &bull; <strong>Advanced Standing</strong> evaluation covering contextual comprehension and written fluency.</p>
+          </div>
         </div>
-      </div>
-    </section>
-
-    <!-- Research & Governance Section -->
-    <section id="research" class="space-y-6">
-      <div>
-        <span class="text-xs font-mono text-accent uppercase tracking-widest">Academic &amp; Policy Analysis</span>
-        <h2 class="text-2xl font-bold tracking-tight text-white mt-1">Organizational Research &amp; Governance</h2>
-        <p class="text-slate-400 text-sm mt-1">Rigorous analysis on nationalization policies, training &amp; development, and labor dynamics.</p>
-      </div>
-
-      <div class="p-6 rounded-xl bg-slate-900 border border-slate-800 space-y-3">
-        <span class="text-xs font-mono text-emerald-400">Strategic T&amp;D &bull; Vision 2030 Human Capital</span>
-        <h3 class="text-lg font-bold text-white">Nitaqat Mutawar &amp; The Localization of Technical Talent</h3>
-        <p class="text-sm text-slate-300 leading-relaxed">
-          Comprehensive analytical breakdown of corporate readiness, capability gaps, and retention frameworks for bilingual Saudi national engineers within modern industrial and tech hubs.
-        </p>
-      </div>
-    </section>
-
-    <!-- Education Section -->
-    <section id="education" class="space-y-6">
-      <div>
-        <span class="text-xs font-mono text-accent uppercase tracking-widest">Academic Background</span>
-        <h2 class="text-2xl font-bold tracking-tight text-white mt-1">Education &amp; Credentials</h2>
-      </div>
-
-      <div class="p-6 rounded-xl bg-slate-900 border border-slate-800 space-y-2">
-        <div class="flex justify-between items-baseline">
-          <h3 class="text-base font-bold text-white">King Fahd University of Petroleum &amp; Minerals (KFUPM)</h3>
-          <span class="text-xs font-mono text-slate-400">Dhahran, Saudi Arabia</span>
-        </div>
-        <p class="text-sm text-accent">Bachelor of Science in Management / Human Resource Management</p>
-        <p class="text-xs text-slate-400 leading-relaxed pt-1">
-          Specialized coursework spanning Organizational Strategy, Consumer Psychology, Research Methodologies, and Talent Optimization Systems.
-        </p>
       </div>
     </section>
 
     <!-- Contact Section -->
-    <section id="contact" class="py-12 border-t border-slate-800/80 space-y-6">
-      <div>
-        <span class="text-xs font-mono text-accent uppercase tracking-widest">Get In Touch</span>
-        <h2 class="text-2xl font-bold tracking-tight text-white mt-1">Let's Connect</h2>
-        <p class="text-slate-400 text-sm mt-1 max-w-xl">
-          Whether you have an opening in digital marketing, social media leadership, or organizational research—reach out directly.
-        </p>
-      </div>
-
-      <div class="flex flex-wrap gap-4">
-        <a href="mailto:contact@sohaibmasud.com" class="px-6 py-3 rounded-lg bg-accent text-slate-950 font-semibold hover:bg-sky-400 transition">
-          Email Me Directly
-        </a>
-        <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="px-6 py-3 rounded-lg bg-slate-900 border border-slate-800 text-slate-200 hover:bg-slate-800 transition font-medium">
-          Connect on LinkedIn
-        </a>
+    <section id="contact" class="space-y-6">
+      <div class="p-8 sm:p-12 rounded-2xl bg-gradient-to-br from-slate-900 via-slate-900 to-slate-950 border border-slate-800 text-center space-y-6">
+        <div class="max-w-xl mx-auto space-y-3">
+          <h2 class="text-3xl font-bold text-white">Let's Discuss Opportunities</h2>
+          <p class="text-slate-400 text-sm">
+            Open to creative media direction, digital growth strategy, and people operations roles globally or remotely.
+          </p>
+        </div>
+        <div class="flex flex-wrap justify-center gap-4 pt-2">
+          <a href="mailto:sohaibmasud@outlook.com" class="px-6 py-3 rounded-lg bg-sky-500 hover:bg-sky-400 text-slate-950 font-semibold transition shadow-lg shadow-sky-500/20">
+            sohaibmasud@outlook.com
+          </a>
+          <a href="https://linkedin.com/in/sohaibm2001" target="_blank" class="px-6 py-3 rounded-lg bg-slate-800 hover:bg-slate-700 text-slate-200 border border-slate-700 font-medium transition">
+            LinkedIn Profile
+          </a>
+          <a href="tel:+966572475955" class="px-6 py-3 rounded-lg bg-slate-800 hover:bg-slate-700 text-slate-200 border border-slate-700 font-medium transition">
+            +966 57 247 5955
+          </a>
+        </div>
       </div>
     </section>
 
   </main>
 
-  <!-- Interactive CV Modal -->
-  <div id="cv-modal" class="fixed inset-0 z-50 bg-slate-950/80 backdrop-blur-md hidden flex items-center justify-center p-4 sm:p-6 overflow-y-auto">
-    <div class="relative w-full max-w-4xl my-8">
-      <div id="cv-modal-controls" class="flex justify-between items-center mb-3">
-        <div class="flex gap-2">
-          <button onclick="switchCvTab('cv1')" id="tab-cv1" class="px-3 py-1.5 text-xs font-mono rounded bg-slate-800 text-white">Social &amp; Content</button>
-          <button onclick="switchCvTab('cv2')" id="tab-cv2" class="px-3 py-1.5 text-xs font-mono rounded bg-slate-900 text-slate-400">Growth &amp; CRO</button>
-          <button onclick="switchCvTab('cv3')" id="tab-cv3" class="px-3 py-1.5 text-xs font-mono rounded bg-slate-900 text-slate-400">Research &amp; HR</button>
+  <footer class="border-t border-slate-900 py-8 text-center text-xs text-slate-600">
+    &copy; <span id="year"></span> Sohaib Masud. All rights reserved.
+  </footer>
+
+  <!-- Interactive Resume Modal & Live PDF Exporter -->
+  <div id="cv-modal" class="fixed inset-0 z-50 hidden bg-slate-950/80 backdrop-blur-md overflow-y-auto p-4 sm:p-6">
+    <div class="max-w-4xl mx-auto flex flex-col items-center">
+      
+      <!-- Modal Navigation Bar -->
+      <div id="cv-modal-controls" class="w-full max-w-[820px] mb-4 flex flex-wrap items-center justify-between gap-3 bg-slate-900/90 border border-slate-800 p-3 rounded-xl shadow-lg">
+        <div class="flex items-center gap-2">
+          <button onclick="switchCvTab('cv1')" id="tab-btn-cv1" class="px-3 py-1.5 text-xs font-semibold rounded-lg bg-sky-500 text-slate-950 transition">Content &amp; Social</button>
+          <button onclick="switchCvTab('cv2')" id="tab-btn-cv2" class="px-3 py-1.5 text-xs font-semibold rounded-lg bg-slate-800 text-slate-300 hover:bg-slate-700 transition">Digital Growth</button>
+          <button onclick="switchCvTab('cv3')" id="tab-btn-cv3" class="px-3 py-1.5 text-xs font-semibold rounded-lg bg-slate-800 text-slate-300 hover:bg-slate-700 transition">People Ops</button>
         </div>
-        <div class="flex gap-2">
-          <button onclick="window.print()" class="px-3 py-1.5 text-xs font-mono rounded bg-accent text-slate-950 font-semibold">Print / Save PDF</button>
-          <button onclick="closeCvModal()" class="px-3 py-1.5 text-xs font-mono rounded bg-slate-800 text-slate-300 hover:text-white">✕ Close</button>
+        <div class="flex items-center gap-2">
+          <button onclick="window.print()" class="px-3.5 py-1.5 text-xs font-semibold rounded-lg bg-emerald-500 hover:bg-emerald-400 text-slate-950 transition flex items-center gap-1.5 shadow-sm">
+            <span>🖨️</span> Download ATS Resume (PDF)
+          </button>
+          <button onclick="closeCvModal()" class="px-3 py-1.5 text-xs font-semibold rounded-lg bg-slate-800 hover:bg-slate-700 text-slate-300 transition">
+            Close ✕
+          </button>
         </div>
       </div>
 
-      <!-- CV Paper Wrapper -->
-      <div class="cv-paper mx-auto">
-        <!-- Content Profile 1: Social & Content Strategy -->
-        <div id="cv1-content" class="cv-tab-content">
-          <div class="cv-header">
-            <div class="cv-h1">SOHAIB MASUD</div>
-            <div class="cv-subtitle">Digital Content Strategist &bull; Creative Producer</div>
-            <div class="cv-contact">Dhahran, Eastern Province, Saudi Arabia &bull; Open to Relocation &bull; Remote Available</div>
-          </div>
-
-          <div class="cv-section-title">Core Competencies</div>
-          <div class="cv-grid">
-            <div>&bull; Short-Form Pacing &amp; Hook Architecture (0:00–0:02)</div>
-            <div>&bull; Organic Growth &amp; Algorithmic Distribution</div>
-            <div>&bull; Audio/Video Asset Curation &amp; Archival Strategy</div>
-            <div>&bull; Minimalist Aesthetic &amp; High-Contrast Typography</div>
-          </div>
-
-          <div class="cv-section-title">Verified Social Growth &amp; Content Architecture</div>
-          <div class="cv-item">
-            <div class="cv-item-header">
-              <span class="cv-item-title">Lead Creator &amp; Strategist | @mehehehmwe</span>
-              <span class="cv-item-date">2023 – Present</span>
-            </div>
-            <div class="cv-item-sub">Culture, Typography &amp; Micro-Content</div>
-            <ul>
-              <li>Engineered high-retention text-based micro-content, generating <b>53,000+ likes</b> on flagship assets with zero paid budget.</li>
-              <li>Sustained <b>71.8% non-follower reach rate</b> and 10%–17% daily story retention across key 18–34 demographics.</li>
-            </ul>
-          </div>
-
-          <div class="cv-item">
-            <div class="cv-item-header">
-              <span class="cv-item-title">Editorial Director &amp; Curator | @jaureguisvocals &amp; @camilahavequestions</span>
-              <span class="cv-item-date">2017 – 2025</span>
-            </div>
-            <div class="cv-item-sub">Music Archival &amp; Digital Publication</div>
-            <ul>
-              <li>Generated <b>25K–30K monthly organic interactions</b>; acknowledged directly by artist Lauren Jauregui and manager Roger Gold.</li>
-              <li>Curated multi-territory digital album rollouts, media breakdowns, and community discourse hubs.</li>
-            </ul>
+      <!-- CV 1: Content Creation & Social Strategy -->
+      <div id="cv1-content" class="cv-tab-content cv-paper">
+        <div class="cv-header">
+          <div class="cv-h1">SOHAIB MASUD</div>
+          <div class="cv-subtitle">Short-Form Content Creator &bull; Social Media Strategist &bull; Community Builder</div>
+          <div class="cv-contact">
+            +966 57 247 5955 &bull; <a href="mailto:sohaibmasud@outlook.com">sohaibmasud@outlook.com</a> &bull; 
+            <a href="https://linkedin.com/in/sohaibm2001">linkedin.com/in/sohaibm2001</a> &bull; Immediate Availability &bull; Remote
           </div>
         </div>
 
-        <!-- Content Profile 2: Digital Strategy & Marketing -->
-        <div id="cv2-content" class="cv-tab-content hidden">
-          <div class="cv-header">
-            <div class="cv-h1">SOHAIB MASUD</div>
-            <div class="cv-subtitle">Digital Strategist &bull; Full-Funnel Growth Specialist</div>
-            <div class="cv-contact">Dhahran, Eastern Province, Saudi Arabia &bull; Open to Relocation &bull; Remote Available</div>
-          </div>
+        <div class="cv-section-title">Professional Summary</div>
+        <p style="color: #334155;">
+          Hands-on content strategist and short-form editor with a proven track record of engineering viral micro-content, mastering native social algorithms, and nurturing high-retention fan communities without paid ad spend. Possesses verified Google certifications in Web Analytics and Digital Marketing, combining creative instinct with quantitative audience tracking.
+        </p>
 
-          <div class="cv-section-title">Core Competencies</div>
-          <div class="cv-grid">
-            <div>&bull; Google Analytics 4 (GA4) &amp; Google Tag Manager (GTM)</div>
-            <div>&bull; Paid Social Parameter Simulation (Meta / TikTok)</div>
-            <div>&bull; Conversion Rate Optimization (CRO) &amp; SEO Clusters</div>
-            <div>&bull; Direct-to-Consumer (D2C) Operations (99%+ Accuracy)</div>
-          </div>
+        <div class="cv-section-title">Content Creation &amp; Social Media Experience</div>
 
-          <div class="cv-section-title">Marketing Architecture &amp; Growth Experience</div>
-          <div class="cv-item">
-            <div class="cv-item-header">
-              <span class="cv-item-title">Growth Architect | Strategic MarTech Labs</span>
-              <span class="cv-item-date">2024 – Present</span>
-            </div>
-            <div class="cv-item-sub">Full-Funnel Commercial Campaigns</div>
-            <ul>
-              <li>Engineered 4-stage acquisition funnels across Paid Social, E-Commerce SEO, and Lifecycle Win-Back triggers.</li>
-              <li>Constructed GTM DataLayers, GA4 cohort exploration tracking, and sticky mobile CRO conversion architectures.</li>
-            </ul>
+        <div class="cv-item">
+          <div class="cv-item-header">
+            <span class="cv-item-title">Creator &amp; Account Strategist</span>
+            <span class="cv-item-date">2021 &ndash; 2025</span>
           </div>
-
-          <div class="cv-item">
-            <div class="cv-item-header">
-              <span class="cv-item-title">E-Commerce Operations Lead</span>
-              <span class="cv-item-date">Recent</span>
-            </div>
-            <div class="cv-item-sub">Fulfillment &amp; Customer Logistics</div>
-            <ul>
-              <li>Maintained <b>99%+ order fulfillment accuracy</b> while managing multi-stage customer retention pipelines.</li>
-            </ul>
-          </div>
+          <div class="cv-item-sub">@jaureguisvocals (Instagram) &bull; Vocal Archive &amp; Music Curation</div>
+          <ul>
+            <li><b>Artist Recognition:</b> Curated independent discography archive dedicated to Lauren Jauregui, earning direct personal acknowledgment and engagement from Lauren Jauregui in January 2024.</li>
+            <li><b>Sustained Organic Engagement:</b> Generated <b>25,000&ndash;30,000</b> monthly organic account interactions with zero ad spend by packaging studio snippets, vocal runs, and performance edits.</li>
+            <li><b>Asset Pacing &amp; Production:</b> Cut high-retention video reels and carousel breakdowns highlighting vocal technique and production nuances, driving active fan discourse in comments.</li>
+          </ul>
         </div>
 
-        <!-- Content Profile 3: Research & Human Capital Strategy -->
-        <div id="cv3-content" class="cv-tab-content hidden">
-          <div class="cv-header">
-            <div class="cv-h1">SOHAIB MASUD</div>
-            <div class="cv-subtitle">Applied Researcher &bull; Human Capital &amp; Policy Analyst</div>
-            <div class="cv-contact">Dhahran, Eastern Province, Saudi Arabia &bull; Open to Relocation &bull; Remote Available</div>
+        <div class="cv-item">
+          <div class="cv-item-header">
+            <span class="cv-item-title">Founder &amp; Content Lead</span>
+            <span class="cv-item-date">Nov 2023 &ndash; Present</span>
           </div>
-
-          <div class="cv-section-title">Core Competencies</div>
-          <div class="cv-grid">
-            <div>&bull; Strategic Training &amp; Development (T&amp;D) Frameworks</div>
-            <div>&bull; Nitaqat Mutawar &amp; Vision 2030 Nationalization</div>
-            <div>&bull; Organizational Governance &amp; Labor Policy Analysis</div>
-            <div>&bull; Qualitative &amp; Quantitative Inquiry</div>
-          </div>
-
-          <div class="cv-section-title">Applied Research &amp; Organizational Analysis</div>
-          <div class="cv-item">
-            <div class="cv-item-header">
-              <span class="cv-item-title">Researcher | Nationalization &amp; Talent Localization</span>
-              <span class="cv-item-date">Recent</span>
-            </div>
-            <div class="cv-item-sub">Vision 2030 Labor Frameworks</div>
-            <ul>
-              <li>Researched capability pipelines, retention barriers, and structured onboarding for bilingual Saudi engineering cohorts.</li>
-              <li>Evaluated workforce readiness in accordance with strategic Nitaqat Mutawar guidelines.</li>
-            </ul>
-          </div>
-
-          <div class="cv-section-title">Academic Credentials</div>
-          <div class="cv-item">
-            <div class="cv-item-header">
-              <span class="cv-item-title">King Fahd University of Petroleum &amp; Minerals (KFUPM)</span>
-              <span class="cv-item-date">Dhahran, KSA</span>
-            </div>
-            <div class="cv-item-sub">Bachelor of Science in Management / Human Resource Management</div>
-          </div>
+          <div class="cv-item-sub">@mehehehmwe (Instagram) &bull; Text &amp; Cultural Micro-Content</div>
+          <ul>
+            <li><b>Viral Discovery &amp; Reach:</b> Ideated and published text-first cultural content yielding <b>53,000+ likes</b> on a single post, with <b>71.8% non-follower reach</b> and 90% audience density in the 18&ndash;34 age bracket.</li>
+            <li><b>Retention &amp; Interactive Testing:</b> Maintained <b>10%&ndash;17% daily story view rates</b> and regular impressions between 30,000 and 55,000 through minimalist aesthetics and interactive story features.</li>
+          </ul>
         </div>
 
+        <div class="cv-item">
+          <div class="cv-item-header">
+            <span class="cv-item-title">Founder &amp; Editorial Lead</span>
+            <span class="cv-item-date">2017 &ndash; 2020</span>
+          </div>
+          <div class="cv-item-sub">@camilahavequestions (Instagram) &bull; Digital Journalism &amp; Updates</div>
+          <ul>
+            <li><b>Industry Recognition:</b> Directed a high-frequency digital update publication tracking Camila Cabello's album campaigns, earning direct recognition from Camila Cabello, official management (@camilaccess), and veteran manager Roger Gold.</li>
+            <li><b>Multi-Year Audience Loyalty:</b> Maintained <b>12,000&ndash;25,000</b> monthly interactions by delivering breaking news, optimized caption copywriting, and synchronized community campaigns.</li>
+          </ul>
+        </div>
+
+        <div class="cv-item">
+          <div class="cv-item-header">
+            <span class="cv-item-title">Brand &amp; Social Media Coordinator</span>
+            <span class="cv-item-date">Oct 2020 &ndash; Present</span>
+          </div>
+          <div class="cv-item-sub">Independent Commercial D2C Food Venture</div>
+          <ul>
+            <li>Managed direct digital customer messaging and brand identity, driving repeat customer retention with a <b>99%+ on-time fulfillment track record</b>.</li>
+          </ul>
+        </div>
+
+        <div class="cv-section-title">Verified Certifications &amp; Accreditations</div>
+        <div class="cv-grid">
+          <div>&bull; <b>Google Analytics Certification:</b> Google (2026)</div>
+          <div>&bull; <b>Fundamentals of Digital Marketing:</b> Google (2024)</div>
+          <div>&bull; <b>Diploma in Media Studies:</b> Alison (Nov 2024)</div>
+          <div>&bull; <b>EF SET English (Advanced Standing):</b> EF Education (Oct 2024)</div>
+        </div>
+
+        <div class="cv-section-title">Education</div>
+        <div class="cv-item">
+          <div class="cv-item-header">
+            <span class="cv-item-title">Master of Science (MSc) in Strategic Digital Marketing</span>
+            <span class="cv-item-date">Expected Dec 2027</span>
+          </div>
+          <div class="cv-item-sub">Arden University (UK) &bull; Dual CIM &amp; DMI Accredited</div>
+        </div>
+        <div class="cv-item" style="margin-bottom: 2px;">
+          <div class="cv-item-header">
+            <span class="cv-item-title">Bachelor of Science in Human Resource Management</span>
+            <span class="cv-item-date">Conferred August 2026</span>
+          </div>
+          <div class="cv-item-sub">Prince Mohammad Bin Fahd University (PMU)</div>
+        </div>
+
+        <div class="cv-section-title">Core Skills &amp; Creative Tools</div>
+        <p style="color: #334155;">
+          <b>Production &amp; Editing:</b> Short-form video editing (CapCut, InShot), Reels/TikTok pacing, audio syncing, typography design, carousel architecture.<br>
+          <b>Strategy &amp; Analytics:</b> Google Analytics (GA4), Instagram Insights, Meta Business Suite, community management, demographic segmentation.<br>
+          <b>Creative Tools:</b> Canva, Figma, Adobe Lightroom, Liit, Microsoft Excel (audience analytics).
+        </p>
       </div>
+
+      <!-- CV 2: Digital Growth & Marketing Strategy -->
+      <div id="cv2-content" class="cv-tab-content cv-paper hidden">
+        <div class="cv-header">
+          <div class="cv-h1">SOHAIB MASUD</div>
+          <div class="cv-subtitle">Digital Growth Strategist &bull; Performance &amp; Social Marketing &bull; Web Analytics</div>
+          <div class="cv-contact">
+            +966 57 247 5955 &bull; <a href="mailto:sohaibmasud@outlook.com">sohaibmasud@outlook.com</a> &bull; 
+            <a href="https://linkedin.com/in/sohaibm2001">linkedin.com/in/sohaibm2001</a> &bull; Immediate Availability &bull; Remote
+          </div>
+        </div>
+
+        <div class="cv-section-title">Professional Profile</div>
+        <p style="color: #334155;">
+          Analytically driven digital strategist with dual expertise in organic growth architecture, customer acquisition modeling, and web analytics. Certified in Google Analytics (2026) and Digital Marketing Fundamentals. Experienced in turning organic audiences into active communities, modeling commercial unit margins, and applying rigorous quantitative strategy to scalable growth models.
+        </p>
+
+        <div class="cv-section-title">Growth Marketing &amp; Brand Experience</div>
+
+        <div class="cv-item">
+          <div class="cv-item-header">
+            <span class="cv-item-title">Founder &amp; Content Lead</span>
+            <span class="cv-item-date">Nov 2023 &ndash; Present</span>
+          </div>
+          <div class="cv-item-sub">@mehehehmwe (Digital Cultural Brand)</div>
+          <ul>
+            <li><b>Viral Acquisition &amp; Reach:</b> Engineered text-driven brand scaling to <b>53,000+ likes on a single post</b> and generating consistent 30,000&ndash;55,000 impressions with zero paid acquisition spend.</li>
+            <li><b>Retention Funneling:</b> Maintained <b>10%&ndash;17% daily story view rates</b> and a <b>71.8% non-follower discovery rate</b> through systematic visual formatting and high-resonance cultural copywriting.</li>
+            <li><b>Audience Segmentation:</b> Leveraged platform analytics to cultivate an audience with 90% aged 18&ndash;34 in key international markets, adjusting content cadence based on engagement drops.</li>
+          </ul>
+        </div>
+
+        <div class="cv-item">
+          <div class="cv-item-header">
+            <span class="cv-item-title">E-Commerce &amp; Commercial Operations Lead</span>
+            <span class="cv-item-date">Oct 2020 &ndash; Present</span>
+          </div>
+          <div class="cv-item-sub">Independent D2C Food Venture</div>
+          <ul>
+            <li><b>Margin &amp; Pricing Optimization:</b> Structured unit-margin pricing models, monitored customer ordering behavior, and sustained a <b>99%+ on-time fulfillment rate</b>.</li>
+            <li><b>Conversational Retention Funnel:</b> Built direct digital customer communication channels, improving repeat purchase rates and customer lifetime value (LTV).</li>
+          </ul>
+        </div>
+
+        <div class="cv-item">
+          <div class="cv-item-header">
+            <span class="cv-item-title">Digital Operations &amp; Academic Data Intern</span>
+            <span class="cv-item-date">Jun 2025 &ndash; Aug 2025</span>
+          </div>
+          <div class="cv-item-sub">College of Business Administration &bull; PMU</div>
+          <ul>
+            <li><b>Data Analytics &amp; Reporting:</b> Cleaned and analyzed performance datasets in Microsoft Excel using formulas and pivot tables, streamlining operational insights for academic leadership.</li>
+            <li><b>Market Alignment:</b> Conducted benchmarking research against US university curriculums to identify emerging market skill demands and align digital program positioning.</li>
+          </ul>
+        </div>
+
+        <div class="cv-section-title">Strategic Projects &amp; Growth Modeling</div>
+        <div class="cv-item">
+          <div class="cv-item-header">
+            <span class="cv-item-title">Capsim Enterprise Simulation &bull; Market Demand &amp; Growth Lead</span>
+            <span class="cv-item-date">Jan 2026 &ndash; Jun 2026</span>
+          </div>
+          <div class="cv-item-sub">Team Ferris (Solo Executive Operator) &bull; Prince Mohammad Bin Fahd University</div>
+          <ul>
+            <li><b>Market Demand &amp; Elasticity:</b> Modeled price elasticity curves, customer satisfaction metrics, and promotional spend to capture high market share across all 8 fiscal rounds.</li>
+            <li><b>Product Positioning (R&amp;D):</b> Dynamically aligned product size, performance, and MTBF reliability criteria to meet changing customer drift preferences each year.</li>
+            <li><b>Scale &amp; Unit Economics:</b> Balanced production capacity against quantitative growth forecasts, increasing plant automation to cut unit labor costs and achieve sustained cash flow.</li>
+          </ul>
+        </div>
+
+        <div class="cv-section-title">Verified Certifications &amp; Accreditations</div>
+        <div class="cv-grid">
+          <div>&bull; <b>Google Analytics Certification:</b> Google (2026)</div>
+          <div>&bull; <b>Fundamentals of Digital Marketing:</b> Google (2024)</div>
+          <div>&bull; <b>EF SET English (Advanced Standing):</b> EF Education (Oct 2024)</div>
+          <div>&bull; <b>Diploma in Media Studies:</b> Alison (Nov 2024)</div>
+        </div>
+
+        <div class="cv-section-title">Education</div>
+        <div class="cv-item">
+          <div class="cv-item-header">
+            <span class="cv-item-title">Master of Science (MSc) in Strategic Digital Marketing</span>
+            <span class="cv-item-date">Expected Dec 2027</span>
+          </div>
+          <div class="cv-item-sub">Arden University (UK) &bull; Dual CIM &amp; DMI Accredited</div>
+        </div>
+        <div class="cv-item" style="margin-bottom: 2px;">
+          <div class="cv-item-header">
+            <span class="cv-item-title">Bachelor of Science in Human Resource Management</span>
+            <span class="cv-item-date">Conferred August 2026</span>
+          </div>
+          <div class="cv-item-sub">Prince Mohammad Bin Fahd University (PMU)</div>
+        </div>
+
+        <div class="cv-section-title">Core Competencies &amp; Technical Toolkit</div>
+        <p style="color: #334155;">
+          <b>Growth Marketing:</b> Google Analytics (GA4), Search Engine Optimization (SEO), Paid Social acquisition modeling, Conversion Rate Optimization (CRO), Lifecycle email nurture architecture.<br>
+          <b>Analytics &amp; Modeling:</b> Microsoft Excel (Pivot Tables, VLOOKUP, Data Cleaning), Google Sheets, Demand Forecasting, KPI Dashboards.<br>
+          <b>Creative Tools:</b> Canva, Figma, Adobe Lightroom, Liit.
+        </p>
+      </div>
+
+      <!-- CV 3: People Operations & HR Management -->
+      <div id="cv3-content" class="cv-tab-content cv-paper hidden">
+        <div class="cv-header">
+          <div class="cv-h1">SOHAIB MASUD</div>
+          <div class="cv-subtitle">Human Resources Associate &bull; People Operations &bull; Human Capital Analytics</div>
+          <div class="cv-contact">
+            +966 57 247 5955 &bull; <a href="mailto:sohaibmasud@outlook.com">sohaibmasud@outlook.com</a> &bull; 
+            <a href="https://linkedin.com/in/sohaibm2001">linkedin.com/in/sohaibm2001</a> &bull; Immediate Availability &bull; Remote
+          </div>
+        </div>
+
+        <div class="cv-section-title">Professional Profile</div>
+        <p style="color: #334155;">
+          Detail-oriented Human Resource Management graduate with a strong analytical foundation in people operations, workforce data administration, and structured institutional governance. Certified in Google Analytics (2026) and Digital Marketing, bringing a modern data-conscious approach to talent onboarding, HR analytics, and employee lifecycle management.
+        </p>
+
+        <div class="cv-section-title">Professional &amp; HR Experience</div>
+
+        <div class="cv-item">
+          <div class="cv-item-header">
+            <span class="cv-item-title">HR Operations &amp; Academic Data Intern</span>
+            <span class="cv-item-date">Jun 2025 &ndash; Aug 2025</span>
+          </div>
+          <div class="cv-item-sub">College of Business Administration &bull; Prince Mohammad Bin Fahd University</div>
+          <ul>
+            <li><b>Internship Lifecycle Tracking:</b> Managed onboarding documentation, partner verification, and evaluation tracking for university students, ensuring adherence to academic program criteria.</li>
+            <li><b>Workforce &amp; Database Administration:</b> Maintained centralized student performance logs in Microsoft Excel using formulas and pivot tables, expediting grade reporting for faculty leadership.</li>
+            <li><b>Regulatory &amp; Policy Benchmarking:</b> Researched global curricula and compliance frameworks to support new graduate degree proposals; reviewed undergraduate HR modules against industry standards.</li>
+            <li><b>Board Diversity &amp; Governance Research:</b> Authored empirical research on boardroom diversity across GCC banking institutions (Agency Theory, Resource Dependence Theory, Faultline Theory) to evaluate committee decision-making and firm value.</li>
+            <li><b>Leadership &amp; Retention Studies:</b> Investigated servant leadership frameworks, analyzing psychological safety and emotional intelligence as key levers for early-career employee retention and workplace trust.</li>
+          </ul>
+        </div>
+
+        <div class="cv-item">
+          <div class="cv-item-header">
+            <span class="cv-item-title">Peer Facilitator &amp; Academic Mentor</span>
+            <span class="cv-item-date">Jan 2023 &ndash; May 2023</span>
+          </div>
+          <div class="cv-item-sub">University Learning Center &bull; PMU</div>
+          <ul>
+            <li><b>Developmental Coaching:</b> Mentored undergraduate students in business writing, presentation delivery, and critical analysis, improving comprehension and academic retention metrics.</li>
+            <li><b>Stakeholder Liaison:</b> Functioned as an active intermediary between students and faculty advisors, recommending customized interventions to resolve communication and engagement friction.</li>
+          </ul>
+        </div>
+
+        <div class="cv-item">
+          <div class="cv-item-header">
+            <span class="cv-item-title">Operations &amp; People Lead</span>
+            <span class="cv-item-date">Oct 2020 &ndash; Present</span>
+          </div>
+          <div class="cv-item-sub">Independent Commercial Venture</div>
+          <ul>
+            <li><b>Resource &amp; Workflow Scheduling:</b> Coordinated daily supplier interactions, order processing, and delivery timetables, sustaining a <b>99%+ on-time fulfillment track record</b>.</li>
+            <li><b>Conflict Resolution &amp; Quality Control:</b> Established direct customer communication channels, resolving logistical inquiries promptly and improving overall service consistency.</li>
+          </ul>
+        </div>
+
+        <div class="cv-section-title">Verified Certifications &amp; Accreditations</div>
+        <div class="cv-grid">
+          <div>&bull; <b>Google Analytics Certification:</b> Google (2026)</div>
+          <div>&bull; <b>Fundamentals of Digital Marketing:</b> Google (2024)</div>
+          <div>&bull; <b>EF SET English (Advanced Standing):</b> EF Education (Oct 2024)</div>
+          <div>&bull; <b>Diploma in Media Studies:</b> Alison (Nov 2024)</div>
+        </div>
+
+        <div class="cv-section-title">Education</div>
+        <div class="cv-item">
+          <div class="cv-item-header">
+            <span class="cv-item-title">Bachelor of Science in Human Resource Management</span>
+            <span class="cv-item-date">Conferred August 2026</span>
+          </div>
+          <div class="cv-item-sub">Prince Mohammad Bin Fahd University (PMU)</div>
+          <div style="font-size: 7.5pt; color: #475569; margin-top: 1px;">
+            Core: Talent Management, Organizational Behavior, Labor Allocation, Human Capital Analytics. Capstone: Capsim Business Simulation (Solo Executive Operator).
+          </div>
+        </div>
+        <div class="cv-item" style="margin-bottom: 2px;">
+          <div class="cv-item-header">
+            <span class="cv-item-title">Master of Science (MSc) in Strategic Digital Marketing</span>
+            <span class="cv-item-date">Expected Dec 2027</span>
+          </div>
+          <div class="cv-item-sub">Arden University (UK) &bull; Dual CIM &amp; DMI Accredited</div>
+        </div>
+
+        <div class="cv-section-title">Core Competencies &amp; Tools</div>
+        <p style="color: #334155;">
+          <b>HR &amp; People Operations:</b> Candidate lifecycle tracking, onboarding coordination, workforce planning, policy benchmarking, mentorship, employee experience design.<br>
+          <b>Data &amp; Systems:</b> Google Analytics (GA4), Microsoft Excel (Pivot Tables, VLOOKUP, data sanitization), Google Sheets, KPI tracking, structured reporting.<br>
+          <b>Interpersonal Skills:</b> Cross-functional communication, conflict resolution, executive presentations, stakeholder alignment.
+        </p>
+      </div>
+
     </div>
   </div>
 
-  <footer class="border-t border-slate-800/80 py-8 text-center text-xs text-slate-500 font-mono">
-    &copy; 2026 Sohaib Masud. All rights reserved.
-  </footer>
-
+  <!-- Script for Modal Tabs & Dynamic Year -->
   <script>
-    function openCvModal(tab) {
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    function openCvModal(tabKey) {
       document.getElementById('cv-modal').classList.remove('hidden');
-      switchCvTab(tab);
+      document.body.style.overflow = 'hidden';
+      switchCvTab(tabKey);
     }
+
     function closeCvModal() {
       document.getElementById('cv-modal').classList.add('hidden');
+      document.body.style.overflow = '';
     }
-    function switchCvTab(tabId) {
-      ['cv1', 'cv2', 'cv3'].forEach(id => {
-        const content = document.getElementById(id + '-content');
-        const tabBtn = document.getElementById('tab-' + id);
-        if (id === tabId) {
-          content.classList.remove('hidden');
-          tabBtn.classList.replace('bg-slate-900', 'bg-slate-800');
-          tabBtn.classList.replace('text-slate-400', 'text-white');
+
+    function switchCvTab(tabKey) {
+      document.querySelectorAll('.cv-tab-content').forEach(el => el.classList.add('hidden'));
+      
+      const tabs = ['cv1', 'cv2', 'cv3'];
+      tabs.forEach(key => {
+        const btn = document.getElementById('tab-btn-' + key);
+        if (key === tabKey) {
+          btn.className = 'px-3 py-1.5 text-xs font-semibold rounded-lg bg-sky-500 text-slate-950 transition';
         } else {
-          content.classList.add('hidden');
-          tabBtn.classList.replace('bg-slate-800', 'bg-slate-900');
-          tabBtn.classList.replace('text-white', 'text-slate-400');
+          btn.className = 'px-3 py-1.5 text-xs font-semibold rounded-lg bg-slate-800 text-slate-300 hover:bg-slate-700 transition';
         }
       });
+
+      document.getElementById(tabKey + '-content').classList.remove('hidden');
     }
   </script>
 </body>
