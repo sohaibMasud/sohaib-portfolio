@@ -11,7 +11,9 @@
       theme: {
         extend: {
           colors: {
-            accent: '#38bdf8',
+            accent: '#e2d4b7', // Subtle Champagne Gold
+            accentHover: '#f3e8d2',
+            luxeSlate: '#94a3b8',
             brandIndigo: '#6366f1',
           }
         }
@@ -75,11 +77,11 @@
     }
   </style>
 </head>
-<body class="bg-slate-950 text-slate-100 font-sans antialiased selection:bg-accent selection:text-slate-950">
+<body class="bg-[#07090e] text-slate-100 font-sans antialiased selection:bg-[#e2d4b7] selection:text-[#07090e]">
 
-  <!-- Modern Floating Header Navigation: Marketing Labs → Growth → Resumes → Endorsements → Projects → Visual Eye → Research → Education -->
+  <!-- Modern Floating Header Navigation -->
   <header class="sticky top-4 z-50 max-w-6xl mx-auto px-4 sm:px-6">
-    <div class="backdrop-blur-xl bg-slate-950/80 border border-slate-800/80 rounded-2xl shadow-2xl px-5 h-16 flex items-center justify-between gap-4">
+    <div class="backdrop-blur-xl bg-[#0b0f17]/90 border border-slate-800/80 rounded-2xl shadow-2xl px-5 h-16 flex items-center justify-between gap-4">
       
       <!-- Brand Logo -->
       <a href="#" class="text-base font-bold tracking-tight text-white hover:text-accent transition flex items-center gap-1.5 shrink-0">
@@ -87,7 +89,7 @@
         Sohaib Masud<span class="text-accent">.</span>
       </a>
 
-      <!-- Desktop Nav -->
+      <!-- Desktop Nav: Marketing Labs → Growth → Resumes → Endorsements → Projects → Visual Eye → Research → Education -->
       <nav class="hidden lg:flex items-center gap-1 text-xs font-medium text-slate-300">
         <a href="#marketing-labs" class="px-2.5 py-1.5 rounded-lg hover:text-white hover:bg-slate-800/60 transition">Marketing Labs</a>
         <a href="#case-studies" class="px-2.5 py-1.5 rounded-lg hover:text-white hover:bg-slate-800/60 transition">Growth</a>
@@ -101,7 +103,7 @@
 
       <!-- Right CTAs & Mobile Toggle -->
       <div class="flex items-center gap-3">
-        <a href="#contact" class="hidden sm:inline-flex px-4 py-2 text-xs font-semibold rounded-xl bg-accent text-slate-950 hover:bg-sky-400 hover:shadow-lg hover:shadow-sky-500/20 transition shrink-0">
+        <a href="#contact" class="hidden sm:inline-flex px-4 py-2 text-xs font-semibold rounded-xl bg-accent text-[#0b0f17] hover:bg-accentHover hover:shadow-lg hover:shadow-[#e2d4b7]/10 transition shrink-0">
           Let's Connect
         </a>
 
@@ -119,7 +121,7 @@
     </div>
 
     <!-- Mobile Slide-Down Menu -->
-    <div id="mobile-menu" class="hidden lg:hidden mt-2 p-4 rounded-2xl bg-slate-950/95 border border-slate-800/90 shadow-2xl backdrop-blur-xl flex flex-col gap-1 text-sm font-medium">
+    <div id="mobile-menu" class="hidden lg:hidden mt-2 p-4 rounded-2xl bg-[#0b0f17]/95 border border-slate-800/90 shadow-2xl backdrop-blur-xl flex flex-col gap-1 text-sm font-medium">
       <a href="#marketing-labs" onclick="toggleMobileNav()" class="px-3 py-2 rounded-lg text-slate-300 hover:text-white hover:bg-slate-800/60 transition">Marketing Labs</a>
       <a href="#case-studies" onclick="toggleMobileNav()" class="px-3 py-2 rounded-lg text-slate-300 hover:text-white hover:bg-slate-800/60 transition">Growth</a>
       <a href="#cv-downloads" onclick="toggleMobileNav()" class="px-3 py-2 rounded-lg text-slate-300 hover:text-white hover:bg-slate-800/60 transition">Resumes</a>
@@ -129,7 +131,7 @@
       <a href="#research" onclick="toggleMobileNav()" class="px-3 py-2 rounded-lg text-slate-300 hover:text-white hover:bg-slate-800/60 transition">Research</a>
       <a href="#education" onclick="toggleMobileNav()" class="px-3 py-2 rounded-lg text-slate-300 hover:text-white hover:bg-slate-800/60 transition">Education</a>
       <div class="pt-2 border-t border-slate-800 mt-1">
-        <a href="#contact" onclick="toggleMobileNav()" class="block text-center w-full px-4 py-2.5 text-xs font-semibold rounded-xl bg-accent text-slate-950 hover:bg-sky-400 transition">
+        <a href="#contact" onclick="toggleMobileNav()" class="block text-center w-full px-4 py-2.5 text-xs font-semibold rounded-xl bg-accent text-[#0b0f17] hover:bg-accentHover transition">
           Let's Connect &rarr;
         </a>
       </div>
@@ -140,29 +142,29 @@
 
     <!-- Hero Section -->
     <section id="about" class="py-12 md:py-16 flex flex-col items-start gap-6">
-      <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-slate-900 border border-slate-800 text-xs font-mono text-accent">
+      <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-slate-900/90 border border-slate-800 text-xs font-mono text-accent">
         <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
-        Open to Opportunities &bull; Singapore &bull; GCC &bull; SAPMENA
+        Targeting Enterprise Strategy &bull; EURMENA &bull; GCC &bull; SAPMENA
       </div>
       
       <div class="space-y-3">
         <h1 class="text-4xl sm:text-6xl font-extrabold tracking-tight text-white leading-tight">
           Digital Marketing &amp; <br class="hidden sm:inline" />
-          <span class="text-transparent bg-clip-text bg-gradient-to-r from-sky-400 via-indigo-400 to-emerald-400">
+          <span class="text-transparent bg-clip-text bg-gradient-to-r from-[#f3e8d2] via-[#e2d4b7] to-slate-400">
             Brand Strategist
           </span>
         </h1>
-        <div class="text-lg sm:text-xl font-mono text-accent font-semibold tracking-wide">
+        <div class="text-base sm:text-lg font-mono text-accent font-semibold tracking-wide">
           Growth &bull; Social &bull; Consumer &bull; Content
         </div>
       </div>
 
       <p class="text-lg text-slate-300 max-w-3xl leading-relaxed">
-        Targeting digital growth, omnichannel strategy, and brand experiences across premium consumer, beauty, and lifestyle enterprises. Applying data-conscious full-funnel architectures to turn discovery into sustained community and business equity across Singapore, GCC &amp; SAPMENA.
+        Building digital growth and brand experiences across consumer, beauty, luxury and lifestyle categories. Open to opportunities across EURMENA, GCC &amp; SAPMENA.
       </p>
 
       <div class="flex flex-wrap gap-4 pt-2">
-        <a href="#marketing-labs" class="px-6 py-3 rounded-lg bg-sky-500 hover:bg-sky-400 text-slate-950 font-semibold transition shadow-lg shadow-sky-500/20">
+        <a href="#marketing-labs" class="px-6 py-3 rounded-lg bg-accent hover:bg-accentHover text-[#0b0f17] font-semibold transition shadow-lg shadow-[#e2d4b7]/10">
           Explore Marketing Labs
         </a>
         <a href="#case-studies" class="px-6 py-3 rounded-lg bg-slate-900 hover:bg-slate-800 text-slate-200 border border-slate-800 font-medium transition">
@@ -174,75 +176,71 @@
       </div>
     </section>
 
-    <!-- What I Bring Section (Tied Directly to Marketing Labs & Corporate Growth Strategies) -->
+    <!-- What I Bring Section -->
     <section id="what-i-bring" class="space-y-6">
       <div>
-        <span class="text-xs font-mono text-accent uppercase tracking-widest">Core Value Proposition</span>
+        <span class="text-xs font-mono text-accent uppercase tracking-widest">Enterprise Strategic Pillars</span>
         <h2 class="text-2xl font-bold tracking-tight text-white mt-1">What I Bring</h2>
       </div>
 
       <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
         <!-- BRAND & CONSUMER -->
-        <div class="p-6 rounded-xl bg-slate-900 border border-slate-800 hover:border-slate-700 transition flex flex-col justify-between space-y-4">
+        <div class="p-6 rounded-xl bg-slate-900/90 border border-slate-800 hover:border-slate-700 transition flex flex-col justify-between space-y-4">
           <div class="space-y-2">
             <span class="text-xs font-mono text-accent uppercase tracking-wider">Pillar 01</span>
             <h3 class="text-lg font-bold text-white uppercase tracking-tight">Brand &amp; Consumer</h3>
-            <p class="text-xs text-sky-400 font-mono font-medium leading-relaxed">
+            <p class="text-xs text-accent font-mono font-medium leading-relaxed">
               Brand Strategy &bull; Consumer Insights &bull; Audience Segmentation &bull; Cultural Trends
             </p>
           </div>
-          <div class="space-y-1.5 text-xs text-slate-400 border-t border-slate-800/80 pt-3">
-            <div>&bull; <strong>LTV Protection:</strong> Behavioral segmentation frameworks from Spotify CRM lab designed to re-engage lapsed consumers without brand-eroding discounts.</div>
-            <div>&bull; <strong>Consumer Intent:</strong> Persona profiling from Duolingo &amp; Gymshark teardowns aligning ad creative directly with consumer motivations.</div>
-            <div>&bull; <strong>Community Equity:</strong> Cultivating organic brand advocacy and high-margin repeat ordering through direct customer channels.</div>
+          <div class="space-y-2 text-xs text-slate-300 border-t border-slate-800/80 pt-3 leading-relaxed">
+            <div>&bull; <strong>Gemini Strategic Inquiry:</strong> Leveraging structured Google Gemini prompt architectures to critically interrogate premium brand heritage, examine corporate growth strategies, and explore nuanced positioning alternatives without algorithmic confirmation bias.</div>
+            <div>&bull; <strong>Consumer Insight Synthesis:</strong> Mapping intent-driven buyer psychology and high-retention community frameworks, bridging corporate brand identity directly with customer equity.</div>
           </div>
         </div>
 
         <!-- DIGITAL & GROWTH -->
-        <div class="p-6 rounded-xl bg-slate-900 border border-slate-800 hover:border-slate-700 transition flex flex-col justify-between space-y-4">
+        <div class="p-6 rounded-xl bg-slate-900/90 border border-slate-800 hover:border-slate-700 transition flex flex-col justify-between space-y-4">
           <div class="space-y-2">
-            <span class="text-xs font-mono text-sky-400 uppercase tracking-wider">Pillar 02</span>
+            <span class="text-xs font-mono text-accent uppercase tracking-wider">Pillar 02</span>
             <h3 class="text-lg font-bold text-white uppercase tracking-tight">Digital &amp; Growth</h3>
-            <p class="text-xs text-sky-400 font-mono font-medium leading-relaxed">
+            <p class="text-xs text-accent font-mono font-medium leading-relaxed">
               Digital Strategy &bull; GA4 &bull; SEO &bull; CRO &bull; Paid Social &bull; E-commerce &bull; CRM
             </p>
           </div>
-          <div class="space-y-1.5 text-xs text-slate-400 border-t border-slate-800/80 pt-3">
-            <div>&bull; <strong>Paid Social &amp; CAC:</strong> Simulated Meta Ads funnels from Duolingo lab to reduce CPA through hook testing and mid-funnel retargeting.</div>
-            <div>&bull; <strong>SEO &amp; CRO Architecture:</strong> High-intent organic search gap modeling and PDP checkout optimizations modeled in Gymshark teardown.</div>
-            <div>&bull; <strong>Analytics &amp; Precision:</strong> Certified GA4 event attribution blueprints coupled with 99%+ on-time e-commerce operational fulfillment.</div>
+          <div class="space-y-2 text-xs text-slate-300 border-t border-slate-800/80 pt-3 leading-relaxed">
+            <div>&bull; <strong>Strategic Gap Discovery:</strong> Utilizing Gemini prompt literacy to model competitive market gaps against corporate annual priorities—identifying overlooked opportunities across paid social acquisition, search clusters, and CRO.</div>
+            <div>&bull; <strong>Precision Analytics:</strong> Certified GA4 event attribution blueprints, customer journey exploration, and commercial logistics management maintained at 99%+ fulfillment accuracy.</div>
           </div>
         </div>
 
         <!-- SOCIAL & CONTENT -->
-        <div class="p-6 rounded-xl bg-slate-900 border border-slate-800 hover:border-slate-700 transition flex flex-col justify-between space-y-4">
+        <div class="p-6 rounded-xl bg-slate-900/90 border border-slate-800 hover:border-slate-700 transition flex flex-col justify-between space-y-4">
           <div class="space-y-2">
-            <span class="text-xs font-mono text-indigo-400 uppercase tracking-wider">Pillar 03</span>
+            <span class="text-xs font-mono text-accent uppercase tracking-wider">Pillar 03</span>
             <h3 class="text-lg font-bold text-white uppercase tracking-tight">Social &amp; Content</h3>
-            <p class="text-xs text-sky-400 font-mono font-medium leading-relaxed">
+            <p class="text-xs text-accent font-mono font-medium leading-relaxed">
               Content Strategy &bull; Short-Form Content &bull; Community Growth &bull; Social Analytics &bull; Creative Strategy
             </p>
           </div>
-          <div class="space-y-1.5 text-xs text-slate-400 border-t border-slate-800/80 pt-3">
-            <div>&bull; <strong>Viral Hook Architecture:</strong> 0:00–0:02 scroll-stopping pacing generating 53K+ likes and 71.8% non-follower discovery at $0 spend.</div>
-            <div>&bull; <strong>Asset Pacing &amp; Production:</strong> Curating high-retention video reels and carousels that drive active consumer and fan discourse.</div>
-            <div>&bull; <strong>Proven Authority:</strong> Multi-year curation acknowledged directly by recording artists and veteran entertainment management.</div>
+          <div class="space-y-2 text-xs text-slate-300 border-t border-slate-800/80 pt-3 leading-relaxed">
+            <div>&bull; <strong>Hook Architecture:</strong> Rapid 0:00–0:02 scroll-stopping pacing and high-contrast typography, achieving 53K+ likes and 71.8% non-follower reach with zero ad spend.</div>
+            <div>&bull; <strong>Verified Editorial Authority:</strong> Long-term catalog curation and aesthetic breakdowns recognized by recording artists and veteran entertainment management.</div>
           </div>
         </div>
 
         <!-- PEOPLE & RESEARCH -->
-        <div class="p-6 rounded-xl bg-slate-900 border border-slate-800 hover:border-slate-700 transition flex flex-col justify-between space-y-4">
+        <div class="p-6 rounded-xl bg-slate-900/90 border border-slate-800 hover:border-slate-700 transition flex flex-col justify-between space-y-4">
           <div class="space-y-2">
-            <span class="text-xs font-mono text-emerald-400 uppercase tracking-wider">Pillar 04</span>
+            <span class="text-xs font-mono text-accent uppercase tracking-wider">Pillar 04</span>
             <h3 class="text-lg font-bold text-white uppercase tracking-tight">People &amp; Research</h3>
-            <p class="text-xs text-sky-400 font-mono font-medium leading-relaxed">
+            <p class="text-xs text-accent font-mono font-medium leading-relaxed">
               People Operations &bull; Peer Tutoring &bull; Applied Research &bull; Organisational Strategy
             </p>
           </div>
-          <div class="space-y-1.5 text-xs text-slate-400 border-t border-slate-800/80 pt-3">
-            <div>&bull; <strong>Enterprise Strategy:</strong> Solo executive operator steering 8 full rounds of Capsim corporate forecasting, R&amp;D, and finance.</div>
-            <div>&bull; <strong>Governance Analysis:</strong> Empirical research on GCC banking board diversity, servant leadership, and psychological safety.</div>
-            <div>&bull; <strong>Collaborative Direction:</strong> Applied stakeholder management spanning academic mentoring and on-set technical videography.</div>
+          <div class="space-y-2 text-xs text-slate-300 border-t border-slate-800/80 pt-3 leading-relaxed">
+            <div>&bull; <strong>Enterprise Decision-Making:</strong> Sole executive operator steering 8 fiscal rounds of Capsim corporate strategy, financial allocation, and market elasticity forecasting.</div>
+            <div>&bull; <strong>Governance Inquiry:</strong> Academic research analyzing GCC banking board composition, servant leadership, psychological safety, and organizational culture.</div>
           </div>
         </div>
       </div>
@@ -250,9 +248,9 @@
 
     <!-- Marketing Labs Section -->
     <section id="marketing-labs" class="space-y-8">
-      <div class="p-8 sm:p-10 rounded-2xl bg-gradient-to-br from-slate-900 via-slate-900 to-indigo-950/40 border border-slate-800 space-y-8">
+      <div class="p-8 sm:p-10 rounded-2xl bg-gradient-to-br from-slate-900 via-slate-900 to-[#14120e] border border-slate-800 space-y-8">
         <div>
-          <span class="text-xs font-mono text-accent uppercase tracking-widest">🔬 Digital Marketing Lab &amp; Creative Ventures</span>
+          <span class="text-xs font-mono text-accent uppercase tracking-widest">🔬 Strategic Sandbox &amp; Digital Playbook</span>
           <h2 class="text-2xl font-bold tracking-tight text-white mt-1">Selected Strategy &amp; Marketing Labs — Portfolio Projects</h2>
           <p class="text-slate-400 text-sm mt-1 max-w-3xl leading-relaxed">
             This section serves as my strategic sandbox—where I apply data-driven marketing frameworks to analyze, critique, and optimize the digital presence of real-world brands.
@@ -312,20 +310,20 @@
         <div class="p-6 rounded-xl bg-slate-950/90 border border-slate-800 space-y-4">
           <div class="flex items-center gap-2">
             <span class="text-base">🛠️</span>
-            <h3 class="text-sm font-semibold uppercase tracking-wider text-slate-200">The Tech &amp; Marketing Stack I'm Testing</h3>
+            <h3 class="text-sm font-semibold uppercase tracking-wider text-slate-200">The Tech &amp; Strategic Stack I Deploy</h3>
           </div>
           <div class="grid sm:grid-cols-3 gap-4 text-xs">
             <div class="p-3.5 rounded-lg bg-slate-900 border border-slate-800/80 space-y-1">
-              <div class="text-accent font-mono font-semibold">Design &amp; Copy</div>
-              <div class="text-slate-300">Canva | Figma | AI-Prompt Engineering</div>
+              <div class="text-accent font-mono font-semibold">Design &amp; Creative Research</div>
+              <div class="text-slate-300">Canva | Figma | Google Gemini (Strategy &amp; Gap Architecture)</div>
             </div>
             <div class="p-3.5 rounded-lg bg-slate-900 border border-slate-800/80 space-y-1">
-              <div class="text-accent font-mono font-semibold">Analytics &amp; Search</div>
+              <div class="text-accent font-mono font-semibold">Analytics &amp; Search Engine</div>
               <div class="text-slate-300">GA4 Blueprinting | SEO Keyword Mapping | Google Search Console Logic</div>
             </div>
             <div class="p-3.5 rounded-lg bg-slate-900 border border-slate-800/80 space-y-1">
-              <div class="text-accent font-mono font-semibold">Paid Media</div>
-              <div class="text-slate-300">Meta Ads Manager Simulation | Budget Allocation Modeling</div>
+              <div class="text-accent font-mono font-semibold">Paid Media &amp; Commerce</div>
+              <div class="text-slate-300">Meta Ads Manager Simulation | Budget Allocation Modeling | D2C Fulfillment</div>
             </div>
           </div>
         </div>
@@ -409,7 +407,7 @@
         <!-- CV 1 Card -->
         <div class="p-6 rounded-xl bg-slate-900 border border-slate-800 flex flex-col justify-between hover:border-slate-700 transition">
           <div class="space-y-3">
-            <span class="px-2 py-0.5 text-[11px] rounded bg-slate-800 text-sky-400 font-mono">Organic Reach &amp; Audio/Video</span>
+            <span class="px-2 py-0.5 text-[11px] rounded bg-slate-800 text-accent font-mono">Organic Reach &amp; Audio/Video</span>
             <h3 class="text-lg font-semibold text-white">Content Creation &amp; Social Strategy CV</h3>
             <p class="text-sm text-slate-400 leading-relaxed">
               Tailored for creative direction, algorithmic video editing, caption copywriting, and fanbase curation.
@@ -426,7 +424,7 @@
         <!-- CV 2 Card -->
         <div class="p-6 rounded-xl bg-slate-900 border border-slate-800 flex flex-col justify-between hover:border-slate-700 transition">
           <div class="space-y-3">
-            <span class="px-2 py-0.5 text-[11px] rounded bg-slate-800 text-sky-400 font-mono">Growth &amp; CRO</span>
+            <span class="px-2 py-0.5 text-[11px] rounded bg-slate-800 text-accent font-mono">Growth &amp; CRO</span>
             <h3 class="text-lg font-semibold text-white">Digital Growth &amp; Marketing Strategy CV</h3>
             <p class="text-sm text-slate-400 leading-relaxed">
               Focuses on customer journey mapping, brand equity, conversion rate optimization, and D2C commerce retention.
@@ -443,7 +441,7 @@
         <!-- CV 3 Card -->
         <div class="p-6 rounded-xl bg-slate-900 border border-slate-800 flex flex-col justify-between hover:border-slate-700 transition">
           <div class="space-y-3">
-            <span class="px-2 py-0.5 text-[11px] rounded bg-slate-800 text-sky-400 font-mono">Talent &amp; Operations</span>
+            <span class="px-2 py-0.5 text-[11px] rounded bg-slate-800 text-accent font-mono">Talent &amp; Operations</span>
             <h3 class="text-lg font-semibold text-white">People Operations &amp; HR Management CV</h3>
             <p class="text-sm text-slate-400 leading-relaxed">
               Covers candidate onboarding lifecycles, structured HR data modeling in Excel, and regulatory policy alignment.
@@ -696,7 +694,7 @@
       <div class="grid md:grid-cols-2 gap-6">
         <div class="p-6 rounded-xl bg-slate-900 border border-slate-800 space-y-4 flex flex-col justify-between">
           <div class="space-y-2">
-            <span class="px-2 py-0.5 text-[11px] rounded bg-slate-800 text-sky-400 font-mono">Corporate Governance &amp; AI Ethics</span>
+            <span class="px-2 py-0.5 text-[11px] rounded bg-slate-800 text-accent font-mono">Corporate Governance &amp; AI Ethics</span>
             <h3 class="text-lg font-semibold text-white">Board Diversity &amp; Emerging Tech Governance in GCC Banking</h3>
             <p class="text-sm text-slate-400 leading-relaxed">
               Investigated the direct relationship between boardroom composition (demographic, cognitive, and geographic diversity) and firm value within the GCC financial sector, balancing strategic perspective gains against communication friction.
@@ -710,7 +708,7 @@
 
         <div class="p-6 rounded-xl bg-slate-900 border border-slate-800 space-y-4 flex flex-col justify-between">
           <div class="space-y-2">
-            <span class="px-2 py-0.5 text-[11px] rounded bg-slate-800 text-sky-400 font-mono">People Operations &amp; Culture</span>
+            <span class="px-2 py-0.5 text-[11px] rounded bg-slate-800 text-accent font-mono">People Operations &amp; Culture</span>
             <h3 class="text-lg font-semibold text-white">Servant Leadership, Psychological Safety &amp; Human Capital</h3>
             <p class="text-sm text-slate-400 leading-relaxed">
               Explored how human-centric leadership models dismantle rigid corporate power hierarchies, mitigate subtle workplace discrimination, and accelerate the transition of early-career professionals into collaborative organizations.
@@ -724,7 +722,7 @@
 
         <div class="p-6 rounded-xl bg-slate-900 border border-slate-800 space-y-4 flex flex-col justify-between">
           <div class="space-y-2">
-            <span class="px-2 py-0.5 text-[11px] rounded bg-slate-800 text-sky-400 font-mono">Market Dynamics &amp; Information Strategy</span>
+            <span class="px-2 py-0.5 text-[11px] rounded bg-slate-800 text-accent font-mono">Market Dynamics &amp; Information Strategy</span>
             <h3 class="text-lg font-semibold text-white">Information Architecture &amp; Supply Chain Analytics (Walmart Case Analysis)</h3>
             <p class="text-sm text-slate-400 leading-relaxed">
               Analyzed how large-scale enterprise retailers establish sustainable competitive advantages by actively assessing the nature and extent of their organizational data needs.
@@ -738,7 +736,7 @@
 
         <div class="p-6 rounded-xl bg-slate-900 border border-slate-800 space-y-4 flex flex-col justify-between">
           <div class="space-y-2">
-            <span class="px-2 py-0.5 text-[11px] rounded bg-slate-800 text-sky-400 font-mono">Media Theory &amp; Audience Psychology</span>
+            <span class="px-2 py-0.5 text-[11px] rounded bg-slate-800 text-accent font-mono">Media Theory &amp; Audience Psychology</span>
             <h3 class="text-lg font-semibold text-white">Media Evolution, Algorithmic Consumption &amp; Cultural Identity</h3>
             <p class="text-sm text-slate-400 leading-relaxed">
               Synthesized critical media theories (including Adorno's culture industry critique) to analyze how mass media consumption, digital formatting, and film representation shape generational attitudes and cultural values.
@@ -779,7 +777,7 @@
               <h3 class="text-lg font-semibold text-white">HR Operations &amp; Academic Data Intern</h3>
               <p class="text-xs text-slate-400">College of Business Administration &bull; Jun 2025 &ndash; Aug 2025</p>
             </div>
-            <span class="px-2 py-0.5 text-xs rounded bg-slate-800 text-sky-400 font-mono">Data &amp; Compliance</span>
+            <span class="px-2 py-0.5 text-xs rounded bg-slate-800 text-accent font-mono">Data &amp; Compliance</span>
           </div>
           <p class="text-sm text-slate-400 leading-relaxed">
             Maintained student performance logs in Microsoft Excel using formulas and pivot tables; conducted international benchmarking to support graduate compliance programs.
@@ -836,7 +834,7 @@
       <div class="space-y-4 pt-2">
         <h3 class="text-sm font-semibold uppercase tracking-wider text-slate-300">Verified Certifications &amp; Diplomas</h3>
         <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
-          <div class="p-4 rounded-lg bg-slate-900 border border-slate-800 space-y-1 hover:border-sky-500/40 transition">
+          <div class="p-4 rounded-lg bg-slate-900 border border-slate-800 space-y-1 hover:border-accent/40 transition">
             <div class="flex items-center justify-between">
               <span class="text-[11px] font-mono text-accent">Sep 2026 &ndash; 2027</span>
               <span class="text-[10px] font-mono text-emerald-400 bg-emerald-950/60 px-1.5 py-0.5 rounded border border-emerald-900">Verified</span>
@@ -845,7 +843,7 @@
             <p class="text-xs text-slate-400">Google &bull; Event tracking, attribution models, user funnels, and data exploration.</p>
           </div>
 
-          <div class="p-4 rounded-lg bg-slate-900 border border-slate-800 space-y-1 hover:border-sky-500/40 transition">
+          <div class="p-4 rounded-lg bg-slate-900 border border-slate-800 space-y-1 hover:border-accent/40 transition">
             <div class="flex items-center justify-between">
               <span class="text-[11px] font-mono text-accent">Sep 2024</span>
               <span class="text-[10px] font-mono text-emerald-400 bg-emerald-950/60 px-1.5 py-0.5 rounded border border-emerald-900">Verified</span>
@@ -854,7 +852,7 @@
             <p class="text-xs text-slate-400">Google &bull; Search engine strategy, organic social media growth, display ad setup, and conversion planning.</p>
           </div>
 
-          <div class="p-4 rounded-lg bg-slate-900 border border-slate-800 space-y-1 hover:border-sky-500/40 transition">
+          <div class="p-4 rounded-lg bg-slate-900 border border-slate-800 space-y-1 hover:border-accent/40 transition">
             <div class="flex items-center justify-between">
               <span class="text-[11px] font-mono text-accent">Nov 2024</span>
               <span class="text-[10px] font-mono text-slate-400">Diploma</span>
@@ -863,10 +861,10 @@
             <p class="text-xs text-slate-400">Alison &bull; Media evolution, copyright law, digital distribution channels, and audio broadcasting.</p>
           </div>
 
-          <div class="p-4 rounded-lg bg-slate-900 border border-slate-800 space-y-1 hover:border-sky-500/40 transition">
+          <div class="p-4 rounded-lg bg-slate-900 border border-slate-800 space-y-1 hover:border-accent/40 transition">
             <div class="flex items-center justify-between">
               <span class="text-[11px] font-mono text-accent">Oct 2024</span>
-              <span class="text-[10px] font-mono text-sky-400">Advanced</span>
+              <span class="text-[10px] font-mono text-accent">Advanced</span>
             </div>
             <h4 class="text-sm font-semibold text-white">EF SET English Certification</h4>
             <p class="text-xs text-slate-400">EF Education &bull; <strong>Advanced Standing</strong> evaluation covering contextual comprehension and written fluency.</p>
@@ -877,15 +875,15 @@
 
     <!-- Contact Section -->
     <section id="contact" class="space-y-6">
-      <div class="p-8 sm:p-12 rounded-2xl bg-gradient-to-br from-slate-900 via-slate-900 to-slate-950 border border-slate-800 text-center space-y-6">
+      <div class="p-8 sm:p-12 rounded-2xl bg-gradient-to-br from-slate-900 via-slate-900 to-[#14120e] border border-slate-800 text-center space-y-6">
         <div class="max-w-xl mx-auto space-y-3">
           <h2 class="text-3xl font-bold text-white">Let's Discuss Opportunities</h2>
           <p class="text-slate-400 text-sm">
-            Open to digital marketing, brand strategy, and growth leadership opportunities across Singapore, GCC &amp; SAPMENA.
+            Open to digital marketing, brand strategy, and growth leadership opportunities across EURMENA, GCC &amp; SAPMENA.
           </p>
         </div>
         <div class="flex flex-wrap justify-center gap-4 pt-2">
-          <a href="mailto:sohaibmasud@outlook.com" class="px-6 py-3 rounded-lg bg-sky-500 hover:bg-sky-400 text-slate-950 font-semibold transition shadow-lg shadow-sky-500/20">
+          <a href="mailto:sohaibmasud@outlook.com" class="px-6 py-3 rounded-lg bg-accent hover:bg-accentHover text-[#0b0f17] font-semibold transition shadow-lg shadow-[#e2d4b7]/10">
             sohaibmasud@outlook.com
           </a>
           <a href="https://linkedin.com/in/sohaibm2001" target="_blank" class="px-6 py-3 rounded-lg bg-slate-800 hover:bg-slate-700 text-slate-200 border border-slate-700 font-medium transition">
@@ -911,7 +909,7 @@
       <!-- Modal Navigation Bar -->
       <div id="cv-modal-controls" class="w-full max-w-[820px] mb-4 flex flex-wrap items-center justify-between gap-3 bg-slate-900/90 border border-slate-800 p-3 rounded-xl shadow-lg">
         <div class="flex items-center gap-2">
-          <button onclick="switchCvTab('cv1')" id="tab-btn-cv1" class="px-3 py-1.5 text-xs font-semibold rounded-lg bg-sky-500 text-slate-950 transition">Content &amp; Social</button>
+          <button onclick="switchCvTab('cv1')" id="tab-btn-cv1" class="px-3 py-1.5 text-xs font-semibold rounded-lg bg-accent text-[#0b0f17] transition">Content &amp; Social</button>
           <button onclick="switchCvTab('cv2')" id="tab-btn-cv2" class="px-3 py-1.5 text-xs font-semibold rounded-lg bg-slate-800 text-slate-300 hover:bg-slate-700 transition">Digital Growth</button>
           <button onclick="switchCvTab('cv3')" id="tab-btn-cv3" class="px-3 py-1.5 text-xs font-semibold rounded-lg bg-slate-800 text-slate-300 hover:bg-slate-700 transition">People Ops</button>
         </div>
@@ -1250,7 +1248,7 @@
       tabs.forEach(key => {
         const btn = document.getElementById('tab-btn-' + key);
         if (key === tabKey) {
-          btn.className = 'px-3 py-1.5 text-xs font-semibold rounded-lg bg-sky-500 text-slate-950 transition';
+          btn.className = 'px-3 py-1.5 text-xs font-semibold rounded-lg bg-accent text-[#0b0f17] transition';
         } else {
           btn.className = 'px-3 py-1.5 text-xs font-semibold rounded-lg bg-slate-800 text-slate-300 hover:bg-slate-700 transition';
         }
