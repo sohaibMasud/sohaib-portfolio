@@ -4,61 +4,143 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Sohaib Masud | Digital Marketing &amp; Brand Strategist</title>
+  
+  <!-- Inter & JetBrains Mono Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+
+  <!-- Tailwind CSS -->
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
     tailwind.config = {
       darkMode: 'class',
       theme: {
         extend: {
+          fontFamily: {
+            sans: ['Inter', 'sans-serif'],
+            mono: ['JetBrains Mono', 'monospace'],
+          },
           colors: {
-            accent: '#e2d4b7', // Subtle Champagne Gold
-            accentHover: '#f3e8d2',
+            accent: '#e2d4b7',        // Champagne Gold
+            accentHover: '#f5ebdc',
+            accentDim: '#bfae8b',
             luxeSlate: '#94a3b8',
             brandIndigo: '#6366f1',
+            canvas: '#07090e',
+            surface: '#0c1017',
+            surfaceElevated: '#121722',
+            borderSubtle: '#1e2638',
+          },
+          animation: {
+            'glow-pulse': 'glowPulse 8s ease-in-out infinite alternate',
+            'float-slow': 'floatSlow 6s ease-in-out infinite',
+          },
+          keyframes: {
+            glowPulse: {
+              '0%': { opacity: '0.2', transform: 'scale(0.95)' },
+              '100%': { opacity: '0.45', transform: 'scale(1.05)' },
+            },
+            floatSlow: {
+              '0%, 100%': { transform: 'translateY(0px)' },
+              '50%': { transform: 'translateY(-6px)' },
+            }
           }
         }
       }
     }
   </script>
+
   <style>
-    /* CV Document Styling (Screen View) */
+    /* Ambient Glow Cursor follower */
+    #glow-cursor {
+      pointer-events: none;
+      position: fixed;
+      width: 450px;
+      height: 450px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(226, 212, 183, 0.07) 0%, rgba(99, 102, 241, 0.03) 40%, transparent 70%);
+      transform: translate(-50%, -50%);
+      z-index: 1;
+      transition: opacity 0.3s ease, transform 0.08s linear;
+      will-change: transform;
+    }
+
+    /* 3D Specular Tilt Card System */
+    .tilt-card {
+      position: relative;
+      transform-style: preserve-3d;
+      perspective: 1000px;
+      transition: transform 0.25s cubic-bezier(0.2, 0, 0.1, 1), box-shadow 0.25s ease, border-color 0.25s ease;
+    }
+    .tilt-card-glow {
+      position: absolute;
+      inset: 0;
+      border-radius: inherit;
+      background: radial-gradient(circle at var(--mouse-x, 50%) var(--mouse-y, 50%), rgba(226, 212, 183, 0.12) 0%, transparent 60%);
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.3s ease;
+      z-index: 2;
+    }
+    .tilt-card:hover .tilt-card-glow {
+      opacity: 1;
+    }
+
+    /* Custom Luxury Scrollbars */
+    ::-webkit-scrollbar {
+      width: 6px;
+      height: 6px;
+    }
+    ::-webkit-scrollbar-track {
+      background: #07090e;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: #1e2638;
+      border-radius: 9999px;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background: #e2d4b7;
+    }
+
+    /* CV Paper Styling for Print & Modal View */
     .cv-paper {
       width: 100%;
       max-width: 820px;
       background: #ffffff;
       color: #1e293b;
-      padding: 28px 32px;
-      font-size: 8.2pt;
-      line-height: 1.32;
+      padding: 32px 36px;
+      font-size: 8.4pt;
+      line-height: 1.34;
       font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-      box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.7);
+      box-shadow: 0 25px 60px -15px rgba(0, 0, 0, 0.85);
       border-radius: 8px;
     }
     .cv-header { border-bottom: 2px solid #0f172a; padding-bottom: 6px; margin-bottom: 8px; }
-    .cv-h1 { font-size: 15pt; font-weight: 800; color: #0f172a; letter-spacing: -0.4px; line-height: 1.1; }
-    .cv-subtitle { font-size: 7.8pt; font-weight: 700; color: #0369a1; letter-spacing: 0.5px; text-transform: uppercase; margin-top: 2px; }
-    .cv-contact { font-size: 7.2pt; color: #475569; margin-top: 3px; }
+    .cv-h1 { font-size: 15.5pt; font-weight: 800; color: #0f172a; letter-spacing: -0.4px; line-height: 1.1; }
+    .cv-subtitle { font-size: 8pt; font-weight: 700; color: #0369a1; letter-spacing: 0.5px; text-transform: uppercase; margin-top: 2px; }
+    .cv-contact { font-size: 7.4pt; color: #475569; margin-top: 4px; }
     .cv-contact a { color: #0369a1; text-decoration: none; }
     .cv-section-title {
-      font-size: 8pt;
+      font-size: 8.2pt;
       font-weight: 800;
       text-transform: uppercase;
       letter-spacing: 0.6px;
       color: #0f172a;
       border-bottom: 1px solid #cbd5e1;
       padding-bottom: 2px;
-      margin-top: 7px;
+      margin-top: 8px;
       margin-bottom: 4px;
     }
     .cv-item { margin-bottom: 5px; }
     .cv-item-header { display: flex; justify-content: space-between; align-items: baseline; }
-    .cv-item-title { font-weight: 700; font-size: 8.2pt; color: #0f172a; }
-    .cv-item-date { font-size: 7.2pt; color: #64748b; font-family: ui-monospace, monospace; }
-    .cv-item-sub { font-size: 7.6pt; color: #0369a1; font-weight: 600; margin-bottom: 1px; }
-    .cv-paper ul { list-style: square; padding-left: 13px; margin: 0; }
-    .cv-paper li { margin-bottom: 1.5px; color: #334155; }
+    .cv-item-title { font-weight: 700; font-size: 8.4pt; color: #0f172a; }
+    .cv-item-date { font-size: 7.4pt; color: #64748b; font-family: ui-monospace, monospace; }
+    .cv-item-sub { font-size: 7.8pt; color: #0369a1; font-weight: 600; margin-bottom: 1.5px; }
+    .cv-paper ul { list-style: square; padding-left: 14px; margin: 0; }
+    .cv-paper li { margin-bottom: 2px; color: #334155; }
     .cv-paper b { color: #0f172a; font-weight: 600; }
-    .cv-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 2px 10px; }
+    .cv-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 3px 12px; }
 
     /* Exact 1-Page A4 PDF Output Fix */
     @media print {
@@ -75,7 +157,7 @@
         padding: 0 !important;
         overflow: hidden !important;
       }
-      header, main, footer, #cv-modal-controls, .cv-tab-content.hidden {
+      #glow-cursor, header, main, footer, #cv-modal-controls, #marketing-drawer, #toast-container, .cv-tab-content.hidden {
         display: none !important;
       }
       #cv-modal {
@@ -114,34 +196,50 @@
     }
   </style>
 </head>
-<body class="bg-[#07090e] text-slate-100 font-sans antialiased selection:bg-[#e2d4b7] selection:text-[#07090e]">
+<body class="bg-canvas text-slate-100 font-sans antialiased selection:bg-accent selection:text-canvas relative min-h-screen overflow-x-hidden">
+
+  <!-- Ambient Cursor Glow Follower -->
+  <div id="glow-cursor" class="hidden md:block"></div>
+
+  <!-- Background Decorative Blur Accents -->
+  <div class="fixed top-[-10vw] left-[15vw] w-[45vw] h-[45vw] bg-accent/5 rounded-full blur-[140px] pointer-events-none -z-10 animate-glow-pulse"></div>
+  <div class="fixed bottom-[-10vw] right-[5vw] w-[40vw] h-[40vw] bg-brandIndigo/5 rounded-full blur-[160px] pointer-events-none -z-10"></div>
+
+  <!-- Toast Notification Box -->
+  <div id="toast-container" class="fixed bottom-6 right-6 z-50 flex flex-col gap-2 pointer-events-none"></div>
 
   <!-- Header Navigation -->
-  <header class="sticky top-4 z-50 max-w-6xl mx-auto px-4 sm:px-6">
-    <div class="backdrop-blur-xl bg-[#0b0f17]/90 border border-slate-800/80 rounded-2xl shadow-2xl px-5 h-16 flex items-center justify-between gap-4">
+  <header class="sticky top-4 z-40 max-w-6xl mx-auto px-4 sm:px-6">
+    <div class="backdrop-blur-xl bg-surface/85 border border-borderSubtle rounded-2xl shadow-2xl px-5 h-16 flex items-center justify-between gap-4 transition-all duration-300 hover:border-slate-700">
       
-      <a href="#" class="text-base font-bold tracking-tight text-white hover:text-accent transition flex items-center gap-1.5 shrink-0">
-        <span class="w-2.5 h-2.5 rounded-full bg-accent animate-pulse"></span>
-        Sohaib Masud<span class="text-accent">.</span>
+      <a href="#" class="text-base font-bold tracking-tight text-white hover:text-accent transition flex items-center gap-2 shrink-0 group">
+        <span class="w-2.5 h-2.5 rounded-full bg-accent group-hover:scale-125 transition-transform duration-300 animate-pulse"></span>
+        <span>Sohaib Masud<span class="text-accent">.</span></span>
       </a>
 
       <nav class="hidden lg:flex items-center gap-1 text-xs font-medium text-slate-300">
-        <a href="#marketing-labs" class="px-2.5 py-1.5 rounded-lg hover:text-white hover:bg-slate-800/60 transition">Marketing Labs</a>
-        <a href="#case-studies" class="px-2.5 py-1.5 rounded-lg hover:text-white hover:bg-slate-800/60 transition">Growth</a>
-        <a href="#cv-downloads" class="px-2.5 py-1.5 rounded-lg hover:text-white hover:bg-slate-800/60 transition">Resumes</a>
-        <a href="#talent-vision" class="px-2.5 py-1.5 rounded-lg hover:text-white hover:bg-slate-800/60 transition">Endorsements</a>
-        <a href="#projects" class="px-2.5 py-1.5 rounded-lg hover:text-white hover:bg-slate-800/60 transition">Projects</a>
-        <a href="#photography" class="px-2.5 py-1.5 rounded-lg hover:text-white hover:bg-slate-800/60 transition">Visual Eye</a>
-        <a href="#research" class="px-2.5 py-1.5 rounded-lg hover:text-white hover:bg-slate-800/60 transition">Research</a>
-        <a href="#education" class="px-2.5 py-1.5 rounded-lg hover:text-white hover:bg-slate-800/60 transition">Education</a>
+        <a href="#strategic-pillars" class="px-2.5 py-1.5 rounded-lg hover:text-white hover:bg-surfaceElevated transition">Alignment</a>
+        <a href="#marketing-labs" class="px-2.5 py-1.5 rounded-lg hover:text-white hover:bg-surfaceElevated transition">Labs</a>
+        <a href="#case-studies" class="px-2.5 py-1.5 rounded-lg hover:text-white hover:bg-surfaceElevated transition">Growth Studies</a>
+        <a href="#cv-downloads" class="px-2.5 py-1.5 rounded-lg hover:text-white hover:bg-surfaceElevated transition">Curated Resumes</a>
+        <a href="#talent-vision" class="px-2.5 py-1.5 rounded-lg hover:text-white hover:bg-surfaceElevated transition">Endorsements</a>
+        <a href="#projects" class="px-2.5 py-1.5 rounded-lg hover:text-white hover:bg-surfaceElevated transition">Operations</a>
+        <a href="#photography" class="px-2.5 py-1.5 rounded-lg hover:text-white hover:bg-surfaceElevated transition">Visual Eye</a>
+        <a href="#research" class="px-2.5 py-1.5 rounded-lg hover:text-white hover:bg-surfaceElevated transition">Research</a>
+        <a href="#education" class="px-2.5 py-1.5 rounded-lg hover:text-white hover:bg-surfaceElevated transition">Education</a>
       </nav>
 
-      <div class="flex items-center gap-3">
-        <a href="mailto:sohaibmasud@outlook.com" class="hidden sm:inline-flex px-4 py-2 text-xs font-semibold rounded-xl bg-accent text-[#0b0f17] hover:bg-accentHover transition shrink-0">
+      <div class="flex items-center gap-2.5">
+        <button onclick="copyContactEmail()" class="hidden sm:inline-flex items-center gap-1.5 px-3 py-1.5 text-xs font-mono rounded-xl bg-surfaceElevated text-slate-300 hover:text-white hover:border-slate-600 border border-borderSubtle transition">
+          <svg class="w-3.5 h-3.5 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"></path></svg>
+          <span>Copy Email</span>
+        </button>
+
+        <a href="mailto:sohaibmasud@outlook.com" class="px-4 py-2 text-xs font-semibold rounded-xl bg-accent text-canvas hover:bg-accentHover shadow-md shadow-accent/10 transition shrink-0">
           Let's Connect
         </a>
 
-        <button onclick="toggleMobileNav()" class="lg:hidden p-2 rounded-lg text-slate-400 hover:text-white hover:bg-slate-800/80 transition" aria-label="Toggle Menu">
+        <button onclick="toggleMobileNav()" class="lg:hidden p-2 rounded-lg text-slate-400 hover:text-white hover:bg-surfaceElevated transition" aria-label="Toggle Menu">
           <svg id="hamburger-icon" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
           </svg>
@@ -153,66 +251,104 @@
 
     </div>
 
-    <div id="mobile-menu" class="hidden lg:hidden mt-2 p-4 rounded-2xl bg-[#0b0f17]/95 border border-slate-800/90 shadow-2xl backdrop-blur-xl flex flex-col gap-1 text-sm font-medium">
-      <a href="#marketing-labs" onclick="toggleMobileNav()" class="px-3 py-2 rounded-lg text-slate-300 hover:text-white hover:bg-slate-800/60 transition">Marketing Labs</a>
-      <a href="#case-studies" onclick="toggleMobileNav()" class="px-3 py-2 rounded-lg text-slate-300 hover:text-white hover:bg-slate-800/60 transition">Growth</a>
-      <a href="#cv-downloads" onclick="toggleMobileNav()" class="px-3 py-2 rounded-lg text-slate-300 hover:text-white hover:bg-slate-800/60 transition">Resumes</a>
-      <a href="#talent-vision" onclick="toggleMobileNav()" class="px-3 py-2 rounded-lg text-slate-300 hover:text-white hover:bg-slate-800/60 transition">Endorsements</a>
-      <a href="#projects" onclick="toggleMobileNav()" class="px-3 py-2 rounded-lg text-slate-300 hover:text-white hover:bg-slate-800/60 transition">Projects</a>
-      <a href="#photography" onclick="toggleMobileNav()" class="px-3 py-2 rounded-lg text-slate-300 hover:text-white hover:bg-slate-800/60 transition">Visual Eye</a>
-      <a href="#research" onclick="toggleMobileNav()" class="px-3 py-2 rounded-lg text-slate-300 hover:text-white hover:bg-slate-800/60 transition">Research</a>
-      <a href="#education" onclick="toggleMobileNav()" class="px-3 py-2 rounded-lg text-slate-300 hover:text-white hover:bg-slate-800/60 transition">Education</a>
-      <div class="pt-2 border-t border-slate-800 mt-1">
-        <a href="mailto:sohaibmasud@outlook.com" onclick="toggleMobileNav()" class="block text-center w-full px-4 py-2.5 text-xs font-semibold rounded-xl bg-accent text-[#0b0f17] hover:bg-accentHover transition">
+    <!-- Mobile Dropdown Menu -->
+    <div id="mobile-menu" class="hidden lg:hidden mt-2 p-4 rounded-2xl bg-surface/95 border border-borderSubtle shadow-2xl backdrop-blur-xl flex flex-col gap-1 text-sm font-medium">
+      <a href="#strategic-pillars" onclick="toggleMobileNav()" class="px-3 py-2 rounded-lg text-slate-300 hover:text-white hover:bg-surfaceElevated transition">Strategic Alignment</a>
+      <a href="#marketing-labs" onclick="toggleMobileNav()" class="px-3 py-2 rounded-lg text-slate-300 hover:text-white hover:bg-surfaceElevated transition">Marketing Labs</a>
+      <a href="#case-studies" onclick="toggleMobileNav()" class="px-3 py-2 rounded-lg text-slate-300 hover:text-white hover:bg-surfaceElevated transition">Growth Case Studies</a>
+      <a href="#cv-downloads" onclick="toggleMobileNav()" class="px-3 py-2 rounded-lg text-slate-300 hover:text-white hover:bg-surfaceElevated transition">Curated Resumes</a>
+      <a href="#talent-vision" onclick="toggleMobileNav()" class="px-3 py-2 rounded-lg text-slate-300 hover:text-white hover:bg-surfaceElevated transition">Endorsements</a>
+      <a href="#projects" onclick="toggleMobileNav()" class="px-3 py-2 rounded-lg text-slate-300 hover:text-white hover:bg-surfaceElevated transition">Projects &amp; Operations</a>
+      <a href="#photography" onclick="toggleMobileNav()" class="px-3 py-2 rounded-lg text-slate-300 hover:text-white hover:bg-surfaceElevated transition">Visual Eye</a>
+      <a href="#research" onclick="toggleMobileNav()" class="px-3 py-2 rounded-lg text-slate-300 hover:text-white hover:bg-surfaceElevated transition">Applied Research</a>
+      <a href="#education" onclick="toggleMobileNav()" class="px-3 py-2 rounded-lg text-slate-300 hover:text-white hover:bg-surfaceElevated transition">Education</a>
+      <div class="pt-3 border-t border-slate-800 mt-2 flex flex-col gap-2">
+        <button onclick="copyContactEmail(); toggleMobileNav()" class="w-full text-center py-2 text-xs font-mono rounded-lg bg-surfaceElevated text-slate-300 border border-borderSubtle">
+          Copy Email (sohaibmasud@outlook.com)
+        </button>
+        <a href="mailto:sohaibmasud@outlook.com" onclick="toggleMobileNav()" class="block text-center w-full px-4 py-2.5 text-xs font-semibold rounded-xl bg-accent text-canvas hover:bg-accentHover transition">
           Let's Connect &rarr;
         </a>
       </div>
     </div>
   </header>
 
-  <main class="max-w-6xl mx-auto px-6 py-12 space-y-28">
+  <main class="max-w-6xl mx-auto px-6 py-12 space-y-32">
 
-    <!-- Hero Section -->
-    <section id="about" class="py-12 md:py-16 flex flex-col items-start gap-6">
-      <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-slate-900/90 border border-slate-800 text-xs font-mono text-accent">
+    <!-- Hero Section with Interactive Metric Strip -->
+    <section id="about" class="pt-8 pb-12 flex flex-col items-start gap-8 relative">
+      <div class="inline-flex items-center gap-2.5 px-3.5 py-1.5 rounded-full bg-surfaceElevated/90 border border-borderSubtle text-xs font-mono text-accent shadow-inner">
         <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
         Targeting Enterprise Strategy | EURMENA | GCC | SAPMENA
       </div>
       
-      <div class="space-y-3">
-        <h1 class="text-4xl sm:text-6xl font-extrabold tracking-tight text-white leading-tight">
+      <div class="space-y-4 max-w-4xl">
+        <h1 class="text-4xl sm:text-6xl md:text-7xl font-extrabold tracking-tight text-white leading-[1.08]">
           Digital Marketing &amp; <br class="hidden sm:inline" />
-          <span class="text-transparent bg-clip-text bg-gradient-to-r from-[#f3e8d2] via-[#e2d4b7] to-slate-400">
+          <span class="text-transparent bg-clip-text bg-gradient-to-r from-accent via-[#fff0d6] to-slate-400">
             Brand Strategist
           </span>
         </h1>
-        <div class="text-base sm:text-lg font-mono text-accent font-semibold tracking-wide">
-          Growth | Social | Consumer | Content
+        <div class="text-base sm:text-xl font-mono text-accent font-semibold tracking-wide flex flex-wrap items-center gap-2">
+          <span>Growth</span> <span class="text-slate-600">&bull;</span>
+          <span>Social</span> <span class="text-slate-600">&bull;</span>
+          <span>Consumer</span> <span class="text-slate-600">&bull;</span>
+          <span>Content Architecture</span>
         </div>
       </div>
 
-      <p class="text-lg text-slate-300 max-w-3xl leading-relaxed">
+      <p class="text-base sm:text-lg text-slate-300 max-w-3xl leading-relaxed">
         Building digital growth and brand experiences across consumer, beauty, luxury, and lifestyle categories. Open to opportunities across EURMENA, GCC, and SAPMENA.
       </p>
 
-      <div class="flex flex-wrap gap-4 pt-2">
-        <a href="#marketing-labs" class="px-6 py-3 rounded-lg bg-accent hover:bg-accentHover text-[#0b0f17] font-semibold transition shadow-lg shadow-[#e2d4b7]/10">
-          Explore Marketing Labs
+      <div class="flex flex-wrap items-center gap-4 pt-2">
+        <a href="#marketing-labs" class="px-6 py-3.5 rounded-xl bg-accent hover:bg-accentHover text-canvas font-semibold transition shadow-xl shadow-accent/10 flex items-center gap-2">
+          <span>Explore Marketing Labs</span>
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
         </a>
-        <a href="#case-studies" class="px-6 py-3 rounded-lg bg-slate-900 hover:bg-slate-800 text-slate-200 border border-slate-800 font-medium transition">
+        <a href="#case-studies" class="px-6 py-3.5 rounded-xl bg-surfaceElevated hover:bg-slate-800 text-slate-200 border border-borderSubtle font-medium transition">
           View Growth Case Studies
         </a>
-        <a href="#cv-downloads" class="px-6 py-3 rounded-lg bg-slate-900 hover:bg-slate-800 text-slate-200 border border-slate-800 font-medium transition">
-          Browse Tailored CVs
-        </a>
+        <button onclick="openCvModal('cv1')" class="px-6 py-3.5 rounded-xl bg-surfaceElevated hover:bg-slate-800 text-accent border border-borderSubtle font-medium transition flex items-center gap-2">
+          <span>Browse Tailored CVs</span>
+          <span class="text-xs px-2 py-0.5 rounded bg-accent/10 text-accent font-mono">ATS Ready</span>
+        </button>
+      </div>
+
+      <!-- Live Interactive Metrics Ticker Bar -->
+      <div class="w-full grid grid-cols-2 sm:grid-cols-4 gap-4 pt-6 border-t border-borderSubtle/60 mt-4">
+        <div class="p-4 rounded-xl bg-surface/60 border border-borderSubtle/80 backdrop-blur-sm">
+          <div class="text-2xl sm:text-3xl font-extrabold text-accent font-mono flex items-baseline">
+            <span class="counter-number" data-target="53" data-suffix="K+">0</span>
+          </div>
+          <div class="text-xs text-slate-400 mt-1">Organic Post Engagements</div>
+        </div>
+        <div class="p-4 rounded-xl bg-surface/60 border border-borderSubtle/80 backdrop-blur-sm">
+          <div class="text-2xl sm:text-3xl font-extrabold text-white font-mono flex items-baseline">
+            <span class="counter-number" data-target="71.8" data-suffix="%" data-decimals="1">0</span>
+          </div>
+          <div class="text-xs text-slate-400 mt-1">Non-Follower Cold Reach</div>
+        </div>
+        <div class="p-4 rounded-xl bg-surface/60 border border-borderSubtle/80 backdrop-blur-sm">
+          <div class="text-2xl sm:text-3xl font-extrabold text-accent font-mono flex items-baseline">
+            <span class="counter-number" data-target="99" data-suffix="%+">0</span>
+          </div>
+          <div class="text-xs text-slate-400 mt-1">E-Commerce Dispatch SLA</div>
+        </div>
+        <div class="p-4 rounded-xl bg-surface/60 border border-borderSubtle/80 backdrop-blur-sm">
+          <div class="text-2xl sm:text-3xl font-extrabold text-white font-mono flex items-baseline">
+            <span class="counter-number" data-target="8" data-suffix=" Rounds">0</span>
+          </div>
+          <div class="text-xs text-slate-400 mt-1">Capsim Executive Lead</div>
+        </div>
       </div>
     </section>
 
     <!-- Strategic Pillars & Executive Alignment Section -->
-    <section id="what-i-bring" class="space-y-10">
+    <section id="strategic-pillars" class="space-y-10">
       <div>
         <span class="text-xs font-mono text-accent uppercase tracking-widest">Strategic Alignment &amp; Execution Framework</span>
-        <h2 class="text-2xl font-bold tracking-tight text-white mt-1">What I Bring — Strategic Commitment Matrix</h2>
+        <h2 class="text-2xl sm:text-3xl font-bold tracking-tight text-white mt-1">What I Bring — Strategic Commitment Matrix</h2>
         <p class="text-slate-400 text-sm mt-1 max-w-3xl leading-relaxed">
           Proactive business alignment addressing key organizational expectations, 30-60-90 day deliverables, and performance management standards.
         </p>
@@ -220,16 +356,24 @@
 
       <!-- Executive Alignment Framework (3 Strategic Questions Answered) -->
       <div class="grid md:grid-cols-3 gap-6">
-        <div class="p-6 rounded-2xl bg-slate-900/90 border border-slate-800 space-y-3">
-          <div class="text-accent font-mono text-xs font-bold uppercase tracking-wider">01 | Core Excellence</div>
+        <div class="tilt-card p-6 rounded-2xl bg-surface border border-borderSubtle hover:border-slate-700 space-y-3">
+          <div class="tilt-card-glow"></div>
+          <div class="text-accent font-mono text-xs font-bold uppercase tracking-wider flex items-center justify-between">
+            <span>01 | Core Excellence</span>
+            <span class="w-1.5 h-1.5 rounded-full bg-accent"></span>
+          </div>
           <h3 class="text-base font-bold text-white leading-snug">What Makes Someone Exceptional in This Role?</h3>
           <p class="text-xs text-slate-300 leading-relaxed">
             Bridging creative intuition with commercial discipline: Connecting 0:00–0:02 scroll-stopping hook architecture directly to customer acquisition metrics, operating with full-funnel autonomy, and driving organic growth before deploying paid media budgets.
           </p>
         </div>
 
-        <div class="p-6 rounded-2xl bg-slate-900/90 border border-slate-800 space-y-3">
-          <div class="text-accent font-mono text-xs font-bold uppercase tracking-wider">02 | 6-Month Roadmap</div>
+        <div class="tilt-card p-6 rounded-2xl bg-surface border border-borderSubtle hover:border-slate-700 space-y-3">
+          <div class="tilt-card-glow"></div>
+          <div class="text-accent font-mono text-xs font-bold uppercase tracking-wider flex items-center justify-between">
+            <span>02 | 6-Month Roadmap</span>
+            <span class="w-1.5 h-1.5 rounded-full bg-accent"></span>
+          </div>
           <h3 class="text-base font-bold text-white leading-snug">What Should Be Accomplished in the First 6 Months?</h3>
           <p class="text-xs text-slate-300 leading-relaxed">
             <strong>Months 1–2:</strong> Audit digital channels, SEO keyword gaps, and GA4 setups. <br />
@@ -238,8 +382,12 @@
           </p>
         </div>
 
-        <div class="p-6 rounded-2xl bg-slate-900/90 border border-slate-800 space-y-3">
-          <div class="text-accent font-mono text-xs font-bold uppercase tracking-wider">03 | Performance Standards</div>
+        <div class="tilt-card p-6 rounded-2xl bg-surface border border-borderSubtle hover:border-slate-700 space-y-3">
+          <div class="tilt-card-glow"></div>
+          <div class="text-accent font-mono text-xs font-bold uppercase tracking-wider flex items-center justify-between">
+            <span>03 | Performance Standards</span>
+            <span class="w-1.5 h-1.5 rounded-full bg-accent"></span>
+          </div>
           <h3 class="text-base font-bold text-white leading-snug">What Does Performance Management Look Like?</h3>
           <p class="text-xs text-slate-300 leading-relaxed">
             Transparent, data-driven feedback loops evaluated against hard indicators (Retention, Conversion Efficiency, ROAS, Contribution Margins) coupled with agile, cycle-by-cycle optimization modeled on enterprise business simulations.
@@ -250,7 +398,8 @@
       <!-- The 4 Enterprise Strategic Pillars -->
       <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 pt-2">
         <!-- BRAND & CONSUMER -->
-        <div class="p-6 rounded-xl bg-slate-900/90 border border-slate-800 hover:border-slate-700 transition flex flex-col justify-between space-y-4">
+        <div class="tilt-card p-6 rounded-xl bg-surface border border-borderSubtle hover:border-slate-700 transition flex flex-col justify-between space-y-4">
+          <div class="tilt-card-glow"></div>
           <div class="space-y-2">
             <span class="text-xs font-mono text-accent uppercase tracking-wider">Pillar 01</span>
             <h3 class="text-lg font-bold text-white uppercase tracking-tight">Brand &amp; Consumer</h3>
@@ -258,14 +407,15 @@
               Brand Strategy | Consumer Insights | Audience Segmentation | Cultural Trends
             </p>
           </div>
-          <div class="space-y-2 text-xs text-slate-300 border-t border-slate-800/80 pt-3 leading-relaxed">
+          <div class="space-y-2 text-xs text-slate-300 border-t border-borderSubtle pt-3 leading-relaxed">
             <div>&bull; <strong>Gemini Strategic Inquiry:</strong> Deploying structured generative AI prompt engineering frameworks to objectively stress-test premium brand heritage, evaluate growth strategies, and model positioning alternatives without data echo chambers.</div>
             <div>&bull; <strong>Consumer Insight Synthesis:</strong> Mapping intent-driven buyer psychology and high-retention community frameworks, bridging corporate brand identity directly with customer equity.</div>
           </div>
         </div>
 
         <!-- DIGITAL & GROWTH -->
-        <div class="p-6 rounded-xl bg-slate-900/90 border border-slate-800 hover:border-slate-700 transition flex flex-col justify-between space-y-4">
+        <div class="tilt-card p-6 rounded-xl bg-surface border border-borderSubtle hover:border-slate-700 transition flex flex-col justify-between space-y-4">
+          <div class="tilt-card-glow"></div>
           <div class="space-y-2">
             <span class="text-xs font-mono text-accent uppercase tracking-wider">Pillar 02</span>
             <h3 class="text-lg font-bold text-white uppercase tracking-tight">Digital &amp; Growth</h3>
@@ -273,14 +423,15 @@
               Digital Strategy | GA4 | SEO | CRO | Paid Social | E-commerce | CRM
             </p>
           </div>
-          <div class="space-y-2 text-xs text-slate-300 border-t border-slate-800/80 pt-3 leading-relaxed">
+          <div class="space-y-2 text-xs text-slate-300 border-t border-borderSubtle pt-3 leading-relaxed">
             <div>&bull; <strong>Strategic Gap Discovery:</strong> Leveraging advanced AI-driven market intelligence to analyze competitive gaps against annual business priorities identifying growth opportunities across paid social acquisition, search clusters, and conversion rate optimization (CRO).</div>
             <div>&bull; <strong>Precision Analytics:</strong> Certified GA4 event attribution blueprints, customer journey exploration, and commercial logistics management maintained at 99%+ fulfillment accuracy.</div>
           </div>
         </div>
 
         <!-- SOCIAL & CONTENT -->
-        <div class="p-6 rounded-xl bg-slate-900/90 border border-slate-800 hover:border-slate-700 transition flex flex-col justify-between space-y-4">
+        <div class="tilt-card p-6 rounded-xl bg-surface border border-borderSubtle hover:border-slate-700 transition flex flex-col justify-between space-y-4">
+          <div class="tilt-card-glow"></div>
           <div class="space-y-2">
             <span class="text-xs font-mono text-accent uppercase tracking-wider">Pillar 03</span>
             <h3 class="text-lg font-bold text-white uppercase tracking-tight">Social &amp; Content</h3>
@@ -288,14 +439,15 @@
               Content Strategy | Short-Form Content | Community Growth | Social Analytics | Creative Strategy
             </p>
           </div>
-          <div class="space-y-2 text-xs text-slate-300 border-t border-slate-800/80 pt-3 leading-relaxed">
+          <div class="space-y-2 text-xs text-slate-300 border-t border-borderSubtle pt-3 leading-relaxed">
             <div>&bull; <strong>Hook Architecture:</strong> Rapid 0:00–0:02 scroll-stopping pacing and high-contrast typography, achieving 53K+ likes and 71.8% non-follower reach with zero ad spend.</div>
             <div>&bull; <strong>Verified Editorial Authority:</strong> Long-term catalog curation and aesthetic breakdowns recognized by recording artists and veteran entertainment management.</div>
           </div>
         </div>
 
         <!-- PEOPLE & RESEARCH -->
-        <div class="p-6 rounded-xl bg-slate-900/90 border border-slate-800 hover:border-slate-700 transition flex flex-col justify-between space-y-4">
+        <div class="tilt-card p-6 rounded-xl bg-surface border border-borderSubtle hover:border-slate-700 transition flex flex-col justify-between space-y-4">
+          <div class="tilt-card-glow"></div>
           <div class="space-y-2">
             <span class="text-xs font-mono text-accent uppercase tracking-wider">Pillar 04</span>
             <h3 class="text-lg font-bold text-white uppercase tracking-tight">People &amp; Research</h3>
@@ -303,7 +455,7 @@
               People Operations | Peer Tutoring | Applied Research | Organisational Strategy
             </p>
           </div>
-          <div class="space-y-2 text-xs text-slate-300 border-t border-slate-800/80 pt-3 leading-relaxed">
+          <div class="space-y-2 text-xs text-slate-300 border-t border-borderSubtle pt-3 leading-relaxed">
             <div>&bull; <strong>Enterprise Decision-Making:</strong> Sole executive operator steering 8 fiscal rounds of Capsim corporate strategy, financial allocation, and market elasticity forecasting.</div>
             <div>&bull; <strong>Governance Inquiry:</strong> Academic research analyzing GCC banking board composition, servant leadership, psychological safety, and organizational culture.</div>
           </div>
@@ -311,22 +463,34 @@
       </div>
     </section>
 
-    <!-- Marketing Labs Section -->
+    <!-- Marketing Labs Section with Interactive Spec Sheet Drawer -->
     <section id="marketing-labs" class="space-y-8">
-      <div class="p-8 sm:p-10 rounded-2xl bg-gradient-to-br from-slate-900 via-slate-900 to-[#14120e] border border-slate-800 space-y-8">
-        <div>
-          <span class="text-xs font-mono text-accent uppercase tracking-widest">🔬 Strategic Sandbox &amp; Digital Playbook</span>
-          <h2 class="text-2xl font-bold tracking-tight text-white mt-1">Selected Strategy &amp; Marketing Labs — Portfolio Projects</h2>
-          <p class="text-slate-400 text-sm mt-1 max-w-3xl leading-relaxed">
-            This section serves as my strategic sandbox—where I apply data-driven marketing frameworks to analyze, critique, and optimize the digital presence of real-world brands.
-          </p>
+      <div class="p-8 sm:p-10 rounded-2xl bg-gradient-to-br from-surface via-surfaceElevated to-[#151410] border border-borderSubtle space-y-8 shadow-2xl">
+        <div class="flex flex-col md:flex-row md:items-end justify-between gap-4">
+          <div>
+            <span class="text-xs font-mono text-accent uppercase tracking-widest flex items-center gap-1.5">
+              <span>🔬</span> Strategic Sandbox &amp; Digital Playbook
+            </span>
+            <h2 class="text-2xl sm:text-3xl font-bold tracking-tight text-white mt-1">Selected Strategy &amp; Marketing Labs — Portfolio Projects</h2>
+            <p class="text-slate-400 text-sm mt-1 max-w-3xl leading-relaxed">
+              This section serves as my strategic sandbox—where I apply data-driven marketing frameworks to analyze, critique, and optimize the digital presence of real-world brands.
+            </p>
+          </div>
+          <div class="text-xs font-mono text-accentDim self-start md:self-auto bg-surfaceElevated px-3 py-1.5 rounded-lg border border-borderSubtle">
+            Click any card to inspect breakdown
+          </div>
         </div>
 
         <div class="grid sm:grid-cols-3 gap-6">
-          <div class="p-5 rounded-xl bg-slate-950/70 border border-slate-800/80 space-y-3 flex flex-col justify-between hover:border-slate-700 transition">
-            <div class="space-y-2">
-              <div class="text-accent font-mono text-xs font-semibold">Brand Teardown | Paid Social</div>
-              <h3 class="text-base font-semibold text-white">Duolingo: Gen-Z Content Strategy &amp; Meta Ad Model</h3>
+          <!-- Duolingo Lab Card -->
+          <div onclick="openLabModal('duolingo')" class="tilt-card p-5 rounded-xl bg-canvas/70 border border-borderSubtle space-y-3 flex flex-col justify-between hover:border-accent/40 cursor-pointer transition group">
+            <div class="tilt-card-glow"></div>
+            <div class="space-y-2.5">
+              <div class="flex items-center justify-between">
+                <span class="text-accent font-mono text-xs font-semibold">Brand Teardown | Paid Social</span>
+                <span class="text-slate-400 text-xs group-hover:text-accent group-hover:translate-x-1 transition-all">Inspect &rarr;</span>
+              </div>
+              <h3 class="text-base font-semibold text-white group-hover:text-accent transition">Duolingo: Gen-Z Content Strategy &amp; Meta Ad Model</h3>
               <p class="text-xs text-slate-400 leading-relaxed">
                 <strong class="text-slate-300">Objective:</strong> Analyzed Duolingo&rsquo;s organic TikTok presence to reverse-engineer their viral short-form video hooks for a speculative Meta Ads acquisition campaign.
               </p>
@@ -334,15 +498,20 @@
                 <strong class="text-slate-300">Execution:</strong> Designed a mock paid media funnel, scripted 3 high-retention video ad concepts, and mapped out a targeting matrix using Meta Ads Manager parameters.
               </p>
             </div>
-            <div class="text-[11px] text-slate-500 font-mono border-t border-slate-800/80 pt-3">
+            <div class="text-[11px] text-slate-500 font-mono border-t border-borderSubtle pt-3">
               <strong class="text-slate-300 font-normal">Core Focus:</strong> Paid social architecture, creative ad copywriting, and conversion-focused performance metrics (CTR, CPA).
             </div>
           </div>
 
-          <div class="p-5 rounded-xl bg-slate-950/70 border border-slate-800/80 space-y-3 flex flex-col justify-between hover:border-slate-700 transition">
-            <div class="space-y-2">
-              <div class="text-accent font-mono text-xs font-semibold">Search Architecture | CRO</div>
-              <h3 class="text-base font-semibold text-white">Gymshark: E-Commerce SEO &amp; Keyword Gap Analysis</h3>
+          <!-- Gymshark Lab Card -->
+          <div onclick="openLabModal('gymshark')" class="tilt-card p-5 rounded-xl bg-canvas/70 border border-borderSubtle space-y-3 flex flex-col justify-between hover:border-accent/40 cursor-pointer transition group">
+            <div class="tilt-card-glow"></div>
+            <div class="space-y-2.5">
+              <div class="flex items-center justify-between">
+                <span class="text-accent font-mono text-xs font-semibold">Search Architecture | CRO</span>
+                <span class="text-slate-400 text-xs group-hover:text-accent group-hover:translate-x-1 transition-all">Inspect &rarr;</span>
+              </div>
+              <h3 class="text-base font-semibold text-white group-hover:text-accent transition">Gymshark: E-Commerce SEO &amp; Keyword Gap Analysis</h3>
               <p class="text-xs text-slate-400 leading-relaxed">
                 <strong class="text-slate-300">Objective:</strong> Conducted an independent organic search audit on Gymshark&rsquo;s high-intent product landing pages to identify untapped search volume.
               </p>
@@ -350,15 +519,20 @@
                 <strong class="text-slate-300">Execution:</strong> Performed a speculative keyword gap analysis against top competitors, mapping out an optimized blog content cluster and updated meta tags.
               </p>
             </div>
-            <div class="text-[11px] text-slate-500 font-mono border-t border-slate-800/80 pt-3">
+            <div class="text-[11px] text-slate-500 font-mono border-t border-borderSubtle pt-3">
               <strong class="text-slate-300 font-normal">Core Focus:</strong> On-page SEO optimization, search intent categorization, and Google Analytics (GA4) conversion funnel tracking.
             </div>
           </div>
 
-          <div class="p-5 rounded-xl bg-slate-950/70 border border-slate-800/80 space-y-3 flex flex-col justify-between hover:border-slate-700 transition">
-            <div class="space-y-2">
-              <div class="text-accent font-mono text-xs font-semibold">Lifecycle Retention | Automation</div>
-              <h3 class="text-base font-semibold text-white">Spotify: Personalized Email Retention Campaign</h3>
+          <!-- Spotify Lab Card -->
+          <div onclick="openLabModal('spotify')" class="tilt-card p-5 rounded-xl bg-canvas/70 border border-borderSubtle space-y-3 flex flex-col justify-between hover:border-accent/40 cursor-pointer transition group">
+            <div class="tilt-card-glow"></div>
+            <div class="space-y-2.5">
+              <div class="flex items-center justify-between">
+                <span class="text-accent font-mono text-xs font-semibold">Lifecycle Retention | Automation</span>
+                <span class="text-slate-400 text-xs group-hover:text-accent group-hover:translate-x-1 transition-all">Inspect &rarr;</span>
+              </div>
+              <h3 class="text-base font-semibold text-white group-hover:text-accent transition">Spotify: Personalized Email Retention Campaign</h3>
               <p class="text-xs text-slate-400 leading-relaxed">
                 <strong class="text-slate-300">Objective:</strong> Developed a speculative, lifecycle email marketing sequence designed to re-engage lapsed Spotify Premium subscribers.
               </p>
@@ -366,27 +540,31 @@
                 <strong class="text-slate-300">Execution:</strong> Wireframed a 3-part automated email nurture stream using user behavior triggers and crafted personalized, benefit-driven email copy.
               </p>
             </div>
-            <div class="text-[11px] text-slate-500 font-mono border-t border-slate-800/80 pt-3">
+            <div class="text-[11px] text-slate-500 font-mono border-t border-borderSubtle pt-3">
               <strong class="text-slate-300 font-normal">Core Focus:</strong> Lifecycle marketing automation, audience segmentation, and subscriber retention analytics (Open Rates, CTR).
             </div>
           </div>
         </div>
 
-        <div class="p-6 rounded-xl bg-slate-950/90 border border-slate-800 space-y-4">
-          <div class="flex items-center gap-2">
-            <span class="text-base">🛠️</span>
-            <h3 class="text-sm font-semibold uppercase tracking-wider text-slate-200">The Tech &amp; Strategic Stack I Deploy</h3>
+        <!-- Tech & Strategic Stack -->
+        <div class="p-6 rounded-xl bg-canvas/90 border border-borderSubtle space-y-4">
+          <div class="flex items-center justify-between flex-wrap gap-2">
+            <div class="flex items-center gap-2">
+              <span class="text-base">🛠️</span>
+              <h3 class="text-sm font-semibold uppercase tracking-wider text-slate-200">The Tech &amp; Strategic Stack I Deploy</h3>
+            </div>
+            <span class="text-xs font-mono text-slate-500">100% Zero Paid Tool Lock-in</span>
           </div>
           <div class="grid sm:grid-cols-3 gap-4 text-xs">
-            <div class="p-3.5 rounded-lg bg-slate-900 border border-slate-800/80 space-y-1">
+            <div class="p-3.5 rounded-lg bg-surface border border-borderSubtle/80 space-y-1">
               <div class="text-accent font-mono font-semibold">Design &amp; Creative Research</div>
               <div class="text-slate-300">Canva | Figma | Google Gemini (Strategy &amp; Gap Architecture)</div>
             </div>
-            <div class="p-3.5 rounded-lg bg-slate-900 border border-slate-800/80 space-y-1">
+            <div class="p-3.5 rounded-lg bg-surface border border-borderSubtle/80 space-y-1">
               <div class="text-accent font-mono font-semibold">Analytics &amp; Search Engine</div>
               <div class="text-slate-300">GA4 Blueprinting | SEO Keyword Mapping | Google Search Console Logic</div>
             </div>
-            <div class="p-3.5 rounded-lg bg-slate-900 border border-slate-800/80 space-y-1">
+            <div class="p-3.5 rounded-lg bg-surface border border-borderSubtle/80 space-y-1">
               <div class="text-accent font-mono font-semibold">Paid Media &amp; Commerce</div>
               <div class="text-slate-300">Meta Ads Manager Simulation | Budget Allocation Modeling | D2C Fulfillment</div>
             </div>
@@ -395,16 +573,28 @@
       </div>
     </section>
 
-    <!-- Audience Architecture & Growth Case Studies Section -->
+    <!-- Audience Architecture & Growth Case Studies Section with Interactive Category Filter -->
     <section id="case-studies" class="space-y-6">
-      <div>
-        <span class="text-xs font-mono text-accent uppercase tracking-widest">Demonstrated Impact</span>
-        <h2 class="text-2xl font-bold tracking-tight text-white mt-1">Audience Architecture &amp; Growth Case Studies</h2>
-        <p class="text-slate-400 text-sm mt-1">Proof of organic traction built through algorithm literacy, content curation, and community loyalty.</p>
+      <div class="flex flex-col md:flex-row md:items-end justify-between gap-4">
+        <div>
+          <span class="text-xs font-mono text-accent uppercase tracking-widest">Demonstrated Impact</span>
+          <h2 class="text-2xl sm:text-3xl font-bold tracking-tight text-white mt-1">Audience Architecture &amp; Growth Case Studies</h2>
+          <p class="text-slate-400 text-sm mt-1">Proof of organic traction built through algorithm literacy, content curation, and community loyalty.</p>
+        </div>
+        
+        <!-- Interactive Filter Controls -->
+        <div class="flex items-center gap-1.5 p-1 bg-surface rounded-xl border border-borderSubtle self-start md:self-auto text-xs font-medium">
+          <button onclick="filterStudies('all')" id="filter-all" class="filter-btn px-3 py-1.5 rounded-lg bg-accent text-canvas font-semibold transition">All</button>
+          <button onclick="filterStudies('viral')" id="filter-viral" class="filter-btn px-3 py-1.5 rounded-lg text-slate-400 hover:text-white transition">Viral Reach</button>
+          <button onclick="filterStudies('curation')" id="filter-curation" class="filter-btn px-3 py-1.5 rounded-lg text-slate-400 hover:text-white transition">Catalog Curation</button>
+          <button onclick="filterStudies('editorial')" id="filter-editorial" class="filter-btn px-3 py-1.5 rounded-lg text-slate-400 hover:text-white transition">Digital Editorial</button>
+        </div>
       </div>
 
       <div class="grid md:grid-cols-3 gap-6">
-        <div class="p-6 rounded-xl bg-slate-900 border border-slate-800 hover:border-slate-700 transition flex flex-col justify-between">
+        <!-- Study 1 -->
+        <div data-category="viral" class="study-card tilt-card p-6 rounded-xl bg-surface border border-borderSubtle hover:border-slate-700 transition flex flex-col justify-between">
+          <div class="tilt-card-glow"></div>
           <div class="space-y-4">
             <div class="flex items-center justify-between">
               <span class="text-xs font-mono text-accent">Culture &amp; Typography | 11/2023–Present</span>
@@ -414,7 +604,7 @@
             <p class="text-sm text-slate-400 leading-relaxed">
               Engineered text-first cultural content utilizing a high-contrast minimalist aesthetic. Achieved viral breakout distribution with zero paid ad budget.
             </p>
-            <div class="space-y-1.5 text-xs text-slate-400 border-t border-slate-800/60 pt-3">
+            <div class="space-y-1.5 text-xs text-slate-400 border-t border-borderSubtle pt-3">
               <div>&bull; <strong class="text-slate-200">71.8%</strong> non-follower reach rate</div>
               <div>&bull; <strong class="text-slate-200">10%&ndash;17%</strong> daily story retention rate</div>
               <div>&bull; <strong class="text-slate-200">90%</strong> audience concentrated in 18&ndash;34 demo</div>
@@ -422,17 +612,19 @@
           </div>
         </div>
 
-        <div class="p-6 rounded-xl bg-slate-900 border border-slate-800 hover:border-slate-700 transition flex flex-col justify-between">
+        <!-- Study 2 -->
+        <div data-category="curation" class="study-card tilt-card p-6 rounded-xl bg-surface border border-borderSubtle hover:border-slate-700 transition flex flex-col justify-between">
+          <div class="tilt-card-glow"></div>
           <div class="space-y-4">
             <div class="flex items-center justify-between">
               <span class="text-xs font-mono text-accent">Catalog Strategy | 01/2021–03/2026</span>
-              <span class="text-xs px-2 py-0.5 rounded bg-emerald-950 text-emerald-300 font-mono">Artist Acknowledged</span>
+              <span class="text-xs px-2 py-0.5 rounded bg-emerald-950/80 text-emerald-300 border border-emerald-800/60 font-mono">Artist Acknowledged</span>
             </div>
             <h3 class="text-lg font-semibold text-white">@jaureguisvocals (Music Curation &amp; Archive)</h3>
             <p class="text-sm text-slate-400 leading-relaxed">
               Curated discography and vocal archive dedicated to Lauren Jauregui. Scaled through asset pacing, studio outtakes, and high-retention performance breakdowns.
             </p>
-            <div class="space-y-1.5 text-xs text-slate-400 border-t border-slate-800/60 pt-3">
+            <div class="space-y-1.5 text-xs text-slate-400 border-t border-borderSubtle pt-3">
               <div>&bull; Directly acknowledged &amp; engaged by <strong class="text-slate-200">Lauren Jauregui</strong> (Jan 2024)</div>
               <div>&bull; <strong class="text-slate-200">25K&ndash;30K</strong> monthly organic account interactions</div>
               <div>&bull; Highly active global discussion in comment threads</div>
@@ -440,17 +632,19 @@
           </div>
         </div>
 
-        <div class="p-6 rounded-xl bg-slate-900 border border-slate-800 hover:border-slate-700 transition flex flex-col justify-between">
+        <!-- Study 3 -->
+        <div data-category="editorial" class="study-card tilt-card p-6 rounded-xl bg-surface border border-borderSubtle hover:border-slate-700 transition flex flex-col justify-between">
+          <div class="tilt-card-glow"></div>
           <div class="space-y-4">
             <div class="flex items-center justify-between">
               <span class="text-xs font-mono text-accent">Digital Journalism | 01/2017–12/2020</span>
-              <span class="text-xs px-2 py-0.5 rounded bg-emerald-950 text-emerald-300 font-mono">Industry Recognized</span>
+              <span class="text-xs px-2 py-0.5 rounded bg-emerald-950/80 text-emerald-300 border border-emerald-800/60 font-mono">Industry Recognized</span>
             </div>
             <h3 class="text-lg font-semibold text-white">@camilahavequestions (Editorial Updates)</h3>
             <p class="text-sm text-slate-400 leading-relaxed">
               High-frequency digital publication tracking international album cycles, press appearances, and live rollouts across global time zones.
             </p>
-            <div class="space-y-1.5 text-xs text-slate-400 border-t border-slate-800/60 pt-3">
+            <div class="space-y-1.5 text-xs text-slate-400 border-t border-borderSubtle pt-3">
               <div>&bull; Verified recognition from <strong class="text-slate-200">Camila Cabello</strong> &amp; management</div>
               <div>&bull; Acknowledged by veteran manager <strong class="text-slate-200">Roger Gold</strong></div>
               <div>&bull; Sustained <strong class="text-slate-200">12K&ndash;25K</strong> monthly multi-year interactions</div>
@@ -464,55 +658,61 @@
     <section id="cv-downloads" class="space-y-6">
       <div>
         <span class="text-xs font-mono text-accent uppercase tracking-widest">Industry Profiles</span>
-        <h2 class="text-2xl font-bold tracking-tight text-white mt-1">Curated Resumes by Career Track</h2>
+        <h2 class="text-2xl sm:text-3xl font-bold tracking-tight text-white mt-1">Curated Resumes by Career Track</h2>
         <p class="text-slate-400 text-sm mt-1">Select the CV version that matches your organization's domain requirements.</p>
       </div>
 
       <div class="grid md:grid-cols-3 gap-6">
-        <div class="p-6 rounded-xl bg-slate-900 border border-slate-800 flex flex-col justify-between hover:border-slate-700 transition">
+        <div class="tilt-card p-6 rounded-xl bg-surface border border-borderSubtle flex flex-col justify-between hover:border-slate-700 transition">
+          <div class="tilt-card-glow"></div>
           <div class="space-y-3">
-            <span class="px-2 py-0.5 text-[11px] rounded bg-slate-800 text-accent font-mono">Organic Reach &amp; Short-Form Video</span>
+            <span class="px-2 py-0.5 text-[11px] rounded bg-surfaceElevated text-accent font-mono border border-borderSubtle">Organic Reach &amp; Short-Form Video</span>
             <h3 class="text-lg font-semibold text-white">Content Creation &amp; Social Strategy CV</h3>
             <p class="text-sm text-slate-400 leading-relaxed">
               Tailored for creative direction, algorithmic video editing, caption copywriting, and fanbase curation.
             </p>
           </div>
-          <div class="mt-6 pt-4 border-t border-slate-800 flex items-center justify-between text-xs">
-            <span class="text-slate-500">Social Lead / Producer</span>
-            <button onclick="openCvModal('cv1')" class="text-accent font-semibold hover:underline flex items-center gap-1">
-              Access CV Profile &rarr;
+          <div class="mt-6 pt-4 border-t border-borderSubtle flex items-center justify-between text-xs">
+            <span class="text-slate-500 font-mono">Social Lead / Producer</span>
+            <button onclick="openCvModal('cv1')" class="text-accent font-semibold hover:underline flex items-center gap-1 group">
+              <span>Access CV Profile</span>
+              <span class="group-hover:translate-x-1 transition-transform">&rarr;</span>
             </button>
           </div>
         </div>
 
-        <div class="p-6 rounded-xl bg-slate-900 border border-slate-800 flex flex-col justify-between hover:border-slate-700 transition">
+        <div class="tilt-card p-6 rounded-xl bg-surface border border-borderSubtle flex flex-col justify-between hover:border-slate-700 transition">
+          <div class="tilt-card-glow"></div>
           <div class="space-y-3">
-            <span class="px-2 py-0.5 text-[11px] rounded bg-slate-800 text-accent font-mono">Growth &amp; CRO</span>
+            <span class="px-2 py-0.5 text-[11px] rounded bg-surfaceElevated text-accent font-mono border border-borderSubtle">Growth &amp; CRO</span>
             <h3 class="text-lg font-semibold text-white">Digital Growth &amp; Marketing Strategy CV</h3>
             <p class="text-sm text-slate-400 leading-relaxed">
               Focuses on customer journey mapping, brand equity, conversion rate optimization, and D2C commerce retention.
             </p>
           </div>
-          <div class="mt-6 pt-4 border-t border-slate-800 flex items-center justify-between text-xs">
-            <span class="text-slate-500">Growth / Digital Strategist</span>
-            <button onclick="openCvModal('cv2')" class="text-accent font-semibold hover:underline flex items-center gap-1">
-              Access CV Profile &rarr;
+          <div class="mt-6 pt-4 border-t border-borderSubtle flex items-center justify-between text-xs">
+            <span class="text-slate-500 font-mono">Growth / Digital Strategist</span>
+            <button onclick="openCvModal('cv2')" class="text-accent font-semibold hover:underline flex items-center gap-1 group">
+              <span>Access CV Profile</span>
+              <span class="group-hover:translate-x-1 transition-transform">&rarr;</span>
             </button>
           </div>
         </div>
 
-        <div class="p-6 rounded-xl bg-slate-900 border border-slate-800 flex flex-col justify-between hover:border-slate-700 transition">
+        <div class="tilt-card p-6 rounded-xl bg-surface border border-borderSubtle flex flex-col justify-between hover:border-slate-700 transition">
+          <div class="tilt-card-glow"></div>
           <div class="space-y-3">
-            <span class="px-2 py-0.5 text-[11px] rounded bg-slate-800 text-accent font-mono">Talent &amp; Operations</span>
+            <span class="px-2 py-0.5 text-[11px] rounded bg-surfaceElevated text-accent font-mono border border-borderSubtle">Talent &amp; Operations</span>
             <h3 class="text-lg font-semibold text-white">People Operations &amp; HR Management CV</h3>
             <p class="text-sm text-slate-400 leading-relaxed">
               Covers candidate onboarding lifecycles, structured HR data modeling in Excel, and regulatory policy alignment.
             </p>
           </div>
-          <div class="mt-6 pt-4 border-t border-slate-800 flex items-center justify-between text-xs">
-            <span class="text-slate-500">People Ops / HR Associate</span>
-            <button onclick="openCvModal('cv3')" class="text-accent font-semibold hover:underline flex items-center gap-1">
-              Access CV Profile &rarr;
+          <div class="mt-6 pt-4 border-t border-borderSubtle flex items-center justify-between text-xs">
+            <span class="text-slate-500 font-mono">People Ops / HR Associate</span>
+            <button onclick="openCvModal('cv3')" class="text-accent font-semibold hover:underline flex items-center gap-1 group">
+              <span>Access CV Profile</span>
+              <span class="group-hover:translate-x-1 transition-transform">&rarr;</span>
             </button>
           </div>
         </div>
@@ -523,16 +723,17 @@
     <section id="talent-vision" class="space-y-8">
       <div>
         <span class="text-xs font-mono text-accent uppercase tracking-widest">Recruitment &amp; Creative Endorsements</span>
-        <h2 class="text-2xl font-bold tracking-tight text-white mt-1">Endorsements &amp; Performance Reviews</h2>
+        <h2 class="text-2xl sm:text-3xl font-bold tracking-tight text-white mt-1">Endorsements &amp; Performance Reviews</h2>
         <p class="text-slate-400 text-sm mt-1 max-w-2xl">
           Direct evaluations from academic department chairs, HRM professors, and project leads detailing analytical capability, self-discipline, and creative execution.
         </p>
       </div>
 
       <div class="grid md:grid-cols-2 gap-6">
-        <div class="p-6 rounded-xl bg-slate-900 border border-slate-800 flex flex-col justify-between space-y-4 hover:border-slate-700 transition">
+        <div class="tilt-card p-6 rounded-xl bg-surface border border-borderSubtle flex flex-col justify-between space-y-4 hover:border-slate-700 transition">
+          <div class="tilt-card-glow"></div>
           <div class="space-y-3">
-            <span class="px-2 py-0.5 text-[11px] rounded bg-indigo-950 text-indigo-300 border border-indigo-800 font-mono">
+            <span class="px-2.5 py-1 text-[11px] rounded-lg bg-indigo-950/80 text-indigo-300 border border-indigo-800/80 font-mono">
               Academic &amp; Institutional Evaluation
             </span>
             <h3 class="text-lg font-semibold text-white">College of Business Administration Faculty</h3>
@@ -542,9 +743,10 @@
           </div>
         </div>
 
-        <div class="p-6 rounded-xl bg-slate-900 border border-slate-800 flex flex-col justify-between space-y-4 hover:border-slate-700 transition">
+        <div class="tilt-card p-6 rounded-xl bg-surface border border-borderSubtle flex flex-col justify-between space-y-4 hover:border-slate-700 transition">
+          <div class="tilt-card-glow"></div>
           <div class="space-y-3">
-            <span class="px-2 py-0.5 text-[11px] rounded bg-slate-800 text-accent font-mono">
+            <span class="px-2.5 py-1 text-[11px] rounded-lg bg-surfaceElevated text-accent border border-borderSubtle font-mono">
               Enterprise Simulation Performance
             </span>
             <h3 class="text-lg font-semibold text-white">Capsim Enterprise Business Simulation</h3>
@@ -560,36 +762,38 @@
     <section id="projects" class="space-y-6">
       <div>
         <span class="text-xs font-mono text-accent uppercase tracking-widest">Hands-On Execution</span>
-        <h2 class="text-2xl font-bold tracking-tight text-white mt-1">Featured Operations &amp; Business Projects</h2>
+        <h2 class="text-2xl sm:text-3xl font-bold tracking-tight text-white mt-1">Featured Operations &amp; Business Projects</h2>
         <p class="text-slate-400 text-sm mt-1">Real-world operational management across enterprise simulations and direct-to-consumer fulfillment.</p>
       </div>
 
       <div class="grid md:grid-cols-2 gap-6">
-        <div class="p-6 rounded-xl bg-slate-900 border border-slate-800 space-y-4 hover:border-slate-700 transition">
+        <div class="tilt-card p-6 rounded-xl bg-surface border border-borderSubtle space-y-4 hover:border-slate-700 transition">
+          <div class="tilt-card-glow"></div>
           <div class="flex items-center justify-between">
             <span class="text-xs font-mono text-accent">Enterprise Corporate Strategy | 01/2026–06/2026</span>
-            <span class="text-xs px-2 py-0.5 rounded bg-slate-800 text-slate-300 font-mono">Capsim Executive Operator</span>
+            <span class="text-xs px-2.5 py-1 rounded-lg bg-surfaceElevated text-slate-300 font-mono border border-borderSubtle">Capsim Executive Operator</span>
           </div>
           <h3 class="text-lg font-semibold text-white">Capsim Business Simulation | Team Ferris Lead</h3>
           <p class="text-sm text-slate-400 leading-relaxed">
             Operated as sole executive manager overseeing R&amp;D allocations, production scheduling, human capital budgeting, finance, and pricing mechanics across 8 consecutive fiscal rounds.
           </p>
-          <div class="space-y-1 text-xs text-slate-400 border-t border-slate-800/80 pt-3">
+          <div class="space-y-1 text-xs text-slate-400 border-t border-borderSubtle pt-3">
             <div>&bull; Optimized unit contribution margins through demand forecasting models</div>
             <div>&bull; Maintained emergency loan avoidance through strategic cash flow reserves</div>
           </div>
         </div>
 
-        <div class="p-6 rounded-xl bg-slate-900 border border-slate-800 space-y-4 hover:border-slate-700 transition">
+        <div class="tilt-card p-6 rounded-xl bg-surface border border-borderSubtle space-y-4 hover:border-slate-700 transition">
+          <div class="tilt-card-glow"></div>
           <div class="flex items-center justify-between">
             <span class="text-xs font-mono text-accent">E-Commerce Logistics | 10/2020–Present</span>
-            <span class="text-xs px-2 py-0.5 rounded bg-slate-800 text-slate-300 font-mono">D2C Operations Lead</span>
+            <span class="text-xs px-2.5 py-1 rounded-lg bg-surfaceElevated text-slate-300 font-mono border border-borderSubtle">D2C Operations Lead</span>
           </div>
           <h3 class="text-lg font-semibold text-white">Independent D2C E-Commerce Venture</h3>
           <p class="text-sm text-slate-400 leading-relaxed">
             Overseeing supply chain management, inventory forecasting, supplier relations, and order fulfillment workflows for a commercial direct-to-consumer brand.
           </p>
-          <div class="space-y-1 text-xs text-slate-400 border-t border-slate-800/80 pt-3">
+          <div class="space-y-1 text-xs text-slate-400 border-t border-borderSubtle pt-3">
             <div>&bull; Maintained a 99%+ order dispatch fulfillment accuracy rate</div>
             <div>&bull; Reduced order processing turnaround times through streamlined packaging workflows</div>
           </div>
@@ -597,29 +801,48 @@
       </div>
     </section>
 
-    <!-- Visual Eye & Aesthetic Photography Section -->
+    <!-- Visual Eye & Aesthetic Photography Section with Interactive Optical Simulator -->
     <section id="photography" class="space-y-6">
-      <div>
-        <span class="text-xs font-mono text-accent uppercase tracking-widest">Creative Direction &amp; Optical Aesthetics</span>
-        <h2 class="text-2xl font-bold tracking-tight text-white mt-1">Visual Eye &amp; Aesthetic Photography</h2>
-        <p class="text-slate-400 text-sm mt-1">Analyzing color science, optical depth of field, and visual storytelling for digital media framing.</p>
+      <div class="flex flex-col md:flex-row md:items-end justify-between gap-4">
+        <div>
+          <span class="text-xs font-mono text-accent uppercase tracking-widest">Creative Direction &amp; Optical Aesthetics</span>
+          <h2 class="text-2xl sm:text-3xl font-bold tracking-tight text-white mt-1">Visual Eye &amp; Aesthetic Photography</h2>
+          <p class="text-slate-400 text-sm mt-1">Analyzing color science, optical depth of field, and visual storytelling for digital media framing.</p>
+        </div>
+        
+        <!-- Interactive Optical Mood Toggle -->
+        <div class="flex items-center gap-1.5 p-1 bg-surface rounded-xl border border-borderSubtle self-start md:self-auto text-xs font-mono">
+          <button onclick="setCameraFilter('warm')" id="filter-warm" class="cam-btn px-2.5 py-1 rounded-lg bg-accent text-canvas font-semibold transition">Kodak Film</button>
+          <button onclick="setCameraFilter('clean')" id="filter-clean" class="cam-btn px-2.5 py-1 rounded-lg text-slate-400 hover:text-white transition">Canon Crisp</button>
+          <button onclick="setCameraFilter('cinema')" id="filter-cinema" class="cam-btn px-2.5 py-1 rounded-lg text-slate-400 hover:text-white transition">Cinema Hook</button>
+        </div>
       </div>
 
-      <div class="p-8 rounded-2xl bg-slate-900/90 border border-slate-800 space-y-6">
+      <div class="p-8 rounded-2xl bg-surface/90 border border-borderSubtle space-y-6 shadow-xl">
+        <!-- Visual Simulation Frame -->
+        <div id="lens-preview-frame" class="w-full h-44 rounded-xl border border-borderSubtle relative overflow-hidden flex items-center justify-center transition-all duration-700 bg-gradient-to-r from-amber-950/20 via-slate-900 to-amber-900/10">
+          <div class="absolute inset-0 opacity-20 pointer-events-none" style="background-image: radial-gradient(#e2d4b7 1px, transparent 1px); background-size: 20px 20px;"></div>
+          <div class="text-center space-y-1.5 z-10 p-4">
+            <span id="lens-mode-title" class="text-xs font-mono text-accent uppercase tracking-widest">Active Optical Profile: Kodak PixPro Film Tone</span>
+            <div id="lens-mode-desc" class="text-sm font-semibold text-white">Warm highlight roll-off, grain-controlled tone curve, organic skin warmth.</div>
+            <div class="text-xs text-slate-400">Click the toggles above to preview optical grade variations</div>
+          </div>
+        </div>
+
         <div class="grid sm:grid-cols-3 gap-6 text-xs">
-          <div class="p-4 rounded-xl bg-slate-950 border border-slate-800 space-y-2">
+          <div class="p-4 rounded-xl bg-canvas border border-borderSubtle space-y-2">
             <div class="text-accent font-mono font-bold">Canon EOS M6 Optical Depth</div>
             <p class="text-slate-400 leading-relaxed">
               Evaluating M6 mirrorless lens setups, focal depth separation, f/1.8 aperture isolation, and low-light sensor dynamics across crisp photo captures.
             </p>
           </div>
-          <div class="p-4 rounded-xl bg-slate-950 border border-slate-800 space-y-2">
+          <div class="p-4 rounded-xl bg-canvas border border-borderSubtle space-y-2">
             <div class="text-accent font-mono font-bold">Kodak PixPro &amp; Color Science</div>
             <p class="text-slate-400 leading-relaxed">
               Kodak PixPro digital color science, vintage film tone curves, warm highlight roll-off, and grain control engineered for high-retention mobile feeds.
             </p>
           </div>
-          <div class="p-4 rounded-xl bg-slate-950 border border-slate-800 space-y-2">
+          <div class="p-4 rounded-xl bg-canvas border border-borderSubtle space-y-2">
             <div class="text-accent font-mono font-bold">Short-Form Visual Composition</div>
             <p class="text-slate-400 leading-relaxed">
               Applying rapid visual hook layouts, rule of thirds, and dynamic subject framing to maintain 70%+ audience watch time across social feeds.
@@ -633,12 +856,13 @@
     <section id="research" class="space-y-6">
       <div>
         <span class="text-xs font-mono text-accent uppercase tracking-widest">Academic &amp; Governance Inquiry</span>
-        <h2 class="text-2xl font-bold tracking-tight text-white mt-1">Applied Research &amp; Organizational Governance</h2>
+        <h2 class="text-2xl sm:text-3xl font-bold tracking-tight text-white mt-1">Applied Research &amp; Organizational Governance</h2>
         <p class="text-slate-400 text-sm mt-1">Rigorous academic investigation into institutional governance, leadership psychology, and workforce dynamics.</p>
       </div>
 
       <div class="grid md:grid-cols-3 gap-6">
-        <div class="p-6 rounded-xl bg-slate-900 border border-slate-800 space-y-3 hover:border-slate-700 transition">
+        <div class="tilt-card p-6 rounded-xl bg-surface border border-borderSubtle space-y-3 hover:border-slate-700 transition">
+          <div class="tilt-card-glow"></div>
           <span class="px-2 py-0.5 text-[10px] rounded bg-indigo-950 text-indigo-300 border border-indigo-800 font-mono">Institutional Governance</span>
           <h3 class="text-base font-bold text-white">GCC Banking Board Composition</h3>
           <p class="text-xs text-slate-400 leading-relaxed">
@@ -646,7 +870,8 @@
           </p>
         </div>
 
-        <div class="p-6 rounded-xl bg-slate-900 border border-slate-800 space-y-3 hover:border-slate-700 transition">
+        <div class="tilt-card p-6 rounded-xl bg-surface border border-borderSubtle space-y-3 hover:border-slate-700 transition">
+          <div class="tilt-card-glow"></div>
           <span class="px-2 py-0.5 text-[10px] rounded bg-indigo-950 text-indigo-300 border border-indigo-800 font-mono">Leadership Psychology</span>
           <h3 class="text-base font-bold text-white">Servant Leadership &amp; Psychological Safety</h3>
           <p class="text-xs text-slate-400 leading-relaxed">
@@ -654,7 +879,8 @@
           </p>
         </div>
 
-        <div class="p-6 rounded-xl bg-slate-900 border border-slate-800 space-y-3 hover:border-slate-700 transition">
+        <div class="tilt-card p-6 rounded-xl bg-surface border border-borderSubtle space-y-3 hover:border-slate-700 transition">
+          <div class="tilt-card-glow"></div>
           <span class="px-2 py-0.5 text-[10px] rounded bg-indigo-950 text-indigo-300 border border-indigo-800 font-mono">Workforce Analytics</span>
           <h3 class="text-base font-bold text-white">HR Analytics &amp; Compensation Modeling</h3>
           <p class="text-xs text-slate-400 leading-relaxed">
@@ -668,25 +894,27 @@
     <section id="education" class="space-y-6">
       <div>
         <span class="text-xs font-mono text-accent uppercase tracking-widest">Academic Qualifications</span>
-        <h2 class="text-2xl font-bold tracking-tight text-white mt-1">Education Overview</h2>
+        <h2 class="text-2xl sm:text-3xl font-bold tracking-tight text-white mt-1">Education Overview</h2>
       </div>
 
-      <div class="p-8 rounded-2xl bg-slate-900/90 border border-slate-800 space-y-6">
+      <div class="p-8 rounded-2xl bg-surface/90 border border-borderSubtle space-y-6 shadow-xl">
         <div class="grid md:grid-cols-2 gap-6 text-xs">
-          <div class="p-5 rounded-xl bg-slate-950 border border-slate-800 space-y-2">
-            <span class="px-2 py-0.5 text-[10px] rounded bg-slate-800 text-accent font-mono">Postgraduate Degree</span>
+          <div class="tilt-card p-5 rounded-xl bg-canvas border border-borderSubtle space-y-2">
+            <div class="tilt-card-glow"></div>
+            <span class="px-2 py-0.5 text-[10px] rounded bg-surfaceElevated text-accent font-mono border border-borderSubtle">Postgraduate Degree</span>
             <div class="text-white font-bold text-base mt-1">Master of Science in Strategic Digital Marketing</div>
             <div class="text-accent font-mono">Arden University, United Kingdom | Enrolled, Ongoing</div>
-            <p class="text-slate-400 leading-relaxed pt-2 border-t border-slate-800/80">
+            <p class="text-slate-400 leading-relaxed pt-2 border-t border-borderSubtle">
               Advanced master's degree program focusing on strategic consumer behavior, digital channel architecture, paid social modeling, SEO keyword mapping, and marketing data analytics.
             </p>
           </div>
 
-          <div class="p-5 rounded-xl bg-slate-950 border border-slate-800 space-y-2">
-            <span class="px-2 py-0.5 text-[10px] rounded bg-slate-800 text-accent font-mono">Undergraduate Degree</span>
+          <div class="tilt-card p-5 rounded-xl bg-canvas border border-borderSubtle space-y-2">
+            <div class="tilt-card-glow"></div>
+            <span class="px-2 py-0.5 text-[10px] rounded bg-surfaceElevated text-accent font-mono border border-borderSubtle">Undergraduate Degree</span>
             <div class="text-white font-bold text-base mt-1">Bachelor of Science in Human Resource Management</div>
             <div class="text-accent font-mono">Prince Mohammad Bin Fahd University (PMU) | Dhahran, Saudi Arabia | Conferred 08/2026</div>
-            <p class="text-slate-400 leading-relaxed pt-2 border-t border-slate-800/80">
+            <p class="text-slate-400 leading-relaxed pt-2 border-t border-borderSubtle">
               Comprehensive coursework covering Human Capital Strategy, Organizational Dynamics, Labor Law, Strategic Compensation, and HRIS Data Management.
             </p>
           </div>
@@ -694,28 +922,66 @@
       </div>
     </section>
 
+    <!-- Footer -->
+    <footer class="pt-12 pb-20 border-t border-borderSubtle flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-slate-500 font-mono">
+      <div>
+        &copy; 2026 Sohaib Masud &bull; Strategy &bull; Growth &bull; Brand
+      </div>
+      <div class="flex items-center gap-4">
+        <a href="mailto:sohaibmasud@outlook.com" class="hover:text-accent transition">sohaibmasud@outlook.com</a>
+        <span>&bull;</span>
+        <button onclick="window.scrollTo({top:0, behavior:'smooth'})" class="hover:text-accent transition">Back to Top &uarr;</button>
+      </div>
+    </footer>
+
   </main>
 
-  <!-- Interactive CV Modal with Updated ATS-Optimized CV Profiles -->
+  <!-- Interactive Marketing Lab Breakdown Modal / Drawer -->
+  <div id="lab-modal" class="fixed inset-0 z-50 hidden bg-slate-950/85 backdrop-blur-md overflow-y-auto p-4 sm:p-6 md:p-10 flex flex-col items-center justify-center">
+    <div class="w-full max-w-2xl bg-surfaceElevated border border-borderSubtle rounded-2xl p-6 sm:p-8 shadow-2xl relative space-y-6">
+      <button onclick="closeLabModal()" class="absolute top-5 right-5 text-slate-400 hover:text-white p-2 rounded-lg bg-surface hover:bg-slate-800 transition" aria-label="Close Modal">
+        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
+      </button>
+
+      <div class="space-y-1">
+        <span id="lab-tag" class="text-xs font-mono text-accent uppercase tracking-wider"></span>
+        <h3 id="lab-title" class="text-xl font-bold text-white"></h3>
+      </div>
+
+      <div id="lab-body" class="space-y-4 text-xs text-slate-300 leading-relaxed"></div>
+
+      <div class="pt-4 border-t border-borderSubtle flex justify-between items-center text-xs">
+        <span class="text-slate-500 font-mono">Zero paid third-party AI needed</span>
+        <button onclick="closeLabModal()" class="px-4 py-2 rounded-lg bg-accent text-canvas font-semibold hover:bg-accentHover transition">
+          Close Breakdown
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Interactive ATS Resume Modal (Preserved & Enhanced) -->
   <div id="cv-modal" class="fixed inset-0 z-50 hidden bg-slate-950/90 backdrop-blur-md overflow-y-auto p-4 sm:p-6 md:p-10 flex flex-col items-center">
     
-    <div id="cv-modal-controls" class="w-full max-w-[820px] mb-4 flex flex-wrap items-center justify-between gap-3 bg-slate-900 border border-slate-800 p-3 rounded-xl shadow-xl">
+    <div id="cv-modal-controls" class="w-full max-w-[820px] mb-4 flex flex-wrap items-center justify-between gap-3 bg-surface border border-borderSubtle p-3 rounded-xl shadow-xl">
       <div class="flex items-center gap-2">
         <button onclick="switchCvTab('cv1')" id="tab-cv1" class="px-3 py-1.5 text-xs font-semibold rounded-lg bg-slate-800 text-white border border-slate-700">Content CV</button>
-        <button onclick="switchCvTab('cv2')" id="tab-cv2" class="px-3 py-1.5 text-xs font-semibold rounded-lg bg-slate-900 text-slate-400 border border-slate-800 hover:text-white">Growth CV</button>
-        <button onclick="switchCvTab('cv3')" id="tab-cv3" class="px-3 py-1.5 text-xs font-semibold rounded-lg bg-slate-900 text-slate-400 border border-slate-800 hover:text-white">HR Ops CV</button>
+        <button onclick="switchCvTab('cv2')" id="tab-cv2" class="px-3 py-1.5 text-xs font-semibold rounded-lg bg-canvas text-slate-400 border border-borderSubtle hover:text-white">Growth CV</button>
+        <button onclick="switchCvTab('cv3')" id="tab-cv3" class="px-3 py-1.5 text-xs font-semibold rounded-lg bg-canvas text-slate-400 border border-borderSubtle hover:text-white">HR Ops CV</button>
       </div>
-      <div class="flex items-center gap-3">
-        <button onclick="window.print()" class="px-4 py-1.5 text-xs font-semibold rounded-lg bg-accent text-[#0b0f17] hover:bg-accentHover transition">
-          Print / Save PDF
+      <div class="flex items-center gap-2">
+        <button onclick="copyContactEmail()" class="px-3 py-1.5 text-xs font-mono font-medium rounded-lg bg-surfaceElevated text-slate-300 hover:text-white border border-borderSubtle transition">
+          Copy Email
         </button>
-        <button onclick="closeCvModal()" class="px-3 py-1.5 text-xs font-semibold rounded-lg bg-slate-800 text-slate-300 hover:text-white transition">
+        <button onclick="window.print()" class="px-4 py-1.5 text-xs font-semibold rounded-lg bg-accent text-canvas hover:bg-accentHover transition shadow-sm">
+          Print / Save PDF (A4)
+        </button>
+        <button onclick="closeCvModal()" class="px-3 py-1.5 text-xs font-semibold rounded-lg bg-surfaceElevated text-slate-300 hover:text-white transition">
           Close
         </button>
       </div>
     </div>
 
-    <!-- CV Tab 1: Content Creation & Social Strategy (ATS Optimizations Applied) -->
+    <!-- CV Tab 1: Content Creation & Social Strategy -->
     <div id="cv-content-cv1" class="cv-tab-content cv-paper shadow-2xl">
       <div class="cv-header">
         <div class="cv-h1">Sohaib Masud</div>
@@ -811,7 +1077,7 @@
       </div>
     </div>
 
-    <!-- CV Tab 2: Digital Growth & Marketing Strategy (ATS Optimizations Applied) -->
+    <!-- CV Tab 2: Digital Growth & Marketing Strategy -->
     <div id="cv-content-cv2" class="cv-tab-content cv-paper shadow-2xl hidden">
       <div class="cv-header">
         <div class="cv-h1">Sohaib Masud</div>
@@ -906,7 +1172,7 @@
       </div>
     </div>
 
-    <!-- CV Tab 3: People Operations & HR Management (ATS Optimizations Applied) -->
+    <!-- CV Tab 3: People Operations & HR Management -->
     <div id="cv-content-cv3" class="cv-tab-content cv-paper shadow-2xl hidden">
       <div class="cv-header">
         <div class="cv-h1">Sohaib Masud</div>
@@ -1003,8 +1269,251 @@
 
   </div>
 
-  <!-- Scripts -->
+  <!-- Interactive Scripts (Zero external dependencies) -->
   <script>
+    // 1. Ambient Glow Cursor Movement
+    const cursor = document.getElementById('glow-cursor');
+    window.addEventListener('pointermove', (e) => {
+      if (cursor) {
+        cursor.style.left = `${e.clientX}px`;
+        cursor.style.top = `${e.clientY}px`;
+      }
+    });
+
+    // 2. 3D Tilt Card System with Specular Highlight Reflection
+    const tiltCards = document.querySelectorAll('.tilt-card');
+    tiltCards.forEach(card => {
+      card.addEventListener('mousemove', (e) => {
+        const rect = card.getBoundingClientRect();
+        const x = e.clientX - rect.left;
+        const y = e.clientY - rect.top;
+        
+        const centerX = rect.width / 2;
+        const centerY = rect.height / 2;
+        
+        const rotateX = ((y - centerY) / centerY) * -5.5;
+        const rotateY = ((x - centerX) / centerX) * 5.5;
+
+        card.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) translateY(-2px)`;
+        card.style.setProperty('--mouse-x', `${(x / rect.width) * 100}%`);
+        card.style.setProperty('--mouse-y', `${(y / rect.height) * 100}%`);
+      });
+
+      card.addEventListener('mouseleave', () => {
+        card.style.transform = 'perspective(1000px) rotateX(0deg) rotateY(0deg) translateY(0px)';
+      });
+    });
+
+    // 3. Live Animated Metric Counters on Scroll
+    const observerOptions = { threshold: 0.35 };
+    const counterObserver = new IntersectionObserver((entries, observer) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          const el = entry.target;
+          const target = parseFloat(el.getAttribute('data-target'));
+          const suffix = el.getAttribute('data-suffix') || '';
+          const decimals = parseInt(el.getAttribute('data-decimals') || '0', 10);
+          const duration = 1600;
+          const startTime = performance.now();
+
+          function updateCounter(currentTime) {
+            const elapsed = currentTime - startTime;
+            const progress = Math.min(elapsed / duration, 1);
+            // Ease-out cubic formula
+            const easeOut = 1 - Math.pow(1 - progress, 3);
+            const currentVal = (target * easeOut).toFixed(decimals);
+            el.innerText = `${currentVal}${suffix}`;
+            
+            if (progress < 1) {
+              requestAnimationFrame(updateCounter);
+            } else {
+              el.innerText = `${target}${suffix}`;
+            }
+          }
+          requestAnimationFrame(updateCounter);
+          observer.unobserve(el);
+        }
+      });
+    }, observerOptions);
+
+    document.querySelectorAll('.counter-number').forEach(counter => {
+      counterObserver.observe(counter);
+    });
+
+    // 4. Interactive Case Study Filtering
+    function filterStudies(category) {
+      const cards = document.querySelectorAll('.study-card');
+      const buttons = document.querySelectorAll('.filter-btn');
+
+      buttons.forEach(btn => {
+        btn.className = "filter-btn px-3 py-1.5 rounded-lg text-slate-400 hover:text-white transition";
+      });
+      const activeBtn = document.getElementById('filter-' + category);
+      if (activeBtn) {
+        activeBtn.className = "filter-btn px-3 py-1.5 rounded-lg bg-accent text-canvas font-semibold transition";
+      }
+
+      cards.forEach(card => {
+        const itemCat = card.getAttribute('data-category');
+        if (category === 'all' || itemCat === category) {
+          card.style.display = 'flex';
+          card.style.opacity = '0';
+          setTimeout(() => { card.style.opacity = '1'; }, 50);
+        } else {
+          card.style.display = 'none';
+        }
+      });
+    }
+
+    // 5. Marketing Lab Deep-Dive Drawer Modal
+    const labData = {
+      duolingo: {
+        tag: "Paid Social Architecture & Meta Ad Model",
+        title: "Duolingo: Speculative Gen-Z Meta Ad Acquisition Architecture",
+        body: `
+          <div class="space-y-3">
+            <div class="p-3.5 rounded-xl bg-canvas border border-borderSubtle">
+              <span class="text-accent font-mono font-semibold">Funnel Architecture:</span>
+              <p class="text-slate-300 mt-1">Top-of-Funnel (TOF) TikTok hook mechanics converted to Meta Reel formats, retargeting engaged 3-second viewers with dynamic interactive quizzes.</p>
+            </div>
+            <div class="grid grid-cols-2 gap-3">
+              <div class="p-3 rounded-lg bg-canvas border border-borderSubtle">
+                <span class="font-mono text-slate-400">Target CAC:</span>
+                <div class="text-sm font-bold text-white mt-0.5">&minus;24% vs Broad Non-GenZ</div>
+              </div>
+              <div class="p-3 rounded-lg bg-canvas border border-borderSubtle">
+                <span class="font-mono text-slate-400">Hook Timing:</span>
+                <div class="text-sm font-bold text-white mt-0.5">0:00 – 0:01.8 High Contrast</div>
+              </div>
+            </div>
+            <p class="text-slate-400">Designed structured creative briefs testing emotional comedic urgency versus gamified daily streak loss anxiety, modeled across standard Meta Ads Manager campaign budgeting.</p>
+          </div>
+        `
+      },
+      gymshark: {
+        tag: "Search Architecture & CRO",
+        title: "Gymshark: Speculative SEO Keyword Gap & Funnel Optimization",
+        body: `
+          <div class="space-y-3">
+            <div class="p-3.5 rounded-xl bg-canvas border border-borderSubtle">
+              <span class="text-accent font-mono font-semibold">Organic Audit Discovery:</span>
+              <p class="text-slate-300 mt-1">Identified high commercial intent long-tail clusters (e.g., 'compression wear heat-retention fabrics') with low keyword difficulty overlooked by top fitness competitors.</p>
+            </div>
+            <div class="grid grid-cols-2 gap-3">
+              <div class="p-3 rounded-lg bg-canvas border border-borderSubtle">
+                <span class="font-mono text-slate-400">Projected Organic CTR:</span>
+                <div class="text-sm font-bold text-white mt-0.5">+18% with Meta Schema</div>
+              </div>
+              <div class="p-3 rounded-lg bg-canvas border border-borderSubtle">
+                <span class="font-mono text-slate-400">GA4 Event Model:</span>
+                <div class="text-sm font-bold text-white mt-0.5">Custom Scroll & Size-Guide Depth</div>
+              </div>
+            </div>
+            <p class="text-slate-400">Structured landing page wireframe recommendations removing secondary menu friction, directly boosting mobile checkout initiation rate.</p>
+          </div>
+        `
+      },
+      spotify: {
+        tag: "Lifecycle Retention & Automation",
+        title: "Spotify: Speculative 3-Part Re-Engagement Stream",
+        body: `
+          <div class="space-y-3">
+            <div class="p-3.5 rounded-xl bg-canvas border border-borderSubtle">
+              <span class="text-accent font-mono font-semibold">Behavioral Lifecycle Logic:</span>
+              <p class="text-slate-300 mt-1">Triggers automatically on Day 14, 30, and 45 post-subscription lapse, analyzing top artist listening affinity instead of generic discount coupons.</p>
+            </div>
+            <div class="grid grid-cols-2 gap-3">
+              <div class="p-3 rounded-lg bg-canvas border border-borderSubtle">
+                <span class="font-mono text-slate-400">Simulated Open Rate:</span>
+                <div class="text-sm font-bold text-white mt-0.5">42% via Artist Personalization</div>
+              </div>
+              <div class="p-3 rounded-lg bg-canvas border border-borderSubtle">
+                <span class="font-mono text-slate-400">Key Variable:</span>
+                <div class="text-sm font-bold text-white mt-0.5">Unheard Releases Reminder</div>
+              </div>
+            </div>
+            <p class="text-slate-400">Features human-first, brand-aligned copy highlighting what the user missed in their custom Release Radar rather than traditional aggressive sales language.</p>
+          </div>
+        `
+      }
+    };
+
+    function openLabModal(key) {
+      const data = labData[key];
+      if (!data) return;
+      document.getElementById('lab-tag').innerText = data.tag;
+      document.getElementById('lab-title').innerText = data.title;
+      document.getElementById('lab-body').innerHTML = data.body;
+      document.getElementById('lab-modal').classList.remove('hidden');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeLabModal() {
+      document.getElementById('lab-modal').classList.add('hidden');
+      document.body.style.overflow = 'auto';
+    }
+
+    // 6. Optical Photography Grade Simulation
+    function setCameraFilter(mode) {
+      const frame = document.getElementById('lens-preview-frame');
+      const title = document.getElementById('lens-mode-title');
+      const desc = document.getElementById('lens-mode-desc');
+      const buttons = document.querySelectorAll('.cam-btn');
+
+      buttons.forEach(btn => {
+        btn.className = "cam-btn px-2.5 py-1 rounded-lg text-slate-400 hover:text-white transition";
+      });
+      document.getElementById('filter-' + mode).className = "cam-btn px-2.5 py-1 rounded-lg bg-accent text-canvas font-semibold transition";
+
+      if (mode === 'warm') {
+        frame.className = "w-full h-44 rounded-xl border border-accent/40 relative overflow-hidden flex items-center justify-center transition-all duration-700 bg-gradient-to-r from-amber-950/40 via-slate-900 to-amber-900/20";
+        title.innerText = "Active Optical Profile: Kodak PixPro Film Tone";
+        desc.innerText = "Warm highlight roll-off, grain-controlled tone curve, organic skin warmth.";
+      } else if (mode === 'clean') {
+        frame.className = "w-full h-44 rounded-xl border border-cyan-500/40 relative overflow-hidden flex items-center justify-center transition-all duration-700 bg-gradient-to-r from-slate-900 via-sky-950/30 to-slate-900";
+        title.innerText = "Active Optical Profile: Canon EOS M6 Precision Crisp";
+        desc.innerText = "Sharp f/1.8 subject separation, neutral color balance, high dynamic range isolation.";
+      } else if (mode === 'cinema') {
+        frame.className = "w-full h-44 rounded-xl border border-indigo-500/40 relative overflow-hidden flex items-center justify-center transition-all duration-700 bg-gradient-to-r from-indigo-950/40 via-slate-900 to-purple-950/30";
+        title.innerText = "Active Optical Profile: Cinema Hook Pacing";
+        desc.innerText = "High-contrast shadows, 2.39:1 aspect ratio cues, engineered for 0:00–0:02 scroll pause.";
+      }
+    }
+
+    // 7. Clipboard Toast Notification (Zero Alert Policy)
+    function copyContactEmail() {
+      const email = "sohaibmasud@outlook.com";
+      const tempInput = document.createElement("input");
+      tempInput.value = email;
+      document.body.appendChild(tempInput);
+      tempInput.select();
+      try {
+        document.execCommand("copy");
+        showToast("Email copied to clipboard: " + email);
+      } catch (err) {
+        showToast("Address: " + email);
+      }
+      document.body.removeChild(tempInput);
+    }
+
+    function showToast(message) {
+      const container = document.getElementById('toast-container');
+      const toast = document.createElement('div');
+      toast.className = "px-4 py-2.5 rounded-xl bg-surfaceElevated border border-accent/40 text-accent font-mono text-xs shadow-2xl flex items-center gap-2 transform translate-y-4 opacity-0 transition-all duration-300";
+      toast.innerHTML = `<span class="w-2 h-2 rounded-full bg-accent animate-ping"></span><span>${message}</span>`;
+      container.appendChild(toast);
+
+      setTimeout(() => {
+        toast.classList.remove('translate-y-4', 'opacity-0');
+      }, 10);
+
+      setTimeout(() => {
+        toast.classList.add('opacity-0', 'translate-y-2');
+        setTimeout(() => toast.remove(), 300);
+      }, 3500);
+    }
+
+    // 8. Navigation & ATS Resume Modal Controls
     function toggleMobileNav() {
       const menu = document.getElementById('mobile-menu');
       const hamburger = document.getElementById('hamburger-icon');
@@ -1027,7 +1536,8 @@
 
     function switchCvTab(cvType) {
       document.querySelectorAll('.cv-tab-content').forEach(el => el.classList.add('hidden'));
-      document.getElementById('cv-content-' + cvType).classList.remove('hidden');
+      const activeContent = document.getElementById('cv-content-' + cvType);
+      if (activeContent) activeContent.classList.remove('hidden');
 
       const tabs = ['cv1', 'cv2', 'cv3'];
       tabs.forEach(t => {
@@ -1035,10 +1545,18 @@
         if (t === cvType) {
           btn.className = "px-3 py-1.5 text-xs font-semibold rounded-lg bg-slate-800 text-white border border-slate-700";
         } else {
-          btn.className = "px-3 py-1.5 text-xs font-semibold rounded-lg bg-slate-900 text-slate-400 border border-slate-800 hover:text-white";
+          btn.className = "px-3 py-1.5 text-xs font-semibold rounded-lg bg-canvas text-slate-400 border border-borderSubtle hover:text-white";
         }
       });
     }
+
+    // Close modals on Escape key
+    window.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') {
+        closeCvModal();
+        closeLabModal();
+      }
+    });
   </script>
 </body>
 </html>
