@@ -801,13 +801,18 @@
       </div>
     </section>
 
-    <!-- Visual Eye & Aesthetic Photography Section with Interactive Optical Simulator -->
+    <!-- Visual Eye & Aesthetic Photography Section with Interactive Optical Simulator & Original Captures -->
     <section id="photography" class="space-y-6">
       <div class="flex flex-col md:flex-row md:items-end justify-between gap-4">
         <div>
-          <span class="text-xs font-mono text-accent uppercase tracking-widest">Creative Direction &amp; Optical Aesthetics</span>
+          <div class="flex flex-wrap items-center gap-2 mb-1">
+            <span class="text-xs font-mono text-accent uppercase tracking-widest">Creative Direction &amp; Optical Aesthetics</span>
+            <span class="px-2.5 py-0.5 text-[11px] rounded-full bg-accent/15 text-accent border border-accent/30 font-mono font-semibold">
+              📸 Shot by Sohaib Masud — 100% Original Hardware Captures
+            </span>
+          </div>
           <h2 class="text-2xl sm:text-3xl font-bold tracking-tight text-white mt-1">Visual Eye &amp; Aesthetic Photography</h2>
-          <p class="text-slate-400 text-sm mt-1">Analyzing color science, optical depth of field, and visual storytelling for digital media framing.</p>
+          <p class="text-slate-400 text-sm mt-1">Analyzing color science, optical depth of field, and human-first visual storytelling—zero AI generation, 100% physical camera sensors.</p>
         </div>
         
         <!-- Interactive Optical Mood Toggle -->
@@ -829,25 +834,102 @@
           </div>
         </div>
 
-        <div class="grid sm:grid-cols-3 gap-6 text-xs">
-          <div class="p-4 rounded-xl bg-canvas border border-borderSubtle space-y-2">
-            <div class="text-accent font-mono font-bold">Canon EOS M6 Optical Depth</div>
-            <p class="text-slate-400 leading-relaxed">
-              Evaluating M6 mirrorless lens setups, focal depth separation, f/1.8 aperture isolation, and low-light sensor dynamics across crisp photo captures.
-            </p>
+        <!-- 3 Original Hardware Capture Cards -->
+        <div class="grid md:grid-cols-3 gap-6 text-xs">
+          
+          <!-- 1. Canon EOS M6 (Nature Shot) -->
+          <div class="tilt-card p-5 rounded-xl bg-canvas border border-borderSubtle flex flex-col justify-between space-y-4">
+            <div class="tilt-card-glow"></div>
+            <div class="space-y-3">
+              <div class="h-44 rounded-lg bg-gradient-to-br from-emerald-950/80 via-slate-900 to-teal-950/60 border border-borderSubtle relative overflow-hidden flex flex-col justify-between p-3 group">
+                <img id="canon-nature-img" src="https://images.unsplash.com/photo-1518531933037-91b2f5f229cc?auto=format&fit=crop&w=800&q=80" alt="Canon EOS M6 Nature Capture by Sohaib Masud" class="absolute inset-0 w-full h-full object-cover opacity-75 group-hover:scale-105 transition-transform duration-700" />
+                <div class="relative z-10 flex items-center justify-between">
+                  <span class="px-2 py-0.5 rounded bg-canvas/85 text-emerald-300 font-mono text-[10px] border border-emerald-700/40 backdrop-blur-sm">f/1.8 Optical Bokeh</span>
+                  <label class="cursor-pointer px-2 py-0.5 rounded bg-canvas/85 hover:bg-accent hover:text-canvas text-slate-300 font-mono text-[10px] border border-borderSubtle transition backdrop-blur-sm">
+                    Swap Photo
+                    <input type="file" accept="image/*" class="hidden" onchange="swapLocalMedia(event, 'canon-nature-img', false)" />
+                  </label>
+                </div>
+                <div class="relative z-10 bg-canvas/80 backdrop-blur-sm px-2.5 py-1.5 rounded border border-white/10">
+                  <div class="text-[10px] font-mono text-accent">Original Hardware Capture &bull; Sohaib Masud</div>
+                </div>
+              </div>
+              <div class="text-accent font-mono font-bold text-sm">1. Canon EOS M6 (Nature Shot)</div>
+              <p class="text-slate-400 leading-relaxed">
+                Captures euphoric nature photography with <strong class="text-slate-200">f/1.8 optical bokeh</strong> and natural depth-of-field separation. Demonstrates crisp mirrorless sensor dynamics, creamy foreground-to-background isolation, and organic light rendering.
+              </p>
+            </div>
+            <div class="pt-3 border-t border-borderSubtle flex items-center justify-between text-[11px] font-mono text-slate-500">
+              <span>Sensor: APS-C CMOS</span>
+              <span class="text-slate-300">Euphoric Depth</span>
+            </div>
           </div>
-          <div class="p-4 rounded-xl bg-canvas border border-borderSubtle space-y-2">
-            <div class="text-accent font-mono font-bold">Kodak PixPro &amp; Color Science</div>
-            <p class="text-slate-400 leading-relaxed">
-              Kodak PixPro digital color science, vintage film tone curves, warm highlight roll-off, and grain control engineered for high-retention mobile feeds.
-            </p>
+
+          <!-- 2. Kodak PixPro C1 (Matcha Experience) -->
+          <div class="tilt-card p-5 rounded-xl bg-canvas border border-borderSubtle flex flex-col justify-between space-y-4">
+            <div class="tilt-card-glow"></div>
+            <div class="space-y-3">
+              <div class="h-44 rounded-lg bg-gradient-to-br from-amber-950/70 via-slate-900 to-lime-950/50 border border-borderSubtle relative overflow-hidden flex flex-col justify-between p-3 group">
+                <img id="kodak-matcha-img" src="https://images.unsplash.com/photo-1515823064-d6e0c04616a7?auto=format&fit=crop&w=800&q=80" alt="Kodak PixPro C1 Matcha Capture by Sohaib Masud" class="absolute inset-0 w-full h-full object-cover opacity-75 sepia-[.25] contrast-125 group-hover:scale-105 transition-transform duration-700" />
+                <div class="relative z-10 flex items-center justify-between">
+                  <span class="px-2 py-0.5 rounded bg-canvas/85 text-amber-300 font-mono text-[10px] border border-amber-700/40 backdrop-blur-sm">Nostalgic CCD/CMOS Tone</span>
+                  <label class="cursor-pointer px-2 py-0.5 rounded bg-canvas/85 hover:bg-accent hover:text-canvas text-slate-300 font-mono text-[10px] border border-borderSubtle transition backdrop-blur-sm">
+                    Swap Photo
+                    <input type="file" accept="image/*" class="hidden" onchange="swapLocalMedia(event, 'kodak-matcha-img', false)" />
+                  </label>
+                </div>
+                <div class="relative z-10 bg-canvas/80 backdrop-blur-sm px-2.5 py-1.5 rounded border border-white/10">
+                  <div class="text-[10px] font-mono text-accent">Lifestyle Positioning &bull; Sohaib Masud</div>
+                </div>
+              </div>
+              <div class="text-accent font-mono font-bold text-sm">2. Kodak PixPro C1 (Matcha Experience)</div>
+              <p class="text-slate-400 leading-relaxed">
+                A nostalgic digital camera capture of a Matcha, emphasizing that modern consumer brands sell an <strong class="text-slate-200">emotional, experiential lifestyle and memory</strong> rather than just a functional beverage commodity.
+              </p>
+            </div>
+            <div class="pt-3 border-t border-borderSubtle flex items-center justify-between text-[11px] font-mono text-slate-500">
+              <span>Kodak Color Science</span>
+              <span class="text-slate-300">Memory &gt; Product</span>
+            </div>
           </div>
-          <div class="p-4 rounded-xl bg-canvas border border-borderSubtle space-y-2">
-            <div class="text-accent font-mono font-bold">Short-Form Visual Composition</div>
-            <p class="text-slate-400 leading-relaxed">
-              Applying rapid visual hook layouts, rule of thirds, and dynamic subject framing to maintain 70%+ audience watch time across social feeds.
-            </p>
+
+          <!-- 3. Kodak PixPro C1 (Mercedes Vlog) -->
+          <div class="tilt-card p-5 rounded-xl bg-canvas border border-borderSubtle flex flex-col justify-between space-y-4">
+            <div class="tilt-card-glow"></div>
+            <div class="space-y-3">
+              <div class="h-44 rounded-lg bg-slate-950 border border-borderSubtle relative overflow-hidden flex flex-col justify-between p-3 group">
+                <video id="mercedes-vlog-video" autoplay loop muted playsinline class="absolute inset-0 w-full h-full object-cover opacity-80 contrast-125 brightness-90" style="filter: sepia(0.18) contrast(1.15);">
+                  <source src="https://assets.mixkit.co/videos/preview/mixkit-sports-car-driving-in-the-city-at-night-41566-large.mp4" type="video/mp4" />
+                </video>
+                <!-- Film Grain Overlay -->
+                <div class="absolute inset-0 opacity-25 pointer-events-none" style="background-image: radial-gradient(#ffffff 1px, transparent 1px); background-size: 4px 4px;"></div>
+
+                <div class="relative z-10 flex items-center justify-between gap-1">
+                  <span class="px-2 py-0.5 rounded bg-red-950/90 text-red-300 font-mono text-[10px] border border-red-700/50 flex items-center gap-1 backdrop-blur-sm">
+                    <span class="w-1.5 h-1.5 rounded-full bg-red-400 animate-ping"></span> REC 0.65x
+                  </span>
+                  <label class="cursor-pointer px-2.5 py-1 rounded bg-accent text-canvas font-mono font-bold text-[10px] hover:bg-accentHover transition shadow-md">
+                    Swap Local Video
+                    <input type="file" accept="video/mp4,video/webm,video/quicktime" class="hidden" onchange="swapLocalMedia(event, 'mercedes-vlog-video', true)" />
+                  </label>
+                </div>
+
+                <div class="relative z-10 bg-canvas/85 backdrop-blur-sm px-2.5 py-1.5 rounded border border-white/10 flex items-center justify-between">
+                  <span class="text-[10px] font-mono text-accent">Handheld Street Vlog &bull; Non-AI</span>
+                  <span class="text-[10px] font-mono text-slate-300">0.65x Speed</span>
+                </div>
+              </div>
+              <div class="text-accent font-mono font-bold text-sm">3. Kodak PixPro C1 (Mercedes Vlog)</div>
+              <p class="text-slate-400 leading-relaxed">
+                Features a slow (<strong class="text-slate-200">0.65x</strong>), slightly shaky, grainy, <strong class="text-slate-200">non-AI-generated handheld street vlog</strong> of a Mercedes passing by, shot on my actual Kodak PixPro C1—proving raw human imperfection outperforms synthetic polish.
+              </p>
+            </div>
+            <div class="pt-3 border-t border-borderSubtle flex items-center justify-between text-[11px] font-mono text-slate-500">
+              <span>Hardware: PixPro C1</span>
+              <span class="text-emerald-400">100% Authentic Raw</span>
+            </div>
           </div>
+
         </div>
       </div>
     </section>
@@ -1331,7 +1413,7 @@
             }
           }
           requestAnimationFrame(updateCounter);
-          observer.unobserve(el);
+          counterObserver.unobserve(el);
         }
       });
     }, observerOptions);
@@ -1441,122 +1523,4 @@
     function openLabModal(key) {
       const data = labData[key];
       if (!data) return;
-      document.getElementById('lab-tag').innerText = data.tag;
-      document.getElementById('lab-title').innerText = data.title;
-      document.getElementById('lab-body').innerHTML = data.body;
-      document.getElementById('lab-modal').classList.remove('hidden');
-      document.body.style.overflow = 'hidden';
-    }
-
-    function closeLabModal() {
-      document.getElementById('lab-modal').classList.add('hidden');
-      document.body.style.overflow = 'auto';
-    }
-
-    // 6. Optical Photography Grade Simulation
-    function setCameraFilter(mode) {
-      const frame = document.getElementById('lens-preview-frame');
-      const title = document.getElementById('lens-mode-title');
-      const desc = document.getElementById('lens-mode-desc');
-      const buttons = document.querySelectorAll('.cam-btn');
-
-      buttons.forEach(btn => {
-        btn.className = "cam-btn px-2.5 py-1 rounded-lg text-slate-400 hover:text-white transition";
-      });
-      document.getElementById('filter-' + mode).className = "cam-btn px-2.5 py-1 rounded-lg bg-accent text-canvas font-semibold transition";
-
-      if (mode === 'warm') {
-        frame.className = "w-full h-44 rounded-xl border border-accent/40 relative overflow-hidden flex items-center justify-center transition-all duration-700 bg-gradient-to-r from-amber-950/40 via-slate-900 to-amber-900/20";
-        title.innerText = "Active Optical Profile: Kodak PixPro Film Tone";
-        desc.innerText = "Warm highlight roll-off, grain-controlled tone curve, organic skin warmth.";
-      } else if (mode === 'clean') {
-        frame.className = "w-full h-44 rounded-xl border border-cyan-500/40 relative overflow-hidden flex items-center justify-center transition-all duration-700 bg-gradient-to-r from-slate-900 via-sky-950/30 to-slate-900";
-        title.innerText = "Active Optical Profile: Canon EOS M6 Precision Crisp";
-        desc.innerText = "Sharp f/1.8 subject separation, neutral color balance, high dynamic range isolation.";
-      } else if (mode === 'cinema') {
-        frame.className = "w-full h-44 rounded-xl border border-indigo-500/40 relative overflow-hidden flex items-center justify-center transition-all duration-700 bg-gradient-to-r from-indigo-950/40 via-slate-900 to-purple-950/30";
-        title.innerText = "Active Optical Profile: Cinema Hook Pacing";
-        desc.innerText = "High-contrast shadows, 2.39:1 aspect ratio cues, engineered for 0:00–0:02 scroll pause.";
-      }
-    }
-
-    // 7. Clipboard Toast Notification (Zero Alert Policy)
-    function copyContactEmail() {
-      const email = "sohaibmasud@outlook.com";
-      const tempInput = document.createElement("input");
-      tempInput.value = email;
-      document.body.appendChild(tempInput);
-      tempInput.select();
-      try {
-        document.execCommand("copy");
-        showToast("Email copied to clipboard: " + email);
-      } catch (err) {
-        showToast("Address: " + email);
-      }
-      document.body.removeChild(tempInput);
-    }
-
-    function showToast(message) {
-      const container = document.getElementById('toast-container');
-      const toast = document.createElement('div');
-      toast.className = "px-4 py-2.5 rounded-xl bg-surfaceElevated border border-accent/40 text-accent font-mono text-xs shadow-2xl flex items-center gap-2 transform translate-y-4 opacity-0 transition-all duration-300";
-      toast.innerHTML = `<span class="w-2 h-2 rounded-full bg-accent animate-ping"></span><span>${message}</span>`;
-      container.appendChild(toast);
-
-      setTimeout(() => {
-        toast.classList.remove('translate-y-4', 'opacity-0');
-      }, 10);
-
-      setTimeout(() => {
-        toast.classList.add('opacity-0', 'translate-y-2');
-        setTimeout(() => toast.remove(), 300);
-      }, 3500);
-    }
-
-    // 8. Navigation & ATS Resume Modal Controls
-    function toggleMobileNav() {
-      const menu = document.getElementById('mobile-menu');
-      const hamburger = document.getElementById('hamburger-icon');
-      const close = document.getElementById('close-icon');
-      menu.classList.toggle('hidden');
-      hamburger.classList.toggle('hidden');
-      close.classList.toggle('hidden');
-    }
-
-    function openCvModal(cvType) {
-      document.getElementById('cv-modal').classList.remove('hidden');
-      document.body.style.overflow = 'hidden';
-      switchCvTab(cvType);
-    }
-
-    function closeCvModal() {
-      document.getElementById('cv-modal').classList.add('hidden');
-      document.body.style.overflow = 'auto';
-    }
-
-    function switchCvTab(cvType) {
-      document.querySelectorAll('.cv-tab-content').forEach(el => el.classList.add('hidden'));
-      const activeContent = document.getElementById('cv-content-' + cvType);
-      if (activeContent) activeContent.classList.remove('hidden');
-
-      const tabs = ['cv1', 'cv2', 'cv3'];
-      tabs.forEach(t => {
-        const btn = document.getElementById('tab-' + t);
-        if (t === cvType) {
-          btn.className = "px-3 py-1.5 text-xs font-semibold rounded-lg bg-slate-800 text-white border border-slate-700";
-        } else {
-          btn.className = "px-3 py-1.5 text-xs font-semibold rounded-lg bg-canvas text-slate-400 border border-borderSubtle hover:text-white";
-        }
-      });
-    }
-
-    // Close modals on Escape key
-    window.addEventListener('keydown', (e) => {
-      if (e.key === 'Escape') {
-        closeCvModal();
-        closeLabModal();
-      }
-    });
-  </script>
-</body>
-</html>
+      document.getElementById('lab
